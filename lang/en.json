@@ -3,9 +3,7 @@
   "DG.AgentNameFieldTooltip": "LAST NAME, FIRST NAME (AND ALIAS IF APPLICABLE)",
   "DG.RollLuck": "Roll Luck",
   "DG.Luck": "Luck",
-
   "DG.FallbackText.newItem": "New {type}",
-
   "DG.Skills.accounting": "Accounting",
   "DG.Skills.alertness": "Alertness",
   "DG.Skills.anthropology": "Anthropology",
@@ -44,7 +42,6 @@
   "DG.Skills.unarmed_combat": "Unarmed Combat",
   "DG.Skills.unnatural": "Unnatural",
   "DG.Skills.flight": "Flight",
-
   "DG.Skills.Tooltip.accounting": "Spot financial red flags like hidden assets, shell companies, or embezzlement.",
   "DG.Skills.Tooltip.alertness": "Notice hidden dangers, subtle movements, or quiet sounds before they become threats.",
   "DG.Skills.Tooltip.anthropology": "Understand the beliefs, behaviors, and taboos of living cultures and societies.",
@@ -82,7 +79,6 @@
   "DG.Skills.Tooltip.swim": "Survive in water under duress—rescue others, escape, or endure hazards.",
   "DG.Skills.Tooltip.unarmed_combat": "Subdue or injure opponents using fists, grapples, kicks, and other hand-to-hand techniques.",
   "DG.Skills.Tooltip.unnatural": "Recognize, research, or recall truths about entities and forces beyond human understanding.",
-
   "DG.Skills.AddTypedOrCustomSkill": "Add Typed/Custom Skill",
   "DG.Skills.AddSkill": "Add Skill",
   "DG.Skills.Apply": "Apply",
@@ -95,7 +91,6 @@
   "DG.Skills.EditSkill": "Edit Skill",
   "DG.Skills.SkillGroup": "Skill Group",
   "DG.Skills.SkillName": "Skill Name",
-
   "DG.TypeSkills.Art": "Art",
   "DG.TypeSkills.Craft": "Craft",
   "DG.TypeSkills.ForeignLanguage": "Foreign Language",
@@ -103,7 +98,6 @@
   "DG.TypeSkills.Pilot": "Pilot",
   "DG.TypeSkills.Science": "Science",
   "DG.TypeSkills.Other": "Other",
-
   "DG.TypeSkills.Tooltip.Art": "Create or appraise artistic works, and spot forgeries in a given field.",
   "DG.TypeSkills.Tooltip.Craft": "Build, fix, or sabotage specialized tools or systems like engines, locks, or wiring.",
   "DG.TypeSkills.Tooltip.ForeignLanguage": "Speak, read, and understand a specific language.",
@@ -111,7 +105,6 @@
   "DG.TypeSkills.Tooltip.Pilot": "Control and navigate air, sea, or space vehicles in critical situations or conditions.",
   "DG.TypeSkills.Tooltip.Science": "Apply specialized scientific knowledge to interpret or investigate the physical world.",
   "DG.TypeSkills.Tooltip.Other": "Other",
-
   "DG.SpecialTraining.Dialog.CreateSpecialTraining": "Add Special Training",
   "DG.SpecialTraining.Dialog.DropDown.CustomSkills": "Custom/Typed Skills",
   "DG.SpecialTraining.Dialog.DropDown.Skills": "Skills",
@@ -120,7 +113,6 @@
   "DG.SpecialTraining.Dialog.NameLabel": "Name",
   "DG.SpecialTraining.Dialog.SkillLabel": "Skill or Stat",
   "DG.SpecialTraining.Dialog.Title": "Create/Edit Special Training",
-
   "DG.Attributes.HP": "HP",
   "DG.Attributes.WP": "WP",
   "DG.Attributes.SAN": "SAN",
@@ -130,7 +122,6 @@
   "DG.Attributes.int": "INT",
   "DG.Attributes.pow": "POW",
   "DG.Attributes.cha": "CHA",
-
   "DG.Attributes.Tooltip.HP": "Hit Points (HP) indicate physical health, a character becomes unconsious at 2 HP, and dies at 0 HP.",
   "DG.Attributes.Tooltip.WP": "Willpower Points (WP) indicate mental fortitude and drive. Agents require Willpower Points to keep going despite exhaustion or mentally taxing situations. See Page 47 of the Agent's Handbook for more detail.",
   "DG.Attributes.Tooltip.SAN": "Sanity Points (SAN) indicate a connection with humanity and reality as most people perceive it. Click to roll a SAN test",
@@ -140,7 +131,6 @@
   "DG.Attributes.Tooltip.int": "See Page 19 of the Agent's Handbook - Intelligence",
   "DG.Attributes.Tooltip.pow": "See Page 19 of the Agent's Handbook - Power",
   "DG.Attributes.Tooltip.cha": "See Page 19 of the Agent's Handbook - Charisma",
-
   "DG.Navigation.Agent.skills": "Skills",
   "DG.Navigation.Agent.physical": "Statistics",
   "DG.Navigation.Agent.motivations": "Psychological",
@@ -151,7 +141,6 @@
   "DG.Navigation.NPC.gear": "Attacks & Abilities",
   "DG.Navigation.Vehicle.gear": "Gear",
   "DG.Navigation.Vehicle.notes": "Notes",
-
   "DG.About.Changelog": "CHANGELOG (ONLINE)",
   "DG.About.Copyright": "Published by Arc Dream Publishing by arrangement with the Delta Green Partnership. The intellectual property known as Delta Green is a trademark and copyright owned by the Delta Green Partnership, who has licensed its use here.",
   "DG.About.License": "The contents of this system are licensed per the terms of the included <a href=\"systems/deltagreen2/LICENSE.txt\">license</a> file, excepting those elements that are components of the Delta Green intellectual property.",
@@ -159,7 +148,6 @@
   "DG.About.OnlineHelpTooltip": "Launch browser with online GitHub help.",
   "DG.About.OnlineBugTracker": "Questions, Bug Reports or Feature Requests (ONLINE)",
   "DG.About.OnlineBugTrackerTooltip": "Launch browser with GitHub issue tracker.",
-
   "DG.Roll.Rolling": "Rolling",
   "DG.Roll.Target": "Target: ",
   "DG.Roll.Success": "Success",
@@ -173,14 +161,11 @@
   "DG.Roll.RollingDamageFor": "Rolling DAMAGE for",
   "DG.Roll.Or": "Or",
   "DG.Roll.Roll": "Roll",
-
   "DG.Physical.Wounds": "Wounds",
   "DG.Physical.FirstAidLabel": "First Aid Has Already Been Attempted: ",
   "DG.Physical.Exhausted": "Exhausted:",
   "DG.Physical.ExhaustionPenalty": "Penalty:",
-
   "DG.Generic.AddButtonLabel": "Add",
-
   "DG.Mental.BreakingPoint": "Breaking Point: ",
   "DG.Mental.Tooltip.BreakingPoint": "When SAN falls to or below this number, Agent gains a long-term mental disorder; set a new Breaking Point to current SAN - POW. Disorders remain even if SAN later rises above a previous Breaking Point.",
   "DG.Mental.Reset": "Reset",
@@ -195,7 +180,6 @@
   "DG.Mental.AdaptedToHelplessness": "Adapted to Helplessness",
   "DG.Mental.Motivations": "Motivation",
   "DG.Mental.Disorders": "Disorder",
-
   "DG.Gear.WeaponTypes.Firearms": "Firearms",
   "DG.Gear.WeaponTypes.Melee": "Melee",
   "DG.Gear.Weapons": "WEAPONS",
@@ -206,7 +190,6 @@
   "DG.Gear.ArmorPiercing": "Armor Piercing",
   "DG.Gear.ArmorRating": "Armor Rating",
   "DG.Gear.Equipped": "Equipped",
-
   "DG.CV.Sex": "Sex",
   "DG.CV.SexPlaceholder": "Sex",
   "DG.CV.AgeAndDoB": "Age and D.O.B.",
@@ -217,12 +200,10 @@
   "DG.CV.NationalityPlaceholder": "Nationality",
   "DG.CV.Education": "Education",
   "DG.CV.EducationPlaceholder": "Education or Training",
-
   "DG.Bonds.Bond": "Bond",
   "DG.Bonds.Name": "Name",
   "DG.Bonds.Score": "Score",
   "DG.Bonds.NewBond": "New Bond",
-
   "DG.Tooltip.MaximumHP": "Maximum health is the average of STR + CON, rounded UP.",
   "DG.Tooltip.MaximumWP": "Maximum WP is equal to POW.",
   "DG.Tooltip.CurrentSanityPartOne": "Current sanity, current breaking point is ",
@@ -238,17 +219,14 @@
   "DG.Tooltip.AdaptedToHelplessness": "Being adapted to helplessness means your Agent’s personal drive suffers as they pull back from the world around them. As soon as your Agent becomes adapted to helplessness, agent permanently loses 1D6 POW.",
   "DG.Tooltip.ToggleEquippedState": "Click to toggle whether this item is equipped or not.",
   "DG.Tooltip.Exhaustion": "An Agent who works too long or faces extreme danger and injury without resting becomes exhausted. When this comes into play is up to the Handler, but a good rule of thumb is that going a night without sleep or refusing to rest after losing SAN or Hit Points leads to exhaustion.",
-
   "DG.Gear.Expense.NA": "N/A or None",
   "DG.Gear.Expense.Incidental": "Incidental",
   "DG.Gear.Expense.Standard": "Standard",
   "DG.Gear.Expense.Unusual": "Unusual",
   "DG.Gear.Expense.Major": "Major",
   "DG.Gear.Expense.Extreme": "Extreme",
-
   "DG.ItemWindow.Bonds.Description": "Description/Developments",
   "DG.ItemWindow.Bonds.ScoreTooltip": "A higher score represents a stronger relationship between the agent and the bond.",
-
   "DG.ItemWindow.Motivations.Attributes": "Attributes",
   "DG.ItemWindow.Motivations.Motivation": "Motivation",
   "DG.ItemWindow.Motivations.Description": "Description/Notes",
@@ -259,19 +237,16 @@
   "DG.ItemWindow.Motivations.IsDisorderTooltip": "Check this if adding a disorder, or if an existing motivation has been lost due to gaining a disorder.",
   "DG.ItemWindow.Motivations.DisorderHasBeenCured": "Disorder Has Been \"Cured\"",
   "DG.ItemWindow.Motivations.DisorderHasBeenCuredTooltip": "A critical success on a therapy luck roll can 'cure' a disorder.  It may return the next time a breaking point is hit however. See Pages 78-79 of the Agent's Handbook - Therapy.",
-
   "DG.ItemWindow.Gear.Attributes": "Attributes",
   "DG.ItemWindow.Gear.Description": "Description",
   "DG.ItemWindow.Gear.NamePlaceholder": "Name",
   "DG.ItemWindow.Gear.Expense": "Expense",
   "DG.ItemWindow.Gear.Equipped": "Equipped",
-
   "DG.ItemWindow.Armor.Description": "Description",
   "DG.ItemWindow.Armor.NamePlaceholder": "Name",
   "DG.ItemWindow.Armor.ArmorRating": "Armor Rating",
   "DG.ItemWindow.Armor.Expense": "Expense",
   "DG.ItemWindow.Armor.Equipped": "Equipped",
-
   "DG.ItemWindow.Weapons.Description": "Description",
   "DG.ItemWindow.Weapons.NamePlaceholder": "Name",
   "DG.ItemWindow.Weapons.Skill": "Skill",
@@ -285,27 +260,21 @@
   "DG.ItemWindow.Weapons.Ammo": "Ammo (Amount/Type)",
   "DG.ItemWindow.Weapons.Range": "Range",
   "DG.ItemWindow.Weapons.KillRadius": "Kill Radius",
-
   "DG.ModifySkillRollDialogue.Title": "Modify Roll",
   "DG.ModifySkillRollDialogue.Test": "Test:",
   "DG.ModifySkillRollDialogue.OriginalTarget": "Original Target:",
   "DG.ModifySkillRollDialogue.TargetModifier": "Modify Target:",
   "DG.ModifySkillRollDialogue.ModifierTooltip": "Give a positive or negative modifier here to add/subtract from the target for the skill check.",
-
   "DG.ModifyDamageRollDialogue.Weapon": "Weapon:",
   "DG.ModifyDamageRollDialogue.OuterModifierTooltip": "Use this field to modify the outer part of the formula, such as to double the result.",
   "DG.ModifyDamageRollDialogue.InnerModifierTooltip": "Use this field to add a flat modifier such as '+1' or another dice term such as '+1d4'.",
-
   "DG.Roll.Inhuman": "Inhuman",
   "DG.Tooltip.BreakPoint": "The current breaking point, reset when current sanity falls to or below this value.  The starting breaking point is SAN - POW.",
   "DG.Tooltip.BreakPointReset": "Reset breaking point to be current SAN - WP.",
   "DG.Skills.ritual": "Ritual",
-
   "DG.RollMode": "Roll Mode",
   "DG.Bonds.Relationship": "Relationship",
-
   "DG.TypeSkills.Subskills.Painting": "Painting",
-
   "DG.Sheet.BlockHeaders.Attributes": "ATTRIBUTES",
   "DG.Sheet.BlockHeaders.Statistics": "STATISTICS",
   "DG.Sheet.BlockHeaders.PhysicalDescriptionNotes": "PHYSICAL DESCRIPTION / NOTES",
@@ -315,9 +284,7 @@
   "DG.Sheet.BlockHeaders.MotivationsAndDisorders": "MOTIVATIONS AND DISORDERS",
   "DG.Sheet.BlockHeaders.PersonalInfoCV": "PERSONAL INFORMATION / CV",
   "DG.Sheet.BlockHeaders.BondsRelationshipsContacts": "BONDS / RELATIONSHIPS / CONTACTS",
-
   "DG.AgentSheet.ProfessionPlaceholder": "PROFESSION (RANK IF APPLICABLE)",
-
   "DG.UnnaturalSheet.HideUntrainedSkillsLabel": "Hide Untrained",
   "DG.UnnaturalSheet.NotesLabel": "Notes",
   "DG.UnnaturalSheet.ShortDescriptionPlaceholder": "Description of creature or creature type",
@@ -325,39 +292,31 @@
   "DG.UnnaturalSheet.Tabs.NotesTabLabel": "Skills & Notes",
   "DG.UnnaturalSheet.Tabs.ItemsTabLabel": "Attacks & Abilities",
   "DG.NPCSheet.BreakPointAbbreviation": "BP",
-
   "DG.ImpossibleLanscapes.IHaveSeenThe": "I HAVE SEEN THE",
   "DG.ImpossibleLanscapes.YellowSign": "YELLOW SIGN",
   "DG.ImpossibleLanscapes.CorruptionFirstHalf": "Corrup",
   "DG.ImpossibleLanscapes.CorruptionSecondHalf": "tion",
   "DG.ImpossibleLanscapes.Gift": "Gift",
   "DG.ImpossibleLanscapes.Insight": "Insight",
-
   "DG.VehicleSheet.NotesTabName": "Notes",
   "DG.VehicleSheet.GearTabName": "Gear",
   "DG.VehicleSheet.NotesLabel": "NOTES",
   "DG.VehicleSheet.DescriptionPlaceHolder": "Vehicle Description",
-
   "DG.Generic.CheckDamagedBondsBoxUntilNextHomeScene": "Check a damaged Bond's box until the next Home Scene ends.",
   "DG.Generic.ClearAll": "Clear Checks",
-
   "DG.Generic.SanDamage": "SAN Damage",
-
   "DG.ItemWindow.Weapons.CustomSkillTarget": "Target",
   "DG.ItemWindow.Weapons.SkillModifier": "Skill Modifier",
   "DG.ItemWindow.Custom": "Custom",
-
   "DG.Sheet.class.item": "Item Sheet",
   "DG.Sheet.class.agent": "Agent Sheet",
   "DG.Sheet.class.npc": "NPC Sheet",
   "DG.Sheet.class.unnatural": "Unnatural Sheet",
   "DG.Sheet.class.vehicle": "Vehicle Sheet",
-
   "TYPES.Actor.agent": "Agent",
   "TYPES.Actor.npc": "NPC",
   "TYPES.Actor.unnatural": "Unnatural",
   "TYPES.Actor.vehicle": "Vehicle",
-
   "TYPES.Item.armor": "Armor",
   "TYPES.Item.bond": "Bond",
   "TYPES.Item.gear": "Gear",
@@ -365,13 +324,10 @@
   "TYPES.Item.weapon": "Weapon",
   "TYPES.Item.tome": "Tome",
   "TYPES.Item.ritual": "Ritual",
-
   "DG.Gear.Tomes": "TOMES",
   "DG.Gear.Rituals": "RITUALS",
-
   "DG.Tomes.Name": "Name",
   "DG.Ritual.Name": "Name",
-
   "DG.Tome.Name": "Name",
   "DG.Tome.Language": "Language",
   "DG.Tome.StudyTime": "Study Time",
@@ -383,15 +339,12 @@
   "DG.ItemWindow.Tome.StudySanityDamage": "Study Sanity Damage",
   "DG.ItemWindow.Tome.HandlerOnlyTabHeader": "Handler Only",
   "DG.ItemWindow.Tome.HandlerNotes": "Handler Notes",
-
   "DG.ItemWindow.Ritual.ActivationSanityDamage": "Activation SAN Damage",
   "DG.ItemWindow.Ritual.ActivationTime": "Activation Time",
   "DG.ItemWindow.Ritual.ActivationCosts": "Activation Costs",
   "DG.ItemWindow.Ritual.StudyTime": "Study Time",
   "DG.ItemWindow.Ritual.LearnedSanityDamage": "Learn SAN Damage",
-
   "DG.MissionPaused": "Mission Paused",
-
   "DG.Settings.charactersheet.name": "Character Sheet Style",
   "DG.Settings.charactersheet.hint": "Choose how actor sheets should be styled. 'Program' is a more modern government style, where 'Cowboy/Outlaw' is an older, grittier looking typewriter style.",
   "DG.Settings.charactersheet.cowboys": "The Cowboys",
@@ -419,15 +372,29 @@
   "DG.Settings.skillFailure.name": "Auto-mark Skill Failure",
   "DG.Settings.skillFailure.hint": "Activate this setting to always mark a failure checkbox upon failing a skill. The Handler can undo the action from the chat message for the roll.",
   "DG.Settings.Saved": "The current settings have been saved.",
-
   "DG.SettingsMenu.automation.name": "Automation Menu",
   "DG.SettingsMenu.automation.label": "Automation Menu",
   "DG.SettingsMenu.automation.title": "Automation Settings",
-
   "DG.SettingsMenu.handler.name": "Handler Settings",
   "DG.SettingsMenu.handler.label": "Handler Settings",
   "DG.SettingsMenu.handler.title": "Handler-only Settings",
-
   "DG.Messages.Skillsmark.Marked": "This skill is marked",
-  "DG.Messages.Skillsmark.Tooltip": "See p. 29 Agent's Handbook"
+  "DG.Messages.Skillsmark.Tooltip": "See p. 29 Agent's Handbook",
+  "DG.Settings.ammoTracking.name": "Automate Ammo Tracking",
+  "DG.Settings.ammoTracking.hint": "Weapons that track ammo automatically expend one round per attack roll. Reload from the weapon list on the Equipment tab.",
+  "DG2.Roll.MadeItBy": "made it by",
+  "DG2.Roll.MissedBy": "missed by",
+  "DG2.Ammo.Header": "Ammo",
+  "DG2.Ammo.Remaining": "Ammo",
+  "DG2.Ammo.OutOfAmmo": "OUT OF AMMO — reload!",
+  "DG2.Ammo.ReloadTooltip": "Reload to full capacity",
+  "DG2.Ammo.CapacityTooltip": "Magazine capacity (0 = no ammo tracking)",
+  "DG2.Apply.Damage": "Apply Damage",
+  "DG2.Apply.DamageTooltip": "Apply this damage to targeted or selected tokens. Equipped armor (minus the weapon's AP) is subtracted automatically.",
+  "DG2.Apply.Lethality": "Apply Lethality (0 HP)",
+  "DG2.Apply.LethalityTooltip": "The lethality roll succeeded: reduce targeted or selected tokens to 0 HP.",
+  "DG2.Apply.SanSuccessTooltip": "Apply the lower SAN loss (the SAN test succeeded).",
+  "DG2.Apply.SanFailTooltip": "Apply the higher SAN loss (the SAN test failed).",
+  "DG2.Apply.NoTarget": "Target or select a token first.",
+  "DG2.Apply.NoSanTarget": "No valid target with a Sanity score."
 }

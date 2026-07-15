@@ -1,8 +1,16 @@
 /* eslint-disable import/prefer-default-export */
+import { handleDG2ChatAction } from "./apply-effects.js";
 
 export async function handleInlineActions(btnWithAction, messageId) {
   const action = btnWithAction.dataset?.action;
   const message = game.messages.get(messageId);
+
+  // DG2 apply actions work off targets, not the message speaker.
+  if (action?.startsWith("dg2-")) {
+    await handleDG2ChatAction(btnWithAction, message);
+    return;
+  }
+
   const actor = message?.speakerActor;
   if (!actor) return;
 

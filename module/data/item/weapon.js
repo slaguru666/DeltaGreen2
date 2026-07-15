@@ -15,7 +15,8 @@ export default class WeaponItemData extends foundry.abstract.TypeDataModel {
       lethality: new NumberField({ initial: 0, integer: true }),
       isLethal: new BooleanField({ initial: false }),
       killRadius: new StringField({ initial: "N/A" }),
-      ammo: new StringField({ initial: "" }),
+      ammo: new NumberField({ initial: 0, integer: true, min: 0, nullable: false }),
+      ammoMax: new NumberField({ initial: 0, integer: true, min: 0, nullable: false }),
       expense: new StringField({ initial: "Standard" }),
       equipped: new BooleanField({ initial: true }),
     };

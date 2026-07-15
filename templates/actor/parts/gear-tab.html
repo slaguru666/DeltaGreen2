@@ -29,6 +29,7 @@
                 </span>
                 <span class="centered-item-property">{{localize 'DG.Gear.DamageOrLethality'}}</span>
                 <span class="centered-item-property">{{localize 'DG.Gear.ArmorPiercing'}}</span>
+                <span class="centered-item-property">{{localize 'DG2.Ammo.Header'}}</span>
                 <div class="item-controls">
                     <a class="item-control action-pill"
                        data-action="itemAction"
@@ -109,6 +110,22 @@
                     </span>
 
                     <span class="centered-item-property">{{item.system.armorPiercing}}</span>
+
+                    <span class="centered-item-property dg2-ammo-cell">
+                        {{#if (or item.system.ammo item.system.ammoMax)}}
+                            <span class="{{#unless item.system.ammo}}dg2-out-of-ammo{{/unless}}">
+                                {{item.system.ammo}}{{#if item.system.ammoMax}}/{{item.system.ammoMax}}{{/if}}
+                            </span>
+                            <a class="item-control"
+                               data-action="dg2Reload"
+                               data-item-id="{{item._id}}"
+                               title="{{localize 'DG2.Ammo.ReloadTooltip'}}">
+                                <i class="fas fa-rotate-left"></i>
+                            </a>
+                        {{else}}
+                            &mdash;
+                        {{/if}}
+                    </span>
 
                     <div class="item-controls">
                         <a class="item-control"

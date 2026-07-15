@@ -1,6 +1,10 @@
 <div class="dice-roll" data-action="expandRoll">
   <div class="dice-result">
-    <div style="{{styleOverride}}" class="dice-formula">{{resultString}}</div>
+    <div class="dg2-outcome {{outcomeClass}}">
+      <i class="fas {{outcomeIcon}}" aria-hidden="true"></i>
+      <span class="dg2-outcome-text">{{resultString}}</span>
+      {{#if marginText}}<span class="dg2-margin">{{marginText}}</span>{{/if}}
+    </div>
     <div class="dice-tooltip">
       <div class="wrapper">
         <section class="tooltip-part">
@@ -17,6 +21,11 @@
       </div>
     </div>
     <h4 class="dice-total">{{total}}</h4>
+    {{#if ammoLine}}
+      <div class="dg2-ammo-line {{#if outOfAmmo}}dg2-out-of-ammo{{/if}}">
+        <i class="fas fa-crosshairs" aria-hidden="true"></i> {{ammoLine}}
+      </div>
+    {{/if}}
   </div>
 
   {{#if failureMark}}

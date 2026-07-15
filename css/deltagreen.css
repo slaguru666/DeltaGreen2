@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic");
 
 @font-face {
   font-family: "atwriter";
@@ -1467,4 +1465,135 @@ a[data-action="applySkillImprovements"] {
   text-align: center;
   padding: 5px;
   grid-gap: 5px;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* Delta Green 2 additions                                             */
+/* ------------------------------------------------------------------ */
+
+/* Roll outcome banners on chat cards */
+.dg2-outcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 6px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-family: "Special Elite", "Courier New", monospace;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+}
+
+.dg2-outcome .dg2-margin {
+  font-size: 0.8em;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+.dg2-success {
+  background: rgba(85, 107, 47, 0.15);
+  border-color: rgba(85, 107, 47, 0.6);
+  color: #3c5325;
+}
+
+.dg2-crit-success {
+  background: rgba(85, 107, 47, 0.35);
+  border-color: #556b2f;
+  color: #2c3e1a;
+  font-weight: bold;
+}
+
+.dg2-failure {
+  background: rgba(139, 0, 0, 0.08);
+  border-color: rgba(139, 0, 0, 0.45);
+  color: #7a1a1a;
+}
+
+.dg2-crit-failure,
+.dg2-lethal {
+  background: rgba(139, 0, 0, 0.3);
+  border-color: #8b0000;
+  color: #5c0000;
+  font-weight: bold;
+}
+
+/* Keep banners readable on Foundry dark theme */
+.theme-dark .dg2-success { color: #a6c47a; }
+.theme-dark .dg2-crit-success { color: #c0dd8f; }
+.theme-dark .dg2-failure { color: #e08a8a; }
+.theme-dark .dg2-crit-failure,
+.theme-dark .dg2-lethal { color: #ff9d9d; }
+
+/* Apply buttons on damage / lethality / SAN cards */
+.dg2-apply-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+button.dg2-apply-button {
+  flex: 1;
+  font-size: 0.85em;
+  line-height: 1.6;
+  padding: 1px 4px;
+  border: 1px groove #666;
+  border-radius: 3px;
+  background: rgba(85, 107, 47, 0.2);
+  cursor: pointer;
+}
+
+button.dg2-apply-button:hover {
+  background: rgba(85, 107, 47, 0.45);
+  box-shadow: 0 0 4px rgba(85, 107, 47, 0.8);
+}
+
+button.dg2-apply-button.dg2-lethal,
+button.dg2-apply-button.dg2-san-fail {
+  background: rgba(139, 0, 0, 0.15);
+}
+
+button.dg2-apply-button.dg2-lethal:hover,
+button.dg2-apply-button.dg2-san-fail:hover {
+  background: rgba(139, 0, 0, 0.4);
+  box-shadow: 0 0 4px rgba(139, 0, 0, 0.8);
+}
+
+/* Ammo readout on chat cards and the gear tab */
+.dg2-ammo-line {
+  text-align: center;
+  font-size: 0.85em;
+  margin-top: 2px;
+  opacity: 0.9;
+}
+
+.dg2-out-of-ammo {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+.theme-dark .dg2-out-of-ammo {
+  color: #ff9d9d;
+}
+
+.dg2-ammo-cell {
+  white-space: nowrap;
+}
+
+.dg2-ammo-cell .item-control {
+  margin-left: 3px;
+}
+
+/* Ammo inputs on the weapon item sheet */
+.dg2-ammo-inputs {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.dg2-ammo-inputs input {
+  width: 55px;
+  text-align: center;
 }

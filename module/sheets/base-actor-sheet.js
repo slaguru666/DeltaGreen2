@@ -24,6 +24,8 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
       // Toggles.
       toggle: this._toggleGeneric,
       toggleItemSortMode: this._toggleItemSortMode,
+      // DG2 additions.
+      dg2Reload: this._onDG2Reload,
       // Other actions.
       browsePack: this._browsePack,
     },
@@ -1322,6 +1324,36 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
     await roll.evaluate();
     // Send the roll to chat.
     roll.toChat();
+  }
+
+  /**
+   * DG2: Reload a weapon to its magazine capacity.
+   * If no capacity is set yet, adopt the current ammo count as the capacity
+   * (covers items imported from the compendium, which only carry an ammo count).
+   */
+  static async _onDG2Reload(event, target) {
+    const itemId = target.closest("[data-item-id]")?.dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (!item) return;
+
+    const { ammo, ammoMax } = item.system;
+    if (!ammoMax && !ammo) {
+      ui.notifications.info(
+        `${item.name}: set an ammo capacity on the item sheet to enable reloading.`,
+      );
+      return;
+    }
+    if (!ammoMax) {
+      // First reload on a legacy/compendium item: current ammo becomes capacity.
+      await item.update({ "system.ammoMax": ammo });
+      ui.notifications.info(`${item.name}: magazine capacity set to ${ammo}.`);
+      return;
+    }
+    await item.update({ "system.ammo": ammoMax });
+    ChatMessage.create({
+      content: `${this.actor.name} reloads <b>${item.name}</b> (${ammoMax} rounds).`,
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+    });
   }
 
   /** Handler for generic toggle events */

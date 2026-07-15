@@ -6,6 +6,13 @@ export default function registerHandlebarsHelpers() {
     return DGUtils.localizeWithFallback(value, fallbackValue);
   });
 
+  // Logical OR - only register if the Foundry core version hasn't already.
+  if (!Handlebars.helpers.or) {
+    Handlebars.registerHelper("or", (...args) =>
+      args.slice(0, -1).some(Boolean),
+    );
+  }
+
   Handlebars.registerHelper("concat", (...args) => {
     let outStr = "";
     for (const arg in args) {

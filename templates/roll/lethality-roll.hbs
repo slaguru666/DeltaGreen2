@@ -1,0 +1,49 @@
+<div class="dice-roll" data-action="expandRoll">
+  <div class="dice-result">
+    <div class="dg2-outcome {{outcomeClass}}">
+      <i class="fas {{outcomeIcon}}" aria-hidden="true"></i>
+      <span class="dg2-outcome-text">{{resultString}}</span>
+    </div>
+    <div class="dice-tooltip">
+      <div class="wrapper">
+        <section class="tooltip-part">
+          <div class="dice">
+            <header class="part-header flexrow">
+              <span class="part-formula">d100</span>
+              <span class="part-total">{{total}}</span>
+            </header>
+            <ol class="dice-rolls">
+              <li class="roll die d100">{{total}}</li>
+            </ol>
+            <hr>
+            <header class="part-header flexrow">
+              <span class="part-formula">2d10 (d10 + d10)</span>
+              <span class="part-total">{{nonLethal.total}}</span>
+            </header>
+            <ol class="dice-rolls">
+              <li class="roll die d10">{{nonLethal.die1}}</li>
+              <li class="roll die d10">{{nonLethal.die2}}</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </div>
+    <h4 class="dice-total">{{total}} ({{nonLethal.total}} {{localize 'DG.Roll.Damage'}})</h4>
+    <div class="dg2-apply-row">
+      {{#if isLethal}}
+        <button type="button" class="dg2-apply-button dg2-lethal" data-action="dg2-apply-lethality"
+                data-tooltip="{{localize 'DG2.Apply.LethalityTooltip'}}">
+          <i class="fas fa-skull-crossbones" aria-hidden="true"></i>
+          {{localize 'DG2.Apply.Lethality'}}
+        </button>
+      {{else}}
+        <button type="button" class="dg2-apply-button" data-action="dg2-apply-damage"
+                data-damage="{{nonLethal.total}}" data-ap="{{ap}}"
+                data-tooltip="{{localize 'DG2.Apply.DamageTooltip'}}">
+          <i class="fas fa-heart-crack" aria-hidden="true"></i>
+          {{localize 'DG2.Apply.Damage'}} ({{nonLethal.total}}{{#if ap}}, AP {{ap}}{{/if}})
+        </button>
+      {{/if}}
+    </div>
+  </div>
+</div>

@@ -263,23 +263,52 @@ export class DGPercentileRoll extends DGRoll {
     const label = this.createLabel();
 
     let resultString = "";
-    let styleOverride = "";
+    let outcomeClass = "";
+    let outcomeIcon = "";
 
     if (this.isSuccess) {
       if (this.isCritical) {
-        resultString = `${game.i18n.localize("DG.Roll.CriticalSuccess")}`;
-        resultString = `${resultString.toUpperCase()}`;
-        styleOverride = "color: green";
+        resultString = `${game.i18n
+          .localize("DG.Roll.CriticalSuccess")
+          .toUpperCase()}`;
+        outcomeClass = "dg2-crit-success";
+        outcomeIcon = "fa-star";
       } else {
         resultString = `${game.i18n.localize("DG.Roll.Success")}`;
+        outcomeClass = "dg2-success";
+        outcomeIcon = "fa-check";
       }
     } else if (this.isCritical) {
-      resultString = `${game.i18n.localize("DG.Roll.CriticalFailure")}`;
-      resultString = `${resultString.toUpperCase()}`;
-      styleOverride = "color: red";
+      resultString = `${game.i18n
+        .localize("DG.Roll.CriticalFailure")
+        .toUpperCase()}`;
+      outcomeClass = "dg2-crit-failure";
+      outcomeIcon = "fa-skull";
     } else {
       resultString = `${game.i18n.localize("DG.Roll.Failure")}`;
+      outcomeClass = "dg2-failure";
+      outcomeIcon = "fa-xmark";
     }
+
+    // Margin of success/failure, e.g. "made it by 23".
+    let marginText = "";
+    if (typeof this.effectiveTarget === "number") {
+      const margin = this.isSuccess
+        ? this.effectiveTarget - this.total
+        : this.total - this.effectiveTarget;
+      marginText = this.isSuccess
+        ? `${DGUtils.localizeWithFallback(
+            "DG2.Roll.MadeItBy",
+            "made it by",
+          )} ${margin}`
+        : `${DGUtils.localizeWithFallback(
+            "DG2.Roll.MissedBy",
+            "missed by",
+          )} ${margin}`;
+    }
+
+    // Expend ammunition on weapon attack rolls.
+    const { ammoLine, outOfAmmo } = await this.expendAmmo();
 
     const failureMark =
       this.actor?.type === "agent" &&
@@ -292,11 +321,15 @@ export class DGPercentileRoll extends DGRoll {
     const html = await renderTemplate(
       "systems/deltagreen2/templates/roll/percentile-roll.hbs",
       {
-        styleOverride,
+        outcomeClass,
+        outcomeIcon,
+        marginText,
         resultString,
         formula: this.formula,
         total: this.total,
         failureMark,
+        ammoLine,
+        outOfAmmo,
       },
     );
 
@@ -306,7 +339,7 @@ export class DGPercentileRoll extends DGRoll {
 
       const message = await this.toMessage({
         flags: {
-          deltagreen: {
+          deltagreen2: {
             rollbacks: {
               [keyForUpdate]: false,
             },
@@ -329,6 +362,43 @@ export class DGPercentileRoll extends DGRoll {
     }
 
     return this.toMessage({ content: html, flavor: label });
+  }
+
+  /**
+   * Expend one round of ammunition on a weapon attack roll.
+   * Only applies to owned weapon items that track ammo (ammo or ammoMax > 0),
+   * and only when the ammoTracking setting is enabled.
+   *
+   * @returns {Promise<Object>} - { ammoLine, outOfAmmo } for the chat card, or {}.
+   */
+  async expendAmmo() {
+    if (this.type !== "weapon" || !this.item?.isOwned) return {};
+    if (!game.settings.get(DG.ID, "ammoTracking")) return {};
+
+    const ammo = this.item.system.ammo ?? 0;
+    const ammoMax = this.item.system.ammoMax ?? 0;
+    if (ammo <= 0 && ammoMax <= 0) return {}; // This weapon does not track ammo.
+
+    if (ammo <= 0) {
+      return {
+        ammoLine: DGUtils.localizeWithFallback(
+          "DG2.Ammo.OutOfAmmo",
+          "OUT OF AMMO — reload!",
+        ),
+        outOfAmmo: true,
+      };
+    }
+
+    const remaining = ammo - 1;
+    await this.item.update({ "system.ammo": remaining });
+    const maxDisplay = ammoMax > 0 ? ` / ${ammoMax}` : "";
+    return {
+      ammoLine: `${DGUtils.localizeWithFallback(
+        "DG2.Ammo.Remaining",
+        "Ammo",
+      )}: ${remaining}${maxDisplay}`,
+      outOfAmmo: remaining === 0,
+    };
   }
 
   /**
@@ -572,13 +642,21 @@ export class DGLethalityRoll extends DGPercentileRoll {
    * @override
    */
   async toChat() {
+    // Note: intentionally target + modifier, not effectiveTarget - a lethality
+    // roll is a property of the weapon, so exhaustion penalties do not apply.
+    const isLethal = this.total <= this.target + this.modifier;
+
     let resultString = "";
-    let styleOverride = "";
-    if (this.total <= this.target) {
+    let outcomeClass = "";
+    let outcomeIcon = "";
+    if (isLethal) {
       resultString = `${game.i18n.localize("DG.Roll.Lethal").toUpperCase()}`;
-      styleOverride = "color: red";
+      outcomeClass = "dg2-lethal";
+      outcomeIcon = "fa-skull-crossbones";
     } else {
       resultString = `${game.i18n.localize("DG.Roll.Failure")}`;
+      outcomeClass = "dg2-failure";
+      outcomeIcon = "fa-xmark";
     }
 
     const { nonLethalDamage } = this;
@@ -593,47 +671,18 @@ export class DGLethalityRoll extends DGPercentileRoll {
       label += ` (${DGUtils.formatStringWithLeadingPlus(this.modifier)}%)`;
     }
 
-    let html = "";
-    html += `<div class="dice-roll" data-action="expandRoll">`;
-    html += `     <div class="dice-result">`;
-    html += `     <div style="${styleOverride}" class="dice-formula">${resultString}</div>`;
-    html += `     <div class="dice-tooltip">`;
-    html += `          <div class="wrapper">`;
-    html += `          <section class="tooltip-part">`;
-    html += `               <div class="dice">`;
-    html += `                    <header class="part-header flexrow">`;
-    html += `                         <span class="part-formula">`;
-    html += `                              d100`;
-    html += `                         </span>`;
-    html += `                         <span class="part-total">`;
-    html += `                              ${this.total}`;
-    html += `                         </span>`;
-    html += `                    </header>`;
-    html += `                    <ol class="dice-rolls">`;
-    html += `                         <li class="roll die d100">${this.total}`;
-    html += `                    </ol>`;
-    html += `                    <hr>`;
-    html += `                    <header class="part-header flexrow">`;
-    html += `                         <span class="part-formula">`;
-    html += `                              2d10 (d10 + d10)`;
-    html += `                         </span>`;
-    html += `                         <span class="part-total">`;
-    html += `                              ${nonLethalDamage.total}`;
-    html += `                         </span>`;
-    html += `                    </header>`;
-    html += `                    <ol class="dice-rolls">`;
-    html += `                         <li class="roll die d10">${nonLethalDamage.die1}</li>`;
-    html += `                         <li class="roll die d10">${nonLethalDamage.die2}</li>`;
-    html += `                    </ol>`;
-    html += `               </div>`;
-    html += `          </section>`;
-    html += `          </div>`;
-    html += `     </div>`;
-    html += `     <h4 class="dice-total">${this.total} (${
-      nonLethalDamage.total
-    } ${game.i18n.localize("DG.Roll.Damage")})</h4>`;
-    html += `     </div>`;
-    html += `</div>`;
+    const html = await renderTemplate(
+      "systems/deltagreen2/templates/roll/lethality-roll.hbs",
+      {
+        resultString,
+        outcomeClass,
+        outcomeIcon,
+        total: this.total,
+        nonLethal: nonLethalDamage,
+        isLethal,
+        ap: this.item?.system.armorPiercing ?? 0,
+      },
+    );
 
     return this.toMessage({ content: html, flavor: label });
   }
@@ -705,7 +754,20 @@ export class DGDamageRoll extends DGRoll {
       // console.log(ex);
       label = `Rolling <b>DAMAGE</b> for <b>${label.toUpperCase()}</b>`;
     }
-    return this.toMessage({ content: this.total, flavor: label });
+
+    const html = await renderTemplate(
+      "systems/deltagreen2/templates/roll/damage-roll.hbs",
+      {
+        formula: this.formula,
+        total: this.total,
+        dice: this.dice.flatMap((die) =>
+          die.results.map((r) => ({ faces: die.faces, result: r.result })),
+        ),
+        ap: this.item?.system.armorPiercing ?? 0,
+      },
+    );
+
+    return this.toMessage({ content: html, flavor: label });
   }
 
   async showDialog() {
@@ -790,44 +852,18 @@ export class DGSanityDamageRoll extends DGRoll {
       "SAN DAMAGE",
     )}</b> For <b>${lowDie.formula} / ${highDie.formula}</b>`;
 
-    let html = "";
-    html += `<div class="dice-roll" data-action="expandRoll">`;
-    html += `     <div class="dice-result">`;
-    html += `     <div class="dice-formula">${lowDie.formula} / ${highDie.formula}</div>`;
-    html += `     <div class="dice-tooltip">`;
-    html += `          <div class="wrapper">`;
-    html += `          <section class="tooltip-part">`;
-    html += `               <div class="dice">`;
-    html += `                    <header class="part-header flexrow">`;
-    html += `                         <span class="part-formula">`;
-    html += `                              ${lowDie.formula}`;
-    html += `                         </span>`;
-    html += `                         <span class="part-total">`;
-    html += `                              ${lowResult}`;
-    html += `                         </span>`;
-    html += `                    </header>`;
-    html += `                    <ol class="dice-rolls">`;
-    html += `                         <li class="roll die d${lowDie.faces}">${lowResult}`;
-    html += `                    </ol>`;
-    html += `                    <hr>`;
-    html += `                    <header class="part-header flexrow">`;
-    html += `                         <span class="part-formula">`;
-    html += `                               ${highDie.formula}`;
-    html += `                         </span>`;
-    html += `                         <span class="part-total">`;
-    html += `                               ${highResult}`;
-    html += `                         </span>`;
-    html += `                    </header>`;
-    html += `                    <ol class="dice-rolls">`;
-    html += `                         <li class="roll die d${highDie.faces}">${highResult}</li>`;
-    html += `                    </ol>`;
-    html += `               </div>`;
-    html += `          </section>`;
-    html += `          </div>`;
-    html += `     </div>`;
-    html += `     <h4 class="dice-total">${lowResult} / ${highResult}</h4>`;
-    html += `     </div>`;
-    html += `</div>`;
+    const html = await renderTemplate(
+      "systems/deltagreen2/templates/roll/sanity-damage-roll.hbs",
+      {
+        lowFormula: lowDie.formula,
+        highFormula: highDie.formula,
+        lowFaces: lowDie.faces,
+        highFaces: highDie.faces,
+        lowResult,
+        highResult,
+      },
+    );
+
     return this.toMessage({ content: html, flavor });
   }
 
