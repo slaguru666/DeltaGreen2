@@ -1,6 +1,10 @@
 /* eslint-disable max-classes-per-file */
 import DGUtils from "../other/utility-functions.js";
 import DG from "../config.js";
+import {
+  tagRollDice,
+  colorsetForPercentileRoll,
+} from "../integrations/dice-so-nice.js";
 
 const { renderTemplate } = foundry.applications.handlebars;
 const { DialogV2 } = foundry.applications.api;
@@ -259,6 +263,8 @@ export class DGPercentileRoll extends DGRoll {
     const diceSoNice =
       game.modules.has("dice-so-nice") &&
       game.modules.get("dice-so-nice").active;
+
+    tagRollDice(this, colorsetForPercentileRoll(this));
 
     const label = this.createLabel();
 
@@ -642,6 +648,8 @@ export class DGLethalityRoll extends DGPercentileRoll {
    * @override
    */
   async toChat() {
+    tagRollDice(this, "dg2-lethality");
+
     // Note: intentionally target + modifier, not effectiveTarget - a lethality
     // roll is a property of the weapon, so exhaustion penalties do not apply.
     const isLethal = this.total <= this.target + this.modifier;
@@ -741,6 +749,8 @@ export class DGDamageRoll extends DGRoll {
    * @override
    */
   async toChat() {
+    tagRollDice(this, "dg2-lethality");
+
     let label = this.formula;
     try {
       label = `${game.i18n.localize("DG.Roll.Rolling")} <b>${game.i18n
@@ -841,6 +851,8 @@ export class DGSanityDamageRoll extends DGRoll {
    * @override
    */
   async toChat() {
+    tagRollDice(this, "dg2-unnatural");
+
     const [lowDie, highDie] = this.terms[0].terms.map((formula) => {
       return Roll.parse(formula)[0] || { faces: parseInt(formula), number: 1 };
     });

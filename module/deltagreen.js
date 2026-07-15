@@ -17,6 +17,7 @@ import {
   rollSkillTestAndDamageForOwnedItem,
 } from "./other/macro-functions.js";
 import { handleInlineActions } from "./other/inline.js";
+import { registerDG2DiceSoNice } from "./integrations/dice-so-nice.js";
 import DGNPCSheet from "./sheets/npc-sheet.js";
 import DGUnnaturalSheet from "./sheets/unnatural-sheet.js";
 import DGVehicleSheet from "./sheets/vehicle-sheet.js";
@@ -208,6 +209,15 @@ Hooks.on("createActor", async (actor, options, userId) => {
     }
   } catch (ex) {
     console.log(ex);
+  }
+});
+
+// Register themed Delta Green 2 dice with Dice So Nice, if present.
+Hooks.once("diceSoNiceReady", (dice3d) => {
+  try {
+    registerDG2DiceSoNice(dice3d);
+  } catch (ex) {
+    console.warn("Delta Green 2 | Failed to register Dice So Nice theme", ex);
   }
 });
 
