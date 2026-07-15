@@ -27,6 +27,7 @@
     ],
     "styles": [
         "css/deltagreen.css",
+        "css/dg2-tactical.css",
         "css/dialogue.css"
     ],
     "languages": [

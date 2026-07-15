@@ -1,0 +1,533 @@
+/* ==================================================================== */
+/* Delta Green 2 — "Tactical" sheet theme                               */
+/* Modern federal-dossier look: dark surfaces, olive accent, Public Sans */
+/* Applied when the characterSheetStyle setting is "tactical".          */
+/* ==================================================================== */
+
+.deltagreen2 .tactical-style {
+  --dg2-bg: #15171c;
+  --dg2-panel: #1d2026;
+  --dg2-panel-hover: #242832;
+  --dg2-border: #31363f;
+  --dg2-hairline: #272b32;
+  --dg2-text: #e6e8ea;
+  --dg2-text-muted: #8f98a3;
+  --dg2-olive: #8aa353;
+  --dg2-olive-bright: #a9c46a;
+  --dg2-olive-deep: #556b2f;
+  --dg2-steel: #6b93b8;
+  --dg2-red: #d4553c;
+  --dg2-input-bg: #12141a;
+
+  color: var(--dg2-text);
+}
+
+.window-content.tactical-style {
+  background: linear-gradient(160deg, #181b21 0%, #14161b 60%, #121419 100%) !important;
+  font-family: "PublicSans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Outranks the stock ".deltagreen2 section.window-content { color: black }" */
+.deltagreen2 section.window-content.tactical-style {
+  color: var(--dg2-text);
+  scrollbar-color: var(--dg2-border) transparent !important;
+
+  input[type="checkbox"]:checked::before {
+    color: var(--dg2-olive-bright);
+  }
+}
+
+/* Beat the font-setting utility classes if one is also applied */
+.tactical-style.special-elite-font,
+.tactical-style.martel-font,
+.tactical-style.signika-font,
+.tactical-style.typewriter-condensed-font,
+.tactical-style.public-sans-font,
+.tactical-style .special-elite-font,
+.tactical-style .martel-font,
+.tactical-style .signika-font,
+.tactical-style .typewriter-condensed-font {
+  font-family: "PublicSans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Inputs                                                              */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style input[type="text"],
+.deltagreen2 .tactical-style input[type="number"],
+.deltagreen2 .tactical-style select,
+.deltagreen2 .tactical-style textarea,
+.deltagreen2 .tactical-style button {
+  font-family: "PublicSans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.deltagreen2 .tactical-style input[type="text"],
+.deltagreen2 .tactical-style input[type="number"],
+.deltagreen2 .tactical-style select,
+.deltagreen2 .tactical-style textarea {
+  background: var(--dg2-input-bg);
+  color: var(--dg2-text);
+  border: 1px solid var(--dg2-border);
+  border-radius: 4px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.deltagreen2 .tactical-style input[type="text"]:hover,
+.deltagreen2 .tactical-style input[type="number"]:hover {
+  border-color: #3d434e;
+}
+
+.deltagreen2 .tactical-style input[type="text"]:focus,
+.deltagreen2 .tactical-style input[type="number"]:focus,
+.deltagreen2 .tactical-style textarea:focus {
+  border-color: var(--dg2-olive);
+  box-shadow: 0 0 6px rgba(138, 163, 83, 0.35);
+  outline: none;
+}
+
+.deltagreen2 .tactical-style input:disabled {
+  color: var(--dg2-text-muted);
+  background: transparent;
+  border-color: var(--dg2-hairline);
+}
+
+.deltagreen2 .tactical-style input[type="checkbox"] {
+  accent-color: var(--dg2-olive);
+}
+
+.deltagreen2 .tactical-style ::placeholder {
+  color: #5c6572;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* Header: portrait, name plate, profession                            */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style .sheet-header .profile-img {
+  border: 1px solid var(--dg2-border);
+  border-radius: 4px;
+  background: var(--dg2-panel);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.deltagreen2 .tactical-style .sheet-header h1.charname input {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid var(--dg2-olive-deep);
+  border-radius: 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dg2-text);
+  padding-left: 2px;
+}
+
+.deltagreen2 .tactical-style .sheet-header h1.charname input:focus {
+  border-bottom-color: var(--dg2-olive-bright);
+  box-shadow: none;
+}
+
+.deltagreen2 .tactical-style .sheet-header h2.profession input {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dg2-olive);
+  padding-left: 2px;
+  height: 30px;
+}
+
+.deltagreen2 .tactical-style .sheet-header h2.profession input:focus {
+  box-shadow: none;
+  color: var(--dg2-olive-bright);
+}
+
+/* ------------------------------------------------------------------ */
+/* Resource cards: HP / WP / SAN                                       */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style .resources {
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.deltagreen2 .tactical-style .resource-outer-grid-1col {
+  background: var(--dg2-panel);
+  border: 1px solid var(--dg2-border);
+  border-top: 3px solid var(--dg2-olive);
+  border-radius: 6px;
+  padding: 6px 8px 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.deltagreen2 .tactical-style .resources .resource-outer-grid-1col:nth-child(2) {
+  border-top-color: var(--dg2-steel);
+}
+
+.deltagreen2 .tactical-style .resources .resource-outer-grid-1col:nth-child(3) {
+  border-top-color: var(--dg2-red);
+}
+
+.deltagreen2 .tactical-style .resource-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dg2-text-muted);
+}
+
+.deltagreen2 .tactical-style .resource-inner-grid-3col input.centered {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dg2-text);
+}
+
+.deltagreen2 .tactical-style .max-resource-value {
+  border: 1px solid var(--dg2-hairline);
+  border-radius: 4px;
+  color: var(--dg2-text-muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/* Tab navigation                                                      */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style .tabs {
+  height: 2rem;
+  line-height: 2rem;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.deltagreen2 .tactical-style .tabs [data-action="tab"] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dg2-text-muted);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.deltagreen2 .tactical-style .tabs [data-action="tab"]:hover {
+  color: var(--dg2-text);
+  text-shadow: none;
+}
+
+.deltagreen2 .tactical-style .tabs [data-action="tab"].active {
+  background: transparent;
+  color: var(--dg2-olive-bright);
+  border-bottom: 2px solid var(--dg2-olive);
+  font-style: normal;
+  text-shadow: none;
+}
+
+.deltagreen2 .tactical-style .tab {
+  border: none;
+  border-top: 1px solid var(--dg2-hairline);
+  border-radius: 0;
+  padding: 8px 4px 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dg2-border) transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/* Section dividers                                                    */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style div.horizontal-bar-section-divider,
+.deltagreen2 .tactical-style div.horizontal-bar-section-header {
+  background: transparent;
+  color: var(--dg2-olive);
+  border-left: 4px solid var(--dg2-olive);
+  border-bottom: 1px solid var(--dg2-hairline);
+  border-radius: 0;
+  height: 28px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 8px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  justify-content: start;
+}
+
+.deltagreen2 .tactical-style div.horizontal-bar-section-divider:not(.skills-header) {
+  display: flex;
+  align-items: center;
+}
+
+.deltagreen2 .tactical-style .horizontal-bar-section-divider .toggle-untrained {
+  color: var(--dg2-text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------------ */
+/* Skills grid                                                         */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style .grid-3col {
+  gap: 4px 8px;
+}
+
+.deltagreen2 .tactical-style .flex-thin-border {
+  background: var(--dg2-panel);
+  border: 1px solid var(--dg2-hairline);
+  border-left: 3px solid var(--dg2-border);
+  border-radius: 4px;
+  padding: 3px 6px;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.deltagreen2 .tactical-style .flex-thin-border:hover {
+  background: var(--dg2-panel-hover);
+  border-left-color: var(--dg2-olive);
+}
+
+/* Dim untrained skills as a whole row */
+.deltagreen2 .tactical-style .flex-thin-border:has(.not-rollable) {
+  opacity: 0.45;
+}
+
+.deltagreen2 .tactical-style .flex-thin-border {
+  align-items: center;
+  min-height: 30px;
+}
+
+.deltagreen2 .tactical-style .skill-label {
+  color: var(--dg2-text);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-content: center;
+}
+
+.deltagreen2 .tactical-style .skill-label .fa-dice {
+  color: var(--dg2-text-muted);
+  opacity: 0.4;
+  transition: opacity 0.12s ease, color 0.12s ease;
+}
+
+.deltagreen2 .tactical-style .flex-thin-border:hover .rollable .fa-dice {
+  color: var(--dg2-olive-bright);
+  opacity: 1;
+}
+
+.deltagreen2 .tactical-style input.percentile-skill-input {
+  font-weight: 700;
+  color: var(--dg2-olive-bright);
+  height: 1.45rem;
+}
+
+.deltagreen2 .tactical-style .flex-thin-border:has(.not-rollable) input.percentile-skill-input {
+  color: var(--dg2-text-muted);
+}
+
+/* Interactive elements */
+.deltagreen2 .tactical-style .rollable:hover,
+.deltagreen2 .tactical-style .rollable:focus {
+  color: var(--dg2-olive-bright);
+  text-shadow: none;
+}
+
+.deltagreen2 .tactical-style a:hover {
+  text-shadow: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Item lists (Equipment tab etc.)                                     */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style .items-list .item-header {
+  background: transparent;
+  border-bottom: 1px solid var(--dg2-border);
+  color: var(--dg2-text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 0;
+}
+
+.deltagreen2 .tactical-style .items-list .item {
+  border-bottom: 1px solid var(--dg2-hairline);
+  padding: 3px 2px;
+  transition: background 0.12s ease;
+}
+
+.deltagreen2 .tactical-style .items-list .item:not(.item-header):hover {
+  background: var(--dg2-panel-hover);
+}
+
+.deltagreen2 .tactical-style .items-list .item img.item-image {
+  border: 1px solid var(--dg2-hairline);
+  border-radius: 3px;
+  background: var(--dg2-input-bg);
+  filter: invert(0.85) hue-rotate(180deg);
+}
+
+.deltagreen2 .tactical-style .item-controls a {
+  color: var(--dg2-text-muted);
+  transition: color 0.12s ease;
+}
+
+.deltagreen2 .tactical-style .item-controls a:hover {
+  color: var(--dg2-olive-bright);
+}
+
+.deltagreen2 .tactical-style .item-controls a.action-pill {
+  border: 1px solid var(--dg2-border);
+  border-radius: 20px;
+  padding: 1px 8px;
+  font-size: 0.75rem;
+}
+
+.deltagreen2 .tactical-style .item-controls a.action-pill:hover {
+  border-color: var(--dg2-olive);
+  color: var(--dg2-olive-bright);
+}
+
+.deltagreen2 .tactical-style .dg-red,
+.deltagreen2 .tactical-style .dg2-out-of-ammo {
+  color: var(--dg2-red);
+}
+
+/* ------------------------------------------------------------------ */
+/* Contrast fixes: stock rules paint text black for the paper themes   */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style label,
+.deltagreen2 .tactical-style span,
+.deltagreen2 .tactical-style p,
+.deltagreen2 .tactical-style b,
+.deltagreen2 .tactical-style h3,
+.deltagreen2 .tactical-style h4,
+.deltagreen2 .tactical-style .item-name {
+  color: inherit;
+}
+
+/* ------------------------------------------------------------------ */
+/* Buttons and misc                                                    */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2 .tactical-style button {
+  background: var(--dg2-panel);
+  color: var(--dg2-text);
+  border: 1px solid var(--dg2-border);
+  border-radius: 4px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.deltagreen2 .tactical-style button:hover {
+  border-color: var(--dg2-olive);
+  background: var(--dg2-panel-hover);
+  box-shadow: none;
+}
+
+.deltagreen2 .tactical-style span.max-attribute-value-label {
+  border-color: var(--dg2-hairline);
+  color: var(--dg2-text-muted);
+}
+
+.deltagreen2 .tactical-style ::-webkit-scrollbar-thumb {
+  background: var(--dg2-border);
+  border: none;
+  border-radius: 4px;
+}
+
+.deltagreen2 .tactical-style ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ------------------------------------------------------------------ */
+/* Item sheets (ApplicationV1: theme class sits on the app root)       */
+/* ------------------------------------------------------------------ */
+
+.deltagreen2.item.tactical-style {
+  --dg2-panel: #1d2026;
+  --dg2-border: #31363f;
+  --dg2-hairline: #272b32;
+  --dg2-text: #e6e8ea;
+  --dg2-text-muted: #8f98a3;
+  --dg2-olive: #8aa353;
+  --dg2-olive-bright: #a9c46a;
+  --dg2-input-bg: #12141a;
+}
+
+.deltagreen2.item.tactical-style .window-content {
+  background: linear-gradient(160deg, #181b21 0%, #14161b 60%, #121419 100%) !important;
+  color: var(--dg2-text);
+  font-family: "PublicSans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.deltagreen2.item.tactical-style .window-content label,
+.deltagreen2.item.tactical-style .window-content span,
+.deltagreen2.item.tactical-style .window-content p,
+.deltagreen2.item.tactical-style .window-content .resource-label {
+  color: inherit;
+}
+
+.deltagreen2.item.tactical-style .window-content input[type="text"],
+.deltagreen2.item.tactical-style .window-content input[type="number"],
+.deltagreen2.item.tactical-style .window-content select,
+.deltagreen2.item.tactical-style .window-content textarea {
+  background: var(--dg2-input-bg);
+  color: var(--dg2-text);
+  border: 1px solid var(--dg2-border);
+  border-radius: 4px;
+  font-family: "PublicSans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.deltagreen2.item.tactical-style .window-content input:focus,
+.deltagreen2.item.tactical-style .window-content textarea:focus {
+  border-color: var(--dg2-olive);
+  box-shadow: 0 0 6px rgba(138, 163, 83, 0.35);
+  outline: none;
+}
+
+.deltagreen2.item.tactical-style .window-content input[type="checkbox"] {
+  accent-color: var(--dg2-olive);
+}
+
+.deltagreen2.item.tactical-style .window-content img {
+  border-color: var(--dg2-border);
+}
+
+.deltagreen2.item.tactical-style .sheet-tabs [data-tab] {
+  color: var(--dg2-text-muted);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.deltagreen2.item.tactical-style .sheet-tabs [data-tab].active {
+  color: var(--dg2-olive-bright);
+  border-bottom: 2px solid var(--dg2-olive);
+  text-shadow: none;
+}
+
+.deltagreen2.item.tactical-style .window-content .editor,
+.deltagreen2.item.tactical-style .window-content .editor-content {
+  background: var(--dg2-panel);
+  color: var(--dg2-text);
+  border: 1px solid var(--dg2-hairline);
+  border-radius: 4px;
+}

@@ -225,7 +225,10 @@ export default function registerHandlebarsHelpers() {
     if (characterSheetStyle === "outlaw") {
       return "outlaw-style";
     }
-    return "program-style";
+    if (characterSheetStyle === "program") {
+      return "program-style";
+    }
+    return "tactical-style";
   });
 
   Handlebars.registerHelper("keepSanityPrivate", () => {

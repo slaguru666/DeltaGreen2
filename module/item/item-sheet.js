@@ -13,8 +13,14 @@ export default class DeltaGreenItemSheet extends foundry.appv1.sheets
   .ItemSheet {
   /** @override */
   static get defaultOptions() {
+    let themeClass = "program-style";
+    try {
+      themeClass = `${game.settings.get("deltagreen2", "characterSheetStyle")}-style`;
+    } catch {
+      // settings not ready; fall back to default
+    }
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["deltagreen2", "sheet", "item"],
+      classes: ["deltagreen2", "sheet", "item", themeClass],
       width: 520,
       height: 600,
       tabs: [

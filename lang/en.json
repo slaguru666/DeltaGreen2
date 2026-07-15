@@ -396,5 +396,6 @@
   "DG2.Apply.SanSuccessTooltip": "Apply the lower SAN loss (the SAN test succeeded).",
   "DG2.Apply.SanFailTooltip": "Apply the higher SAN loss (the SAN test failed).",
   "DG2.Apply.NoTarget": "Target or select a token first.",
-  "DG2.Apply.NoSanTarget": "No valid target with a Sanity score."
+  "DG2.Apply.NoSanTarget": "No valid target with a Sanity score.",
+  "DG.Settings.charactersheet.tactical": "Tactical (Delta Green 2 modern)"
 }

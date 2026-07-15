@@ -296,11 +296,12 @@ export default function registerSystemSettings() {
     type: String,
     choices: {
       // If choices are defined, the resulting setting will be a select menu
+      tactical: game.i18n.localize("DG.Settings.charactersheet.tactical"),
       cowboy: game.i18n.localize("DG.Settings.charactersheet.cowboys"),
       outlaw: game.i18n.localize("DG.Settings.charactersheet.outlaws"),
       program: game.i18n.localize("DG.Settings.charactersheet.program"),
     },
-    default: "program", // The default value for the setting
+    default: "tactical", // The default value for the setting
     onChange: (value) => {
       // A callback function which triggers when the setting is changed
       // console.log(value)

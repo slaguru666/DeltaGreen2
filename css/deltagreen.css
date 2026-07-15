@@ -38,7 +38,7 @@
 
 /* Global styles */
 
-.deltagreen section.window-content {
+.deltagreen2 section.window-content {
   scrollbar-color: #215112 #111 !important;
   padding: 0.5rem;
   color: black; /* Override for when in Foundry's dark mode */
@@ -290,7 +290,7 @@ explicitly define a number of rows, rather than columns. */
   text-align: left;
 }
 
-.deltagreen .sheet-header {
+.deltagreen2 .sheet-header {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 400px;
   flex: 0 0 auto;
@@ -310,7 +310,7 @@ explicitly define a number of rows, rather than columns. */
   margin-bottom: 8px;
 }
 
-.deltagreen .sheet-header .profile-img {
+.deltagreen2 .sheet-header .profile-img {
   height: 100px;
   flex: 0 0 100px;
   -webkit-box-flex: 0;
@@ -322,13 +322,13 @@ explicitly define a number of rows, rather than columns. */
   margin-right: 5px;
 }
 
-.deltagreen .sheet-header .header-fields {
+.deltagreen2 .sheet-header .header-fields {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.deltagreen .sheet-header h1.charname {
+.deltagreen2 .sheet-header h1.charname {
   height: 55px;
   font-family: inherit;
   font-size: 2rem;
@@ -337,13 +337,13 @@ explicitly define a number of rows, rather than columns. */
   margin-bottom: 0;
 }
 
-.deltagreen .sheet-header h1.charname input {
+.deltagreen2 .sheet-header h1.charname input {
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
-.deltagreen .resource-label {
+.deltagreen2 .resource-label {
   font-weight: bold;
 }
 
@@ -352,7 +352,7 @@ explicitly define a number of rows, rather than columns. */
   border-top: transparent !important;
 }
 
-.deltagreen .tabs {
+.deltagreen2 .tabs {
   height: 1.5rem;
   line-height: 1.5rem;
   text-align: center;
@@ -361,7 +361,7 @@ explicitly define a number of rows, rather than columns. */
   padding-bottom: 0px !important;
 }
 
-.deltagreen .tabs [data-action="tab"] {
+.deltagreen2 .tabs [data-action="tab"] {
   font-weight: bold;
   color: inherit;
   vertical-align: middle !important;
@@ -375,7 +375,7 @@ explicitly define a number of rows, rather than columns. */
   border-style: solid;
 }
 
-.deltagreen .tabs [data-action="tab"].active {
+.deltagreen2 .tabs [data-action="tab"].active {
   text-shadow: none;
   font-style: italic;
   border: #000;
@@ -383,7 +383,7 @@ explicitly define a number of rows, rather than columns. */
   border-style: solid;
 }
 
-.deltagreen .tab {
+.deltagreen2 .tab {
   height: 100%;
   overflow-y: auto;
 
@@ -395,45 +395,45 @@ explicitly define a number of rows, rather than columns. */
   padding: 5px;
 }
 
-.deltagreen .program-style .tabs [data-action="tab"].active {
+.deltagreen2 .program-style .tabs [data-action="tab"].active {
   background-color: #000000;
   color: #ffffff;
 }
 
-.deltagreen .cowboy-style .tabs [data-action="tab"].active {
+.deltagreen2 .cowboy-style .tabs [data-action="tab"].active {
   background-color: rgba(156, 115, 18, 0.3);
   color: #000000;
 }
 
-.deltagreen .items-list {
+.deltagreen2 .items-list {
   list-style: none;
   /*margin: 7px 0; */
   padding: 0;
   overflow-y: auto;
 }
 
-.deltagreen .items-list .item-header {
+.deltagreen2 .items-list .item-header {
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.deltagreen .items-list .item {
+.deltagreen2 .items-list .item {
   min-height: 30px;
   line-height: 24px;
   padding: 3px 0;
   border-bottom: 1px solid #bbb;
 }
 
-.deltagreen .items-list .item .item-image {
+.deltagreen2 .items-list .item .item-image {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 24px;
   flex: 0 0 24px;
   margin-right: 5px;
 }
 
-.deltagreen .items-list .item .item-bond-damage {
+.deltagreen2 .items-list .item .item-bond-damage {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 24px;
   flex: 0 0 24px;
@@ -442,11 +442,11 @@ explicitly define a number of rows, rather than columns. */
   justify-self: center;
 }
 
-.deltagreen .items-list .item img {
+.deltagreen2 .items-list .item img {
   display: block;
 }
 
-.deltagreen .items-list .item-name {
+.deltagreen2 .items-list .item-name {
   display: flex;
   align-content: center;
 
@@ -455,18 +455,18 @@ explicitly define a number of rows, rather than columns. */
   margin: 0;
 }
 
-.deltagreen .items-list .item-controls {
+.deltagreen2 .items-list .item-controls {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 86px;
   flex: 0 0 86px;
   text-align: right;
 }
 
-.deltagreen .skill-and-training-controls {
+.deltagreen2 .skill-and-training-controls {
   flex: 0 0 35px;
 }
 
-.deltagreen .action-pill {
+.deltagreen2 .action-pill {
   padding: 2px;
   border-radius: 2.5px;
   font-size: 0.8rem;
@@ -474,7 +474,7 @@ explicitly define a number of rows, rather than columns. */
   background-color: rgba(0, 0, 0, 0.185);
 }
 
-.deltagreen[id^="dg-settings"] {
+.deltagreen2[id^="dg-settings"] {
   .window-content > div.flexcol {
     gap: 1rem;
   }
@@ -520,12 +520,12 @@ span.max-attribute-value-label {
   height: 26px;
 }
 
-.deltagreen .skill-label {
+.deltagreen2 .skill-label {
   margin: 2px;
   align-content: flex-start;
 }
 
-.deltagreen .skill-type-label {
+.deltagreen2 .skill-type-label {
   margin: 2px;
 }
 
@@ -547,15 +547,15 @@ input.checkbox-skill-input:disabled {
   visibility: hidden;
 }
 
-.deltagreen .sheet-header .header-top {
+.deltagreen2 .sheet-header .header-top {
   margin-bottom: 5px;
 }
 
-.deltagreen .sheet-header .charname input {
+.deltagreen2 .sheet-header .charname input {
   /* font-family: "SpecialElite", sans-serif; */
 }
 
-.deltagreen .sheet-header h2.profession {
+.deltagreen2 .sheet-header h2.profession {
   font-family: inherit;
   font-size: 1.5rem;
   border-bottom: 0;
@@ -563,7 +563,7 @@ input.checkbox-skill-input:disabled {
   margin-bottom: 0;
 }
 
-.deltagreen .sheet-header h2.profession input {
+.deltagreen2 .sheet-header h2.profession input {
   width: 100%;
   height: 40px;
   margin: 0;
@@ -889,16 +889,16 @@ div.motivation-editor-container div.editor {
   min-height: 100% !important;
 }
 
-.deltagreen .editor-host {
+.deltagreen2 .editor-host {
   align-items: stretch;
   height: 100%;
 }
 
-.deltagreen .editor-host .editor {
+.deltagreen2 .editor-host .editor {
   height: 100% !important;
 }
 
-.deltagreen .editor .editor-container {
+.deltagreen2 .editor .editor-container {
   height: 100% !important;
 }
 
@@ -907,27 +907,27 @@ div.motivation-editor-container div.editor {
   background: none !important;
 }
 
-.deltagreen .editor-host .tox {
+.deltagreen2 .editor-host .tox {
   height: 100% !important;
   display: block;
 }
 
-.deltagreen .editor-host .tox-tinymce {
+.deltagreen2 .editor-host .tox-tinymce {
   height: 100% !important;
   display: block;
 }
 
-.deltagreen .editor-host .tox .tox-edit-area {
+.deltagreen2 .editor-host .tox .tox-edit-area {
   position: inherit;
   min-height: 20px;
   height: 300px;
 }
 
-.deltagreen .tox-editor-header {
+.deltagreen2 .tox-editor-header {
   background: none !important;
 }
 
-.deltagreen .tox .tox-edit-area {
+.deltagreen2 .tox .tox-edit-area {
   padding: 0 8px;
 }
 */
