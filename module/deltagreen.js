@@ -255,6 +255,12 @@ Hooks.on("renderChatLog", async (app, element) => {
 });
 
 Hooks.on("renderChatMessageHTML", async (app, element, context) => {
+  // Style DG2 roll messages as dossier cards (variant set in DGRoll.toMessage).
+  const variant = app.getFlag?.("deltagreen2", "variant");
+  if (variant) {
+    element.classList.add("dg2-msg", `dg2-msg-${variant}`);
+  }
+
   // ignore non chat card notifications
   if (!context.canClose) return;
   addEventListenerToChatMessage(element);

@@ -1,41 +1,53 @@
-<div class="dice-roll" data-action="expandRoll">
-  <div class="dice-result">
-    <div class="dg2-outcome {{outcomeClass}}">
-      <i class="fas {{outcomeIcon}}" aria-hidden="true"></i>
-      <span class="dg2-outcome-text">{{resultString}}</span>
-      {{#if marginText}}<span class="dg2-margin">{{marginText}}</span>{{/if}}
-    </div>
-    <div class="dice-tooltip">
-      <div class="wrapper">
-        <section class="tooltip-part">
-          <div class="dice">
-            <header class="part-header flexrow">
-              <span class="part-formula">{{formula}}</span>
-              <span class="part-total">{{total}}</span>
-            </header>
-            <ol class="dice-rolls">
-              <li class="roll die {{formula}}">{{total}}</li>
-            </ol>
-          </div>
-        </section>
-      </div>
-    </div>
-    <h4 class="dice-total">{{total}}</h4>
-    {{#if ammoLine}}
-      <div class="dg2-ammo-line {{#if outOfAmmo}}dg2-out-of-ammo{{/if}}">
-        <i class="fas fa-crosshairs" aria-hidden="true"></i> {{ammoLine}}
-      </div>
+<div class="dg2-card">
+  <div class="dg2-card-strip">
+    <span class="dg2-card-type">{{typeLabel}}</span>
+    <span class="dg2-card-org">{{localize 'DG2.Chat.EyesOnly'}}</span>
+  </div>
+  <div class="dg2-card-title">
+    <span class="dg2-card-name">{{rollName}}</span>
+    {{#if targetText}}
+      <span class="dg2-chip" {{#if chipDetail}}data-tooltip="{{chipDetail}}"{{/if}}>{{targetText}}</span>
     {{/if}}
   </div>
 
-  {{#if failureMark}}
-    <div class="rollback-section">
-      <label>{{localize 'DG.Messages.Skillsmark.Marked'}}</label>
-      <i class="fa fa-book" aria-hidden="true" data-tooltip="<p>{{localize 'DG.Messages.Skillsmark.Tooltip'}}</p>"></i>
-      <button type="button" data-action="rollback-skill-failure-state">
-        <i class="fa fa-undo" aria-hidden="true"></i>
-      </button>
+  <div class="dice-roll" data-action="expandRoll">
+    <div class="dice-result">
+      <div class="dg2-outcome {{outcomeClass}}">
+        <i class="fas {{outcomeIcon}}" aria-hidden="true"></i>
+        <span class="dg2-outcome-text">{{resultString}}</span>
+        {{#if marginText}}<span class="dg2-margin">{{marginText}}</span>{{/if}}
+      </div>
+      <div class="dice-tooltip">
+        <div class="wrapper">
+          <section class="tooltip-part">
+            <div class="dice">
+              <header class="part-header flexrow">
+                <span class="part-formula">{{formula}}</span>
+                <span class="part-total">{{total}}</span>
+              </header>
+              <ol class="dice-rolls">
+                <li class="roll die {{formula}}">{{total}}</li>
+              </ol>
+            </div>
+          </section>
+        </div>
+      </div>
+      <h4 class="dice-total">{{total}}</h4>
+      {{#if ammoLine}}
+        <div class="dg2-ammo-line {{#if outOfAmmo}}dg2-out-of-ammo{{/if}}">
+          <i class="fas fa-crosshairs" aria-hidden="true"></i> {{ammoLine}}
+        </div>
+      {{/if}}
     </div>
-  {{/if}}
 
+    {{#if failureMark}}
+      <div class="rollback-section">
+        <label>{{localize 'DG.Messages.Skillsmark.Marked'}}</label>
+        <i class="fa fa-book" aria-hidden="true" data-tooltip="<p>{{localize 'DG.Messages.Skillsmark.Tooltip'}}</p>"></i>
+        <button type="button" data-action="rollback-skill-failure-state">
+          <i class="fa fa-undo" aria-hidden="true"></i>
+        </button>
+      </div>
+    {{/if}}
+  </div>
 </div>

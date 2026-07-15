@@ -51,6 +51,19 @@ export class DGRoll extends Roll {
   async toMessage(messageData = {}, { rollMode, create = true } = {}) {
     // eslint-disable-next-line no-param-reassign
     messageData.speaker = ChatMessage.getSpeaker({ actor: this.actor });
+
+    // Tag the message with its DG2 variant (agency/lethality/unnatural),
+    // derived from the Dice So Nice colorset set in toChat. The chat
+    // renderer uses this to style the card.
+    const colorset = this.dice[0]?.options?.colorset;
+    if (colorset?.startsWith("dg2-")) {
+      // eslint-disable-next-line no-param-reassign
+      messageData.flags = foundry.utils.mergeObject(
+        { deltagreen2: { variant: colorset.replace("dg2-", "") } },
+        messageData.flags ?? {},
+      );
+    }
+
     return super.toMessage(messageData, {
       rollMode: this.options.rollMode || rollMode,
       create,
@@ -264,9 +277,39 @@ export class DGPercentileRoll extends DGRoll {
       game.modules.has("dice-so-nice") &&
       game.modules.get("dice-so-nice").active;
 
-    tagRollDice(this, colorsetForPercentileRoll(this));
+    const colorset = colorsetForPercentileRoll(this);
+    tagRollDice(this, colorset);
 
-    const label = this.createLabel();
+    // Structured card header data.
+    const typeLabel =
+      colorset === "dg2-unnatural"
+        ? DGUtils.localizeWithFallback("DG2.Chat.TheUnnatural", "THE UNNATURAL")
+        : DGUtils.localizeWithFallback(
+            "DG2.Chat.FieldOperation",
+            "FIELD OPERATION",
+          );
+    let rollName = this.localizedKey ?? this.formula;
+    if (this.isInhuman) {
+      rollName += ` [${game.i18n.localize("DG.Roll.Inhuman").toUpperCase()}]`;
+    }
+    const targetText = `${DGUtils.localizeWithFallback(
+      "DG2.Chat.Target",
+      "TARGET",
+    )} ${this.effectiveTarget}%`;
+    // Show the math when the effective target differs from the base value.
+    let chipDetail = "";
+    const { isExhausted, exhaustedCheckPenalty } = this.exhausted;
+    if (this.modifier || isExhausted) {
+      chipDetail = `${this.target}%`;
+      if (this.modifier) {
+        chipDetail += `${DGUtils.formatStringWithLeadingPlus(this.modifier)}%`;
+      }
+      if (isExhausted) {
+        chipDetail += `${DGUtils.formatStringWithLeadingPlus(
+          exhaustedCheckPenalty,
+        )}%`;
+      }
+    }
 
     let resultString = "";
     let outcomeClass = "";
@@ -327,6 +370,10 @@ export class DGPercentileRoll extends DGRoll {
     const html = await renderTemplate(
       "systems/deltagreen2/templates/roll/percentile-roll.hbs",
       {
+        typeLabel,
+        rollName,
+        targetText,
+        chipDetail,
         outcomeClass,
         outcomeIcon,
         marginText,
@@ -352,7 +399,6 @@ export class DGPercentileRoll extends DGRoll {
           },
         },
         content: html,
-        flavor: label,
       });
 
       if (diceSoNice) {
@@ -367,7 +413,7 @@ export class DGPercentileRoll extends DGRoll {
       return message;
     }
 
-    return this.toMessage({ content: html, flavor: label });
+    return this.toMessage({ content: html });
   }
 
   /**
@@ -668,20 +714,22 @@ export class DGLethalityRoll extends DGPercentileRoll {
     }
 
     const { nonLethalDamage } = this;
-    let label = `${game.i18n.localize("DG.Roll.Rolling")} <b>${game.i18n
-      .localize("DG.Roll.Lethality")
-      .toUpperCase()}</b> ${game.i18n.localize(
-      "DG.Roll.For",
-    )} <b>${this.item.name.toUpperCase()}</b> ${game.i18n.localize(
-      "DG.Roll.Target",
-    )} ${this.target + this.modifier}`;
+    let targetText = `${game.i18n.localize("DG.Roll.Lethality").toUpperCase()} ${
+      this.target + this.modifier
+    }%`;
     if (this.modifier) {
-      label += ` (${DGUtils.formatStringWithLeadingPlus(this.modifier)}%)`;
+      targetText += ` (${DGUtils.formatStringWithLeadingPlus(this.modifier)}%)`;
     }
 
     const html = await renderTemplate(
       "systems/deltagreen2/templates/roll/lethality-roll.hbs",
       {
+        typeLabel: DGUtils.localizeWithFallback(
+          "DG2.Chat.LethalForce",
+          "LETHAL FORCE",
+        ),
+        rollName: this.item.name,
+        targetText,
         resultString,
         outcomeClass,
         outcomeIcon,
@@ -692,7 +740,7 @@ export class DGLethalityRoll extends DGPercentileRoll {
       },
     );
 
-    return this.toMessage({ content: html, flavor: label });
+    return this.toMessage({ content: html });
   }
 
   /**
@@ -751,23 +799,17 @@ export class DGDamageRoll extends DGRoll {
   async toChat() {
     tagRollDice(this, "dg2-lethality");
 
-    let label = this.formula;
-    try {
-      label = `${game.i18n.localize("DG.Roll.Rolling")} <b>${game.i18n
-        .localize("DG.Roll.Damage")
-        .toUpperCase()}</b> ${game.i18n.localize("DG.Roll.For")} ${
-        this.item.name
-      } (<b>${
-        this.item.system.armorPiercing
-      } </b><img class="armor-piercing-chat-card-img" src="systems/deltagreen2/assets/icons/supersonic-bullet.svg" alt="armor penetration"/>)`;
-    } catch (ex) {
-      // console.log(ex);
-      label = `Rolling <b>DAMAGE</b> for <b>${label.toUpperCase()}</b>`;
-    }
-
     const html = await renderTemplate(
       "systems/deltagreen2/templates/roll/damage-roll.hbs",
       {
+        typeLabel: DGUtils.localizeWithFallback(
+          "DG2.Chat.LethalForce",
+          "LETHAL FORCE",
+        ),
+        rollName:
+          this.item?.name ??
+          game.i18n.localize("DG.Roll.Damage").toUpperCase(),
+        targetText: game.i18n.localize("DG.Roll.Damage").toUpperCase(),
         formula: this.formula,
         total: this.total,
         dice: this.dice.flatMap((die) =>
@@ -777,7 +819,7 @@ export class DGDamageRoll extends DGRoll {
       },
     );
 
-    return this.toMessage({ content: html, flavor: label });
+    return this.toMessage({ content: html });
   }
 
   async showDialog() {
@@ -859,14 +901,18 @@ export class DGSanityDamageRoll extends DGRoll {
 
     const [lowResult, highResult] = this.damageResults;
 
-    const flavor = `Rolling <b>${DGUtils.localizeWithFallback(
-      "DG.Generic.SanDamage",
-      "SAN DAMAGE",
-    )}</b> For <b>${lowDie.formula} / ${highDie.formula}</b>`;
-
     const html = await renderTemplate(
       "systems/deltagreen2/templates/roll/sanity-damage-roll.hbs",
       {
+        typeLabel: DGUtils.localizeWithFallback(
+          "DG2.Chat.TheUnnatural",
+          "THE UNNATURAL",
+        ),
+        rollName: DGUtils.localizeWithFallback(
+          "DG.Generic.SanDamage",
+          "SAN DAMAGE",
+        ),
+        targetText: `${lowDie.formula} / ${highDie.formula}`,
         lowFormula: lowDie.formula,
         highFormula: highDie.formula,
         lowFaces: lowDie.faces,
@@ -876,7 +922,7 @@ export class DGSanityDamageRoll extends DGRoll {
       },
     );
 
-    return this.toMessage({ content: html, flavor });
+    return this.toMessage({ content: html });
   }
 
   /**

@@ -9,6 +9,9 @@ A modified fork of the official _Delta Green: The Role-Playing Game_ Foundry VTT
 - **Apply Lethality** — a successful lethality roll offers a one-click "reduce target to 0 HP" button.
 - **Sanity application** — SAN damage cards offer success/failure apply buttons. The GM is whispered alerts for temporary insanity (5+ SAN in one hit), breaking-point crossings, and 0 SAN.
 - **Ammo tracking** — weapon ammo is numeric with a magazine capacity; attack rolls expend a round, the Equipment tab shows an ammo column with a reload control, and the chat card shows remaining rounds / out-of-ammo warnings. Toggleable via the Automation settings (on by default).
+- **Dossier chat cards** — every roll posts as a dark "Eyes Only" case card with a classification strip (FIELD OPERATION / THE UNNATURAL / LETHAL FORCE), the roll name, and a target chip, colour-accented to match the roll type.
+- **Themed 3D dice** — three Dice So Nice colorsets applied per roll type: olive Agency dice for skills/stats, blood-red Lethal Force dice for damage and lethality, and violet-glass Unnatural dice for Sanity.
+- **Field Equipment compendium** — 60 modern investigation and support items (surveillance, forensics, hazmat, breaching, comms, medical) with white-on-black icon art, mechanical bonus notes, and Agent's Handbook expense tiers.
 - **Offline reliability** — the live Google Fonts imports were removed; the system now uses only bundled fonts.
 
 Install by pointing Foundry at this repo, or copy the folder into `Data/systems/deltagreen2`. The system id is `deltagreen2`, so it installs alongside the original without conflict.

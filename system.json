@@ -107,6 +107,7 @@
                 "firearms",
                 "armor",
                 "hand-to-hand-weapons",
+                "field-equipment",
                 "agent-pregens",
                 "operation-code-name-generator-tables"
             ],
@@ -152,6 +153,18 @@
             "label": "Hand-to-Hand Weapons",
             "system": "deltagreen2",
             "path": "packs/hand-to-hand-weapons",
+            "type": "Item",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "field-equipment",
+            "label": "Field Equipment (DG2)",
+            "system": "deltagreen2",
+            "path": "packs/field-equipment",
             "type": "Item",
             "flags": {},
             "ownership": {

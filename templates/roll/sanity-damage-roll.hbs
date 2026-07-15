@@ -1,43 +1,53 @@
-<div class="dice-roll" data-action="expandRoll">
-  <div class="dice-result">
-    <div class="dice-formula">{{lowFormula}} / {{highFormula}}</div>
-    <div class="dice-tooltip">
-      <div class="wrapper">
-        <section class="tooltip-part">
-          <div class="dice">
-            <header class="part-header flexrow">
-              <span class="part-formula">{{lowFormula}}</span>
-              <span class="part-total">{{lowResult}}</span>
-            </header>
-            <ol class="dice-rolls">
-              <li class="roll die d{{lowFaces}}">{{lowResult}}</li>
-            </ol>
-            <hr>
-            <header class="part-header flexrow">
-              <span class="part-formula">{{highFormula}}</span>
-              <span class="part-total">{{highResult}}</span>
-            </header>
-            <ol class="dice-rolls">
-              <li class="roll die d{{highFaces}}">{{highResult}}</li>
-            </ol>
-          </div>
-        </section>
+<div class="dg2-card">
+  <div class="dg2-card-strip">
+    <span class="dg2-card-type">{{typeLabel}}</span>
+    <span class="dg2-card-org">{{localize 'DG2.Chat.EyesOnly'}}</span>
+  </div>
+  <div class="dg2-card-title">
+    <span class="dg2-card-name">{{rollName}}</span>
+    <span class="dg2-chip">{{targetText}}</span>
+  </div>
+
+  <div class="dice-roll" data-action="expandRoll">
+    <div class="dice-result">
+      <div class="dice-tooltip">
+        <div class="wrapper">
+          <section class="tooltip-part">
+            <div class="dice">
+              <header class="part-header flexrow">
+                <span class="part-formula">{{lowFormula}}</span>
+                <span class="part-total">{{lowResult}}</span>
+              </header>
+              <ol class="dice-rolls">
+                <li class="roll die d{{lowFaces}}">{{lowResult}}</li>
+              </ol>
+              <hr>
+              <header class="part-header flexrow">
+                <span class="part-formula">{{highFormula}}</span>
+                <span class="part-total">{{highResult}}</span>
+              </header>
+              <ol class="dice-rolls">
+                <li class="roll die d{{highFaces}}">{{highResult}}</li>
+              </ol>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-    <h4 class="dice-total">{{lowResult}} / {{highResult}}</h4>
-    <div class="dg2-apply-row">
-      <button type="button" class="dg2-apply-button" data-action="dg2-apply-san"
-              data-san="{{lowResult}}"
-              data-tooltip="{{localize 'DG2.Apply.SanSuccessTooltip'}}">
-        <i class="fas fa-brain" aria-hidden="true"></i>
-        {{localize 'DG.Roll.Success'}}: &minus;{{lowResult}} SAN
-      </button>
-      <button type="button" class="dg2-apply-button dg2-san-fail" data-action="dg2-apply-san"
-              data-san="{{highResult}}"
-              data-tooltip="{{localize 'DG2.Apply.SanFailTooltip'}}">
-        <i class="fas fa-brain" aria-hidden="true"></i>
-        {{localize 'DG.Roll.Failure'}}: &minus;{{highResult}} SAN
-      </button>
+      <h4 class="dice-total">{{lowResult}} / {{highResult}}</h4>
+      <div class="dg2-apply-row">
+        <button type="button" class="dg2-apply-button" data-action="dg2-apply-san"
+                data-san="{{lowResult}}"
+                data-tooltip="{{localize 'DG2.Apply.SanSuccessTooltip'}}">
+          <i class="fas fa-brain" aria-hidden="true"></i>
+          {{localize 'DG.Roll.Success'}}: &minus;{{lowResult}} SAN
+        </button>
+        <button type="button" class="dg2-apply-button dg2-san-fail" data-action="dg2-apply-san"
+                data-san="{{highResult}}"
+                data-tooltip="{{localize 'DG2.Apply.SanFailTooltip'}}">
+          <i class="fas fa-brain" aria-hidden="true"></i>
+          {{localize 'DG.Roll.Failure'}}: &minus;{{highResult}} SAN
+        </button>
+      </div>
     </div>
   </div>
 </div>
