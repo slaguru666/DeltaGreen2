@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#08171c"/>
+  <!-- frost bloom -->
+  <g stroke="#bfeaf6" stroke-width="1" opacity="0.35">
+    <path d="M40 40 L110 110 M472 40 L402 110 M40 472 L110 402 M472 472 L402 402"/>
+    <path d="M256 20 V70 M256 492 V442 M20 256 H70 M492 256 H442"/>
+  </g>
+  <g fill="#cfe9f2">
+    <path d="M256 320c-72 0-120 32-136 92-6 22-9 44-11 100h294c-2-56-5-78-11-100-16-60-64-92-136-92z"/>
+    <path d="M232 314h48v40h-48z"/>
+    <path d="M256 118c-46 0-76 34-76 86 0 48 32 88 76 88s76-40 76-88c0-52-30-86-76-86z"/>
+  </g>
+  <!-- wide frozen eyes -->
+  <g fill="#08171c"><circle cx="224" cy="196" r="15"/><circle cx="288" cy="196" r="15"/></g>
+  <g fill="#8fd4e8"><circle cx="224" cy="196" r="6"/><circle cx="288" cy="196" r="6"/></g>
+  <!-- lips torn from teeth: exposed grimace -->
+  <path d="M214 250 Q256 236 298 250 L298 264 Q256 250 214 264 Z" fill="#08171c"/>
+  <g stroke="#08171c" stroke-width="2"><path d="M226 250 V264 M242 248 V266 M256 247 V266 M270 248 V266 M286 250 V264"/></g>
+  <!-- ice sheen -->
+  <path d="M180 150 Q256 120 332 150" stroke="#eafcff" stroke-width="3" fill="none" opacity="0.5"/>
+</svg>

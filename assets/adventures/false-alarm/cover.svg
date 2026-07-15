@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" font-family="Courier New, monospace">
+  <defs>
+    <radialGradient id="cbg" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#12171c"/><stop offset="100%" stop-color="#050708"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#cbg)"/>
+  <!-- snow -->
+  <g fill="#fff" opacity="0.12">
+    <circle cx="120" cy="200" r="2"/><circle cx="300" cy="500" r="2"/><circle cx="800" cy="260" r="2"/>
+    <circle cx="650" cy="700" r="2"/><circle cx="900" cy="820" r="2"/><circle cx="200" cy="820" r="2"/>
+    <circle cx="480" cy="160" r="2"/><circle cx="760" cy="540" r="2"/>
+  </g>
+  <!-- dome silhouette -->
+  <g transform="translate(512 560)">
+    <circle r="300" fill="#0b0f13" stroke="#aebcc4" stroke-width="4"/>
+    <g stroke="#2d3a41" stroke-width="2" fill="none">
+      <polygon points="0,-300 174,-244 174,244 0,300 -174,244 -174,-244"/>
+      <path d="M0,-300 V300 M-174,-244 L174,244 M174,-244 L-174,244 M-260,0 H260"/>
+    </g>
+    <!-- the tear bleeding at center -->
+    <circle r="70" fill="#8fd4e8" opacity="0.25"/>
+    <g stroke="#8fd4e8" stroke-width="2" fill="none" opacity="0.85">
+      <polygon points="0,-70 60,-35 60,35 0,70 -60,35 -60,-35"/>
+      <polygon points="0,-44 38,-22 38,22 0,44 -38,22 -38,-22" transform="rotate(18)"/>
+    </g>
+    <circle r="12" fill="#050708"/>
+  </g>
+  <!-- classified banners -->
+  <rect x="0" y="120" width="1024" height="64" fill="#8aa353"/>
+  <text x="512" y="164" fill="#0a0d10" font-size="40" text-anchor="middle" letter-spacing="10">TOP SECRET // DELTA GREEN</text>
+  <text x="512" y="900" fill="#dfe8ee" font-size="72" text-anchor="middle" letter-spacing="6">FALSE ALARM</text>
+  <text x="512" y="952" fill="#8aa353" font-size="28" text-anchor="middle" letter-spacing="4">OPERATION FILE · EYES ONLY</text>
+  <rect x="0" y="984" width="1024" height="40" fill="#8b1a12"/>
+  <text x="512" y="1012" fill="#e8ecee" font-size="22" text-anchor="middle" letter-spacing="6">NORTHERN MAINE · FAA RADAR STATION</text>
+</svg>

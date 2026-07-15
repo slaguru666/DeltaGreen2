@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1400" font-family="Courier New, monospace">
+  <defs>
+    <pattern id="grid2" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M100 0H0V100" fill="none" stroke="#1d2a30" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1800" height="1400" fill="#080a0d"/>
+  <rect width="1800" height="1400" fill="url(#grid2)"/>
+
+  <!-- room shell -->
+  <rect x="200" y="200" width="1400" height="1000" fill="#0d1216" stroke="#dfe8ee" stroke-width="6"/>
+  <!-- door bottom -->
+  <rect x="820" y="1180" width="160" height="24" fill="#8aa353"/>
+  <text x="900" y="1250" fill="#8aa353" font-size="24" text-anchor="middle">DOOR TO EXTERIOR</text>
+
+  <!-- server racks along top wall -->
+  <g stroke="#9fb0b8" stroke-width="3" fill="none">
+    <rect x="260" y="240" width="120" height="220"/><rect x="400" y="240" width="120" height="220"/>
+    <rect x="540" y="240" width="120" height="220"/><rect x="680" y="240" width="120" height="220"/>
+    <g stroke="#3a474e" stroke-width="2">
+      <path d="M260 300 H380 M260 360 H380 M260 420 H380"/>
+      <path d="M400 300 H520 M400 360 H520 M400 420 H520"/>
+      <path d="M540 300 H660 M540 360 H660 M540 420 H660"/>
+      <path d="M680 300 H800 M680 360 H800 M680 420 H800"/>
+    </g>
+  </g>
+  <text x="530" y="510" fill="#5c6b73" font-size="22" text-anchor="middle">SERVER RACKS</text>
+
+  <!-- main console (center) with body -->
+  <g transform="translate(900 720)">
+    <rect x="-260" y="-70" width="520" height="140" rx="10" fill="#0f1519" stroke="#dfe8ee" stroke-width="5"/>
+    <rect x="-240" y="-54" width="150" height="108" fill="none" stroke="#6b93b8" stroke-width="3"/>
+    <rect x="-70" y="-54" width="150" height="108" fill="none" stroke="#6b93b8" stroke-width="3"/>
+    <rect x="100" y="-54" width="150" height="108" fill="none" stroke="#6b93b8" stroke-width="3"/>
+    <text x="0" y="-96" fill="#9fb0b8" font-size="24" text-anchor="middle">MAIN CONSOLE</text>
+    <!-- Rostova, frozen, slumped -->
+    <g opacity="0.95">
+      <ellipse cx="0" cy="120" rx="70" ry="44" fill="#12303a" stroke="#8fd4e8" stroke-width="3"/>
+      <circle cx="0" cy="96" r="26" fill="#12303a" stroke="#8fd4e8" stroke-width="3"/>
+      <path d="M-40 150 L40 150" stroke="#8fd4e8" stroke-width="2"/>
+    </g>
+    <text x="0" y="205" fill="#8fd4e8" font-size="22" text-anchor="middle">DR. ROSTOVA — FROZEN SOLID</text>
+  </g>
+
+  <!-- failing backup generator (corner) -->
+  <g transform="translate(1360 980)">
+    <rect x="-120" y="-90" width="240" height="180" fill="#0f1519" stroke="#dfe8ee" stroke-width="5"/>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#d4553c" stroke-width="4"/>
+    <path d="M-30 0 L30 0 M0 -30 L0 30" stroke="#d4553c" stroke-width="4"/>
+    <text x="0" y="130" fill="#d4553c" font-size="22" text-anchor="middle">BACKUP GENERATOR</text>
+    <text x="0" y="156" fill="#5c6b73" font-size="16" text-anchor="middle">failing · hums unsteadily</text>
+  </g>
+
+  <!-- ladder up to dome catwalk -->
+  <g transform="translate(300 980)">
+    <rect x="-30" y="-90" width="60" height="180" fill="none" stroke="#8aa353" stroke-width="4"/>
+    <path d="M-30 -60 H30 M-30 -20 H30 M-30 20 H30 M-30 60 H30" stroke="#8aa353" stroke-width="3"/>
+    <text x="0" y="130" fill="#8aa353" font-size="20" text-anchor="middle">LADDER ↑ DOME</text>
+  </g>
+
+  <!-- title -->
+  <g transform="translate(220 40)">
+    <rect width="520" height="120" fill="#0a0d10" stroke="#8aa353" stroke-width="2"/>
+    <text x="20" y="46" fill="#dfe8ee" font-size="32" letter-spacing="2">EQUIPMENT BLDG — INTERIOR</text>
+    <text x="20" y="80" fill="#8aa353" font-size="22">SERVER ROOM · ~40°F</text>
+    <text x="20" y="106" fill="#5c6b73" font-size="18">emergency power only · 1 sq = 5 ft</text>
+  </g>
+</svg>

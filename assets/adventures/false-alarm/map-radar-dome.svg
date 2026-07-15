@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" font-family="Courier New, monospace">
+  <defs>
+    <pattern id="grid3" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M100 0H0V100" fill="none" stroke="#161f24" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="ozone" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1420"/>
+      <stop offset="70%" stop-color="#0a0d10"/>
+      <stop offset="100%" stop-color="#060809"/>
+    </radialGradient>
+  </defs>
+  <rect width="2000" height="2000" fill="url(#ozone)"/>
+  <rect width="2000" height="2000" fill="url(#grid3)"/>
+
+  <!-- outer dome ring -->
+  <circle cx="1000" cy="1000" r="880" fill="none" stroke="#dfe8ee" stroke-width="6"/>
+  <circle cx="1000" cy="1000" r="700" fill="none" stroke="#3a474e" stroke-width="2" stroke-dasharray="10 12"/>
+  <!-- geodesic struts -->
+  <g stroke="#2d3a41" stroke-width="2" fill="none">
+    <path d="M1000 120 V1880 M120 1000 H1880"/>
+    <path d="M380 380 L1620 1620 M1620 380 L380 1620"/>
+    <path d="M1000 120 L1620 380 L1880 1000 L1620 1620 L1000 1880 L380 1620 L120 1000 L380 380 Z"/>
+  </g>
+
+  <!-- catwalk ring -->
+  <circle cx="1000" cy="1000" r="560" fill="none" stroke="#8aa353" stroke-width="10" stroke-dasharray="2 0" opacity="0.9"/>
+  <circle cx="1000" cy="1000" r="500" fill="none" stroke="#8aa353" stroke-width="10" opacity="0.9"/>
+  <text x="1000" y="480" fill="#8aa353" font-size="26" text-anchor="middle">UPPER CATWALK (pitch black)</text>
+
+  <!-- central transmitter mast -->
+  <g transform="translate(1000 1000)">
+    <circle r="150" fill="#0d1216" stroke="#dfe8ee" stroke-width="5"/>
+    <circle r="150" fill="none" stroke="#d4553c" stroke-width="2" opacity="0.6"/>
+    <path d="M-150 0 A150 150 0 0 1 150 0" fill="none" stroke="#6b93b8" stroke-width="3"/>
+    <path d="M0 -150 V150 M-150 0 H150 M-106 -106 L106 106 M106 -106 L-106 106" stroke="#3a474e" stroke-width="2"/>
+    <circle r="40" fill="#8aa353"/>
+    <text x="0" y="230" fill="#dfe8ee" font-size="26" text-anchor="middle">CENTRAL TRANSMITTER</text>
+    <text x="0" y="262" fill="#5c6b73" font-size="18" text-anchor="middle">Vance is rewiring this</text>
+  </g>
+
+  <!-- ladder access down -->
+  <g transform="translate(1000 1500)">
+    <rect x="-34" y="-50" width="68" height="120" fill="none" stroke="#8aa353" stroke-width="4"/>
+    <path d="M-34 -20 H34 M-34 20 H34" stroke="#8aa353" stroke-width="3"/>
+    <text x="0" y="110" fill="#8aa353" font-size="22" text-anchor="middle">↓ LADDER (from server room)</text>
+  </g>
+
+  <!-- main transformer (climax overload point) -->
+  <g transform="translate(560 1000)">
+    <rect x="-90" y="-90" width="180" height="180" fill="#0d1216" stroke="#d4553c" stroke-width="5"/>
+    <path d="M-30 -50 L10 0 L-10 0 L30 50" fill="none" stroke="#d4553c" stroke-width="6"/>
+    <text x="0" y="140" fill="#d4553c" font-size="22" text-anchor="middle">MAIN TRANSFORMER</text>
+    <text x="0" y="166" fill="#5c6b73" font-size="16" text-anchor="middle">manual overload = lethal shock</text>
+  </g>
+
+  <!-- ozone / scorched copper note -->
+  <text x="1000" y="1560" fill="#7a6b3a" font-size="22" text-anchor="middle" opacity="0.8">smell: ozone · scorched copper</text>
+
+  <!-- title -->
+  <g transform="translate(40 40)">
+    <rect width="540" height="120" fill="#0a0d10" stroke="#8aa353" stroke-width="2"/>
+    <text x="20" y="46" fill="#dfe8ee" font-size="32" letter-spacing="2">RADAR DOME — CATWALK</text>
+    <text x="20" y="80" fill="#8aa353" font-size="22">INTERIOR · TOTAL DARKNESS</text>
+    <text x="20" y="106" fill="#5c6b73" font-size="18">bring your own light · 1 sq = 5 ft</text>
+  </g>
+</svg>

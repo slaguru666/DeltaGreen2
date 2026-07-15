@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0a0d10"/>
+  <g fill="#e8ecee">
+    <!-- deputy shoulders -->
+    <path d="M256 322c-72 0-120 32-136 92-6 22-9 44-11 98h294c-2-54-5-76-11-98-16-60-64-92-136-92z"/>
+    <path d="M232 316h48v40h-48z"/>
+    <!-- head, gaunt -->
+    <path d="M256 120c-46 0-74 34-74 86 0 30 12 58 30 74l88 0c18-16 30-44 30-74 0-52-28-86-74-86z"/>
+  </g>
+  <!-- gouged-out eyes: dark hollows with runnels -->
+  <g fill="#0a0d10">
+    <ellipse cx="222" cy="196" rx="20" ry="26"/><ellipse cx="290" cy="196" rx="20" ry="26"/>
+  </g>
+  <g stroke="#8b1a12" stroke-width="6" fill="none" opacity="0.9">
+    <path d="M222 220 C 218 260 214 300 210 340"/>
+    <path d="M290 220 C 294 260 298 300 302 340"/>
+  </g>
+  <!-- UNHINGED JAW: mouth stretched grotesquely open -->
+  <path d="M210 250 C 230 360 282 360 302 250 C 300 300 286 330 256 330 C 226 330 212 300 210 250Z" fill="#0a0d10"/>
+  <g stroke="#e8ecee" stroke-width="3">
+    <path d="M222 262 V300 M238 268 V320 M256 270 V330 M274 268 V320 M290 262 V300"/>
+  </g>
+  <!-- static halo -->
+  <g stroke="#6b93b8" stroke-width="2" fill="none" opacity="0.35">
+    <circle cx="256" cy="230" r="150"/><circle cx="256" cy="230" r="180"/>
+  </g>
+</svg>

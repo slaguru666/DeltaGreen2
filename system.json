@@ -126,6 +126,18 @@
     ],
     "packs": [
         {
+            "name": "false-alarm",
+            "label": "Operation FALSE ALARM (Adventure)",
+            "system": "deltagreen2",
+            "path": "packs/false-alarm",
+            "type": "Adventure",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
             "name": "firearms",
             "label": "Firearms",
             "system": "deltagreen2",

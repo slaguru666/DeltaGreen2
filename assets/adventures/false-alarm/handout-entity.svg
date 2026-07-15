@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" font-family="Courier New, monospace">
+  <defs>
+    <radialGradient id="tear" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e9f6ff"/>
+      <stop offset="18%" stop-color="#8fd4e8"/>
+      <stop offset="45%" stop-color="#3a2a5a"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+    <filter id="warp"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="26"/></filter>
+  </defs>
+  <rect width="1200" height="1200" fill="#050608"/>
+
+  <!-- charged air rings -->
+  <g stroke="#8fd4e8" fill="none" opacity="0.18">
+    <circle cx="600" cy="600" r="520"/><circle cx="600" cy="600" r="440"/><circle cx="600" cy="600" r="360"/>
+  </g>
+
+  <!-- fractal silhouette: nested rotating hexagrams + tendrils -->
+  <g transform="translate(600 600)" filter="url(#warp)">
+    <circle r="300" fill="url(#tear)"/>
+    <g stroke="#eafff2" fill="none" stroke-width="2" opacity="0.9">
+      <polygon points="0,-300 260,-150 260,150 0,300 -260,150 -260,-150"/>
+      <polygon points="0,-210 182,-105 182,105 0,210 -182,105 -182,-105" transform="rotate(18)"/>
+      <polygon points="0,-140 121,-70 121,70 0,140 -121,70 -121,-70" transform="rotate(-12)"/>
+      <polygon points="0,-90 78,-45 78,45 0,90 -78,45 -78,-45" transform="rotate(24)"/>
+    </g>
+    <!-- impossible tendrils -->
+    <g stroke="#8fd4e8" fill="none" stroke-width="3" opacity="0.7">
+      <path d="M0 -300 C 120 -420 -140 -520 40 -600"/>
+      <path d="M260 150 C 420 220 520 60 640 260"/>
+      <path d="M-260 150 C -430 210 -520 380 -640 250"/>
+      <path d="M0 300 C 80 470 -120 560 60 700"/>
+    </g>
+    <!-- singular black core -->
+    <circle r="46" fill="#050608"/>
+    <circle r="46" fill="none" stroke="#eafff2" stroke-width="1.5"/>
+  </g>
+
+  <text x="600" y="1120" fill="#8fd4e8" font-size="26" text-anchor="middle" opacity="0.9" letter-spacing="3">IT DOES NOT FIT THE SPACE IT OCCUPIES</text>
+  <text x="600" y="70" fill="#dfe8ee" font-size="28" text-anchor="middle" letter-spacing="2">THE TEAR — DO NOT SHOW UNTIL CLIMAX</text>
+</svg>

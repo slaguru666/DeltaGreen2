@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="Courier New, monospace">
+  <rect width="1600" height="900" fill="#070a0c"/>
+  <!-- frame -->
+  <rect x="40" y="120" width="1520" height="560" fill="#0a1013" stroke="#2d3a41" stroke-width="2"/>
+  <line x1="40" y1="400" x2="1560" y2="400" stroke="#1d2a30" stroke-width="1"/>
+
+  <!-- oscillating static waveform -->
+  <path fill="none" stroke="#8fd4e8" stroke-width="2.5" opacity="0.9"
+    d="M40 400
+       Q 90 300 140 400 T 240 400 T 340 400
+       Q 390 180 440 400 T 540 400
+       Q 590 250 640 400 T 740 400 T 840 400
+       Q 890 120 940 400 T 1040 400
+       Q 1090 300 1140 400 T 1240 400
+       Q 1290 200 1340 400 T 1440 400 T 1540 400"/>
+  <!-- dense noise overlay -->
+  <g stroke="#4a6b78" stroke-width="1" opacity="0.5">
+    <path d="M40 400 L60 340 L80 460 L100 360 L120 440 L140 380 L160 420 L180 350 L200 450 L220 390 L240 410
+             L260 330 L280 470 L300 370 L320 430 L340 400 L360 460 L380 340 L400 420 L420 380 L440 440
+             L460 360 L480 450 L500 390 L520 410 L540 330 L560 470 L580 370 L600 430 L620 400 L640 460
+             L660 340 L680 420 L700 380 L720 440 L740 360 L760 450 L780 390 L800 410 L820 330 L840 470
+             L860 370 L880 430 L900 400 L920 460 L940 340 L960 420 L980 380 L1000 440 L1020 360 L1040 450
+             L1060 390 L1080 410 L1100 330 L1120 470 L1140 370 L1160 430 L1180 400 L1200 460 L1220 340
+             L1240 420 L1260 380 L1280 440 L1300 360 L1320 450 L1340 390 L1360 410 L1380 330 L1400 470
+             L1420 370 L1440 430 L1460 400 L1480 460 L1500 340 L1520 420 L1540 380"/>
+  </g>
+
+  <!-- hidden low-frequency human voice envelope -->
+  <path fill="none" stroke="#8aa353" stroke-width="4" opacity="0.85"
+    d="M40 620 Q 300 540 560 620 T 1080 620 T 1560 600"/>
+  <text x="60" y="720" fill="#8aa353" font-size="26">▁▂ SUB-CARRIER — HUMAN VOICE (rev. filter) ▂▁</text>
+  <text x="60" y="758" fill="#dfe8ee" font-size="30" letter-spacing="4">&#8220; . . . it is saying our names . . . &#8221;</text>
+
+  <!-- header -->
+  <text x="40" y="70" fill="#dfe8ee" font-size="30" letter-spacing="2">FINAL TRANSMISSION — AUDIO CAPTURE</text>
+  <text x="40" y="102" fill="#5c6b73" font-size="20">rhythmic oscillating static · 00:00:06 loop · SAN 0/1D4 to listen closely</text>
+  <text x="40" y="860" fill="#5c6b73" font-size="18">amplitude (dB) vs time · buried voiceprint isolated at 38 Hz</text>
+</svg>
