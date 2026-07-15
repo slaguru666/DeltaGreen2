@@ -173,7 +173,7 @@ for (const a of AGENTS) {
 
   // Use the pencil portrait for both sheet image and token once it exists on disk;
   // otherwise fall back to the neutral placeholder.
-  const tokenRel = `assets/tokens/${a.token}.webp`;
+  const tokenRel = `assets/tokens/${a.token}.png`;
   const tokenImg = fs.existsSync(`${REPO}/${tokenRel}`)
     ? `systems/deltagreen2/${tokenRel}`
     : PLACEHOLDER;

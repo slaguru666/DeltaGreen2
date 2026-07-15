@@ -1,5 +1,5 @@
-2026/07/15-22:22:50.755440 171b2b000 Delete type=3 #1
-2026/07/15-22:22:50.756827 171bb7000 Level-0 table #5: started
-2026/07/15-22:22:50.757226 171bb7000 Level-0 table #5: 15899 bytes OK
-2026/07/15-22:22:50.757333 171bb7000 Delete type=0 #3
-2026/07/15-22:22:50.757432 171bb7000 Manual compaction at level-0 from '!actors!3xs9ghs6mv1wy7ig' @ 72057594037927935 : 1 .. '!actors.items!vq78xlw4wwkiw4u4.zh5tsusgjddror4q' @ 0 : 0; will stop at (end)
+2026/07/15-22:58:29.796228 170317000 Delete type=3 #1
+2026/07/15-22:58:29.797832 1703a3000 Level-0 table #5: started
+2026/07/15-22:58:29.798421 1703a3000 Level-0 table #5: 15822 bytes OK
+2026/07/15-22:58:29.798545 1703a3000 Delete type=0 #3
+2026/07/15-22:58:29.798628 1703a3000 Manual compaction at level-0 from '!actors!3xs9ghs6mv1wy7ig' @ 72057594037927935 : 1 .. '!actors.items!vq78xlw4wwkiw4u4.zh5tsusgjddror4q' @ 0 : 0; will stop at (end)

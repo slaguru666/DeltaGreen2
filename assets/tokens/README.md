@@ -11,14 +11,14 @@ uses the neutral placeholder.
 
 | File                    | Agent              | Profession                |
 |-------------------------|--------------------|---------------------------|
-| agent-operator.webp     | SITKA, MARCUS      | Special Operator          |
-| agent-marine.webp       | HOLLOWAY, DIANA    | Force Recon Marine        |
-| agent-fed.webp          | VANCE, THEODORE    | FBI Special Agent         |
-| agent-detective.webp    | ROURKE, BERNADETTE | Homicide Detective        |
-| agent-medic.webp        | ELLARD, JONAH      | Emergency Physician       |
-| agent-intel.webp        | KAPLAN, SIMONE     | Intelligence Case Officer |
-| agent-scientist.webp    | MERCER, ELLIOT     | Forensic Scientist        |
-| agent-pilot.webp        | CALLOWAY, REGINA   | Contract Pilot            |
+| agent-operator.png     | SITKA, MARCUS      | Special Operator          |
+| agent-marine.png       | HOLLOWAY, DIANA    | Force Recon Marine        |
+| agent-fed.png          | VANCE, THEODORE    | FBI Special Agent         |
+| agent-detective.png    | ROURKE, BERNADETTE | Homicide Detective        |
+| agent-medic.png        | ELLARD, JONAH      | Emergency Physician       |
+| agent-intel.png        | KAPLAN, SIMONE     | Intelligence Case Officer |
+| agent-scientist.png    | MERCER, ELLIOT     | Forensic Scientist        |
+| agent-pilot.png        | CALLOWAY, REGINA   | Contract Pilot            |
 
-WebP is preferred (smaller). PNG also works — if you use PNG, change the
-extension in `build/gen-field-agents.mjs` (`assets/tokens/${a.token}.webp`).
+PNG is used here (sips could not emit WebP). If you switch to WebP, change the
+extension in `build/gen-field-agents.mjs`.
