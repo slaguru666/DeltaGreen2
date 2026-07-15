@@ -5,6 +5,6 @@
  */
 export default async function preloadHandlebarsTemplates() {
   return foundry.applications.handlebars.loadTemplates([
-    "systems/deltagreen/templates/dialog/modify-percentile-roll.html",
+    "systems/deltagreen2/templates/dialog/modify-percentile-roll.html",
   ]);
 }

@@ -154,7 +154,7 @@
 
   "DG.About.Changelog": "СПИСОК ЗМІН (ОНЛАЙН)",
   "DG.About.Copyright": "Опубліковано Arc Dream Publishing за домовленістю з Delta Green Partnership. Інтелектуальна власність під назвою Delta Green є торговельною маркою та об’єктом авторського права Delta Green Partnership, яка ліцензувала її використання тут.",
-  "DG.About.License": "Вміст цієї системи ліцензовано згідно з умовами файлу <a href=\"systems/deltagreen/LICENSE.txt\">license</a>, за винятком елементів, які належать до інтелектуальної власності Delta Green.",
+  "DG.About.License": "Вміст цієї системи ліцензовано згідно з умовами файлу <a href=\"systems/deltagreen2/LICENSE.txt\">license</a>, за винятком елементів, які належать до інтелектуальної власності Delta Green.",
   "DG.About.OnlineHelp": "Документація системи (ОНЛАЙН)",
   "DG.About.OnlineHelpTooltip": "Відкрити браузер з онлайн-довідкою GitHub.",
   "DG.About.OnlineBugTracker": "Запитання, баг-репорти або пропозиції (ОНЛАЙН)",

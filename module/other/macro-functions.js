@@ -47,7 +47,7 @@ export async function createDeltaGreenMacro(data, slot) {
     img: item.img,
     thumbnail: item.img,
     command,
-    flags: { "deltagreen.itemMacro": true },
+    flags: { "deltagreen2.itemMacro": true },
   });
 
   await game.user.assignHotbarMacro(macro, slot);

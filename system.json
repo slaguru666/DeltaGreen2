@@ -1,10 +1,10 @@
 {
-    "id": "deltagreen",
-    "title": "Delta Green: The Role-Playing Game",
-    "description": "Fan-made Foundry VTT system for Delta Green: The Role-Playing Game. Based on the rules in the Agent's Handbook (https://www.drivethrurpg.com/product/181674/Delta-Green-Agents-Handbook) [*NOT* Call of Cthulu]. Made with the permission of but neither affiliated with nor endorsed by Arc Dream Publishing or the Delta Green Partnership.",
-    "url": "https://github.com/deltagreen-foundryvtt/delta-green-foundry-vtt-system",
+    "id": "deltagreen2",
+    "title": "Delta Green 2",
+    "description": "Delta Green 2 — a modified fork of the fan-made Foundry VTT system for Delta Green: The Role-Playing Game (v1.7.0 base), adding GM automation: templated roll cards, apply-damage with armor handling, sanity application with breaking-point alerts, and ammo tracking. Based on the rules in the Agent's Handbook. Made with the permission of but neither affiliated with nor endorsed by Arc Dream Publishing or the Delta Green Partnership.",
+    "url": "https://github.com/slaguru666/DeltaGreen2",
     "license": "LICENSE.txt",
-    "background": "systems/deltagreen/assets/img/burned_delta_green_logo_on_form_splash_page.webp",
+    "background": "systems/deltagreen2/assets/img/burned_delta_green_logo_on_form_splash_page.webp",
     "authors": [
         {
             "name": "TheLastScrub",
@@ -15,7 +15,7 @@
             "discord": "jalensailin"
         }
     ],
-    "version": "1.7.0",
+    "version": "2.0.0",
     "compatibility": {
         "minimum": "13",
         "verified": "14",
@@ -125,7 +125,7 @@
         {
             "name": "firearms",
             "label": "Firearms",
-            "system": "deltagreen",
+            "system": "deltagreen2",
             "path": "packs/firearms",
             "type": "Item",
             "flags": {},
@@ -137,7 +137,7 @@
         {
             "name": "armor",
             "label": "Armor",
-            "system": "deltagreen",
+            "system": "deltagreen2",
             "path": "packs/armor",
             "type": "Item",
             "flags": {},
@@ -149,7 +149,7 @@
         {
             "name": "hand-to-hand-weapons",
             "label": "Hand-to-Hand Weapons",
-            "system": "deltagreen",
+            "system": "deltagreen2",
             "path": "packs/hand-to-hand-weapons",
             "type": "Item",
             "flags": {},
@@ -161,7 +161,7 @@
         {
             "name": "agent-pregens",
             "label": "Agent Pregens",
-            "system": "deltagreen",
+            "system": "deltagreen2",
             "path": "packs/pregens",
             "type": "Actor",
             "flags": {},
@@ -173,7 +173,7 @@
         {
             "name": "operation-code-name-generator-tables",
             "label": "Operation Code Name Generator Tables",
-            "system": "deltagreen",
+            "system": "deltagreen2",
             "path": "packs/operation-code-name-generator",
             "type": "RollTable",
             "flags": {},
@@ -185,7 +185,7 @@
         {
             "name": "operation-code-name-generator-macro",
             "label": "Operation Code Name Generator Macro",
-            "system": "deltagreen",
+            "system": "deltagreen2",
             "path": "packs/operation-code-name-generator-macro",
             "type": "Macro",
             "flags": {},
@@ -195,8 +195,8 @@
             }
         }
     ],
-    "manifest": "https://github.com/deltagreen-foundryvtt/delta-green-foundry-vtt-system/releases/latest/download/system.json",
-    "download": "https://github.com/deltagreen-foundryvtt/delta-green-foundry-vtt-system/releases/download/v1.7.0/deltagreen.zip",
+    "manifest": "https://github.com/slaguru666/DeltaGreen2/releases/latest/download/system.json",
+    "download": "https://github.com/slaguru666/DeltaGreen2/releases/latest/download/deltagreen2.zip",
     "grid": {
         "distance": 1,
         "units": "m"

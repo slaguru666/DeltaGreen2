@@ -315,7 +315,7 @@ export default class DeltaGreenActor extends Actor {
       let alreadyAdded = false;
 
       for (const item of this.items) {
-        const flag = await item.getFlag("deltagreen", "SystemName");
+        const flag = await item.getFlag("deltagreen2", "SystemName");
 
         if (flag === "unarmed-attack" || item.name === "Unarmed Attack") {
           alreadyAdded = true;
@@ -328,7 +328,7 @@ export default class DeltaGreenActor extends Actor {
       }
 
       const handToHandPack = await game.packs.get(
-        "deltagreen.hand-to-hand-weapons",
+        "deltagreen2.hand-to-hand-weapons",
       );
       const itemIndex = await handToHandPack.getIndex();
       const toAdd = []; // createEmbeddedDocument expects an array
@@ -344,10 +344,10 @@ export default class DeltaGreenActor extends Actor {
       const newItems = await this.createEmbeddedDocuments("Item", toAdd);
 
       for (const item of newItems) {
-        await item.setFlag("deltagreen", "AutoAdded", true);
+        await item.setFlag("deltagreen2", "AutoAdded", true);
 
         if (item.name === "Unarmed Attack") {
-          await item.setFlag("deltagreen", "SystemName", "unarmed-attack");
+          await item.setFlag("deltagreen2", "SystemName", "unarmed-attack");
         }
       }
     } catch (ex) {
@@ -358,14 +358,14 @@ export default class DeltaGreenActor extends Actor {
 
   async AddBaseVehicleItemsIfMissing() {
     try {
-      const flag = await this.getFlag("deltagreen", "DefaultVehicleArmorAdded");
+      const flag = await this.getFlag("deltagreen2", "DefaultVehicleArmorAdded");
 
       if (flag !== null && flag !== undefined && flag !== true) {
         console.log("found a flag");
         console.log(flag);
       } else {
         // mark the actor so that we don't accidently do this again later, or if we want to fix/change something on it in the future
-        this.setFlag("deltagreen", "DefaultVehicleArmorAdded", true);
+        this.setFlag("deltagreen2", "DefaultVehicleArmorAdded", true);
 
         const toAdd = []; // createEmbeddedDocument expects an array
 
@@ -383,7 +383,7 @@ export default class DeltaGreenActor extends Actor {
         const newItems = await this.createEmbeddedDocuments("Item", toAdd);
 
         for (const item of newItems) {
-          await item.setFlag("deltagreen", "AutoAdded", true);
+          await item.setFlag("deltagreen2", "AutoAdded", true);
         }
       }
     } catch (ex) {

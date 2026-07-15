@@ -14,7 +14,7 @@ export default class DeltaGreenItemSheet extends foundry.appv1.sheets
   /** @override */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["deltagreen", "sheet", "item"],
+      classes: ["deltagreen2", "sheet", "item"],
       width: 520,
       height: 600,
       tabs: [
@@ -29,7 +29,7 @@ export default class DeltaGreenItemSheet extends foundry.appv1.sheets
 
   /** @override */
   get template() {
-    const path = "systems/deltagreen/templates/item";
+    const path = "systems/deltagreen2/templates/item";
 
     // unique item sheet by type, like `weapon-sheet.html`.
     return `${path}/item-${this.item.type}-sheet.html`;

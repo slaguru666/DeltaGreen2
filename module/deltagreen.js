@@ -145,19 +145,19 @@ Hooks.on("preCreateItem", (item) => {
   if (item.img === "icons/svg/item-bag.svg") {
     if (item.type === "bond") {
       item.updateSource({
-        img: "systems/deltagreen/assets/icons/person-black-bg.svg",
+        img: "systems/deltagreen2/assets/icons/person-black-bg.svg",
       });
     } else if (item.type === "tome") {
       item.updateSource({
-        img: "systems/deltagreen/assets/icons/book-cover.svg",
+        img: "systems/deltagreen2/assets/icons/book-cover.svg",
       });
     } else if (item.type === "ritual") {
       item.updateSource({
-        img: "systems/deltagreen/assets/icons/bookmarklet.svg",
+        img: "systems/deltagreen2/assets/icons/bookmarklet.svg",
       });
     } else {
       item.updateSource({
-        img: "systems/deltagreen/assets/icons/swap-bag-black-bg.svg",
+        img: "systems/deltagreen2/assets/icons/swap-bag-black-bg.svg",
       });
     }
   }

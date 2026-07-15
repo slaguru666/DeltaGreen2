@@ -283,7 +283,7 @@ export default function registerSystemSettings() {
   });
   HandlerSettings.register();
 
-  game.settings.register("deltagreen", "characterSheetStyle", {
+  game.settings.register("deltagreen2", "characterSheetStyle", {
     name: game.i18n.localize("DG.Settings.charactersheet.name"),
     hint: game.i18n.localize("DG.Settings.charactersheet.hint"),
     scope: "world", // This specifies a world-stored setting
@@ -303,7 +303,7 @@ export default function registerSystemSettings() {
     },
   });
 
-  game.settings.register("deltagreen", "sortSkills", {
+  game.settings.register("deltagreen2", "sortSkills", {
     name: game.i18n.localize("DG.Settings.sortskills.name"),
     hint: game.i18n.localize("DG.Settings.sortskills.hint"),
     scope: "client",
@@ -313,7 +313,7 @@ export default function registerSystemSettings() {
     default: false,
   });
 
-  game.settings.register("deltagreen", "skillTooltipDisplay", {
+  game.settings.register("deltagreen2", "skillTooltipDisplay", {
     name: game.i18n.localize("DG.Settings.skillTooltipDisplay.name"),
     hint: game.i18n.localize("DG.Settings.skillTooltipDisplay.hint"),
     scope: "client",
@@ -337,7 +337,7 @@ export default function registerSystemSettings() {
   });
 
   // obsolete - will be removed at some point
-  game.settings.register("deltagreen", "characterSheetFont", {
+  game.settings.register("deltagreen2", "characterSheetFont", {
     name: "World Font Choice",
     hint: "Choose font style for use throughout this world.",
     scope: "world", // This specifies a world-stored setting
@@ -361,7 +361,7 @@ export default function registerSystemSettings() {
   });
 
   // obsolete - will be removed at some point
-  game.settings.register("deltagreen", "characterSheetBackgroundImageSetting", {
+  game.settings.register("deltagreen2", "characterSheetBackgroundImageSetting", {
     name: "World Sheet Background Image",
     hint: "Choose background image for use throughout this world. (Refresh page to see change.)",
     scope: "world", // This specifies a world-stored setting

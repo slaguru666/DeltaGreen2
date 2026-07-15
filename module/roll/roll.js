@@ -123,7 +123,7 @@ export class DGPercentileRoll extends DGRoll {
    */
   async showDialog() {
     const privateSanSetting = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "keepSanityPrivate",
     );
 
@@ -158,7 +158,7 @@ export class DGPercentileRoll extends DGRoll {
     };
 
     const template =
-      "systems/deltagreen/templates/dialog/modify-percentile-roll.html";
+      "systems/deltagreen2/templates/dialog/modify-percentile-roll.html";
     const content = await renderTemplate(template, backingData);
     return new Promise((resolve, reject) => {
       const modButtons = [-40, -20, 20, 40].map((mod) => {
@@ -245,7 +245,7 @@ export class DGPercentileRoll extends DGRoll {
   async toChat() {
     // if using private san rolls, must hide any SAN roll unless user is a GM
     const privateSanSetting = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "keepSanityPrivate",
     );
     if (
@@ -290,7 +290,7 @@ export class DGPercentileRoll extends DGRoll {
       game.settings.get(DG.ID, "skillFailure");
 
     const html = await renderTemplate(
-      "systems/deltagreen/templates/roll/percentile-roll.hbs",
+      "systems/deltagreen2/templates/roll/percentile-roll.hbs",
       {
         styleOverride,
         resultString,
@@ -700,7 +700,7 @@ export class DGDamageRoll extends DGRoll {
         this.item.name
       } (<b>${
         this.item.system.armorPiercing
-      } </b><img class="armor-piercing-chat-card-img" src="systems/deltagreen/assets/icons/supersonic-bullet.svg" alt="armor penetration"/>)`;
+      } </b><img class="armor-piercing-chat-card-img" src="systems/deltagreen2/assets/icons/supersonic-bullet.svg" alt="armor penetration"/>)`;
     } catch (ex) {
       // console.log(ex);
       label = `Rolling <b>DAMAGE</b> for <b>${label.toUpperCase()}</b>`;
@@ -710,7 +710,7 @@ export class DGDamageRoll extends DGRoll {
 
   async showDialog() {
     const template =
-      "systems/deltagreen/templates/dialog/modify-damage-roll.html";
+      "systems/deltagreen2/templates/dialog/modify-damage-roll.html";
     const backingData = {
       data: {
         label: this.item?.name,

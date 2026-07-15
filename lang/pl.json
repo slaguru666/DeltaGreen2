@@ -154,7 +154,7 @@
 
   "DG.About.Changelog": "DZIENNIK ZMIAN (ONLINE)",
   "DG.About.Copyright": "Opublikowano przez Arc Dream Publishing na mocy umowy z Delta Green Partnership. Własność intelektualna znana jako Delta Green jest znakiem towarowym i prawem autorskim należącym do Delta Green Partnership, które udzieliło tutaj licencji na jej wykorzystanie.",
-  "DG.About.License": "Zawartość tego systemu jest licencjonowana zgodnie z warunkami dołączonego pliku <a href=\"systems/deltagreen/LICENSE.txt\">licencyjnego</a>, z wyjątkiem tych elementów, które są składnikami własności intelektualnej Delta Green.",
+  "DG.About.License": "Zawartość tego systemu jest licencjonowana zgodnie z warunkami dołączonego pliku <a href=\"systems/deltagreen2/LICENSE.txt\">licencyjnego</a>, z wyjątkiem tych elementów, które są składnikami własności intelektualnej Delta Green.",
   "DG.About.OnlineHelp": "Dokumentacja systemu (ONLINE)",
   "DG.About.OnlineHelpTooltip": "Uruchom przeglądarkę z dokumentacją online na GitHubie.",
   "DG.About.OnlineBugTracker": "Pytania, zgłoszenia błędów lub prośby o funkcje (ONLINE)",

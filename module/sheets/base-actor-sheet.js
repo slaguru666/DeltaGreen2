@@ -111,7 +111,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
 
     // Skill tooltip display setting
     context.skillTooltipDisplay = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "skillTooltipDisplay",
     );
 
@@ -122,7 +122,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
 
     // Handle private sanity setting, override for GMs.
     const keepSanityPrivate = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "keepSanityPrivate",
     );
     const hideSan = keepSanityPrivate && !game.user.isGM;
@@ -261,7 +261,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
 
   /** @override */
   activateEditor(target, editorOptions, initialContent) {
-    editorOptions.content_css = "./systems/deltagreen/css/editor.css";
+    editorOptions.content_css = "./systems/deltagreen2/css/editor.css";
     return super.activateEditor(target, editorOptions, initialContent);
   }
 
@@ -377,7 +377,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
     });
 
     // if sorting by columns, re-arrange the array to be columns first, then rows
-    if (game.settings.get("deltagreen", "sortSkills")) {
+    if (game.settings.get("deltagreen2", "sortSkills")) {
       const columnSortedSkills = this.reorderForColumnSorting(sortedSkills, 3);
       this.actor.system.sortedSkills = columnSortedSkills;
     } else {
@@ -428,7 +428,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
       return a.sortLabel.localeCompare(b.sortLabel, game.i18n.lang);
     });
 
-    if (game.settings.get("deltagreen", "sortSkills")) {
+    if (game.settings.get("deltagreen2", "sortSkills")) {
       const columnSortedSkills = this.reorderForColumnSorting(
         sortedCustomSkills,
         2,
@@ -537,7 +537,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
     // check system setting to see if it should always be shown
     if (
       game.settings.get(
-        "deltagreen",
+        "deltagreen2",
         "alwaysShowHypergeometrySectionForPlayers",
       )
     ) {
@@ -1133,7 +1133,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
     // Prepare the template to feed to Dialog.
     const { renderTemplate } = foundry.applications.handlebars;
     const content = await renderTemplate(
-      "systems/deltagreen/templates/dialog/special-training.html",
+      "systems/deltagreen2/templates/dialog/special-training.html",
       {
         name: specialTraining?.name || "",
         selectElement,
@@ -1352,7 +1352,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
               icon: '<i class="fas fa-crosshairs"></i>',
               callback: () =>
                 game.packs
-                  .find((k) => k.collection === "deltagreen.firearms")
+                  .find((k) => k.collection === "deltagreen2.firearms")
                   .render(true),
             },
             {
@@ -1362,7 +1362,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
               callback: () =>
                 game.packs
                   .find(
-                    (k) => k.collection === "deltagreen.hand-to-hand-weapons",
+                    (k) => k.collection === "deltagreen2.hand-to-hand-weapons",
                   )
                   .render(true),
             },
@@ -1372,7 +1372,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
       }
       default:
         game.packs
-          .find((k) => k.collection === `deltagreen.${packType}`)
+          .find((k) => k.collection === `deltagreen2.${packType}`)
           .render(true);
         break;
     }
@@ -1397,7 +1397,7 @@ export default class DGActorSheet extends DGSheetMixin(ActorSheetV2) {
    * Supports either data-tooltip (preferred, may contain HTML) or title (plain text).
    */
   _tooltipsSettings(root) {
-    const mode = game.settings.get("deltagreen", "skillTooltipDisplay");
+    const mode = game.settings.get("deltagreen2", "skillTooltipDisplay");
 
     // If not explicitly hoverShift or never, do nothing.
     if (mode !== "hoverShift" && mode !== "never") return;

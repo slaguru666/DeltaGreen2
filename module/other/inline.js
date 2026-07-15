@@ -7,7 +7,7 @@ export async function handleInlineActions(btnWithAction, messageId) {
   if (!actor) return;
 
   if (action === "rollback-skill-failure-state") {
-    const rollbackFlag = message.getFlag("deltagreen", "rollbacks");
+    const rollbackFlag = message.getFlag("deltagreen2", "rollbacks");
     await actor.update(foundry.utils.deepClone(rollbackFlag));
 
     // eslint-disable-next-line no-use-before-define
@@ -20,7 +20,7 @@ export async function handleInlineActions(btnWithAction, messageId) {
     label.classList.toggle("strike");
 
     message.update({
-      [`flags.deltagreen.rollbacks`]: rollbackFlag,
+      [`flags.deltagreen2.rollbacks`]: rollbackFlag,
       content: message.content.replace(oldHtml, label.outerHTML),
     });
   }

@@ -6,7 +6,7 @@
  */
 
 const DG = /** @type {const} */ ({
-  ID: "deltagreen",
+  ID: "deltagreen2",
 
   // All the base skills
   skills: [

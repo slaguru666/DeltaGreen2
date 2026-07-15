@@ -165,10 +165,10 @@ export default function registerHandlebarsHelpers() {
   // looks at system setting for what font to use and returns the class that is then used in the handlebars template that
   // generates the character sheet.
   Handlebars.registerHelper("getFontFamilySystemSettingClass", () => {
-    const setting = game.settings.get("deltagreen", "characterSheetFont");
+    const setting = game.settings.get("deltagreen2", "characterSheetFont");
 
     const characterSheetStyle = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "characterSheetStyle",
     );
 
@@ -208,7 +208,7 @@ export default function registerHandlebarsHelpers() {
 
   Handlebars.registerHelper("getCharacterSheetStyle", () => {
     const characterSheetStyle = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "characterSheetStyle",
     );
 
@@ -225,7 +225,7 @@ export default function registerHandlebarsHelpers() {
     let setting = false;
 
     try {
-      setting = game.settings.get("deltagreen", "keepSanityPrivate");
+      setting = game.settings.get("deltagreen2", "keepSanityPrivate");
 
       if (game.user.isGM) {
         setting = false;
@@ -244,7 +244,7 @@ export default function registerHandlebarsHelpers() {
   Handlebars.registerHelper("showImpossibleLandscapesContent", () => {
     let result = false;
     const setting = game.settings.get(
-      "deltagreen",
+      "deltagreen2",
       "showImpossibleLandscapesContent",
     );
 
