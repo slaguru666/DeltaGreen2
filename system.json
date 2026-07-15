@@ -1,0 +1,269 @@
+{
+    "id": "deltagreen",
+    "title": "Delta Green: The Role-Playing Game",
+    "description": "Fan-made Foundry VTT system for Delta Green: The Role-Playing Game. Based on the rules in the Agent's Handbook (https://www.drivethrurpg.com/product/181674/Delta-Green-Agents-Handbook) [*NOT* Call of Cthulu]. Made with the permission of but neither affiliated with nor endorsed by Arc Dream Publishing or the Delta Green Partnership.",
+    "url": "https://github.com/deltagreen-foundryvtt/delta-green-foundry-vtt-system",
+    "license": "LICENSE.txt",
+    "background": "systems/deltagreen/assets/img/burned_delta_green_logo_on_form_splash_page.webp",
+    "authors": [
+        {
+            "name": "TheLastScrub",
+            "discord": "TheLastScrub"
+        },
+        {
+            "name": "jalensailin",
+            "discord": "jalensailin"
+        }
+    ],
+    "version": "1.7.0",
+    "compatibility": {
+        "minimum": "13",
+        "verified": "14",
+        "maximum": "14"
+    },
+    "flags": "",
+    "esmodules": [
+        "module/deltagreen.js"
+    ],
+    "styles": [
+        "css/deltagreen.css",
+        "css/dialogue.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json",
+            "flags": {}
+        },
+        {
+            "lang": "ja",
+            "name": "日本語",
+            "path": "lang/ja.json",
+            "flags": {}
+        },
+        {
+            "lang": "es",
+            "name": "Español",
+            "path": "lang/es.json",
+            "flags": {}
+        },
+        {
+            "lang": "ca",
+            "name": "Català",
+            "path": "lang/ca.json",
+            "flags": {}
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json",
+            "flags": {}
+        },
+        {
+            "lang": "pt-BR",
+            "name": "Português (Brasil)",
+            "path": "lang/pt-BR.json",
+            "flags": {}
+        },
+        {
+            "lang": "de",
+            "name": "Deutsch",
+            "path": "lang/de.json",
+            "flags": {}
+        },
+        {
+            "lang": "sv",
+            "name": "Svenska",
+            "path": "lang/sv.json",
+            "flags": {}
+        },
+        {
+            "lang": "cn",
+            "name": "中文",
+            "path": "lang/cn.json",
+            "flags": {}
+        },
+        {
+            "lang": "pl",
+            "name": "polski",
+            "path": "lang/pl.json",
+            "flags": {}
+        },
+        {
+            "lang": "uk",
+            "name": "Українська",
+            "path": "lang/uk.json",
+            "flags": {}
+        }
+    ],
+    "packFolders": [
+        {
+            "name": "Delta Green",
+            "sorting": "a",
+            "color": "#556b2f",
+            "packs": [
+                "firearms",
+                "armor",
+                "hand-to-hand-weapons",
+                "agent-pregens",
+                "operation-code-name-generator-tables"
+            ],
+            "folders": [
+                {
+                    "name": "System macros",
+                    "sorting": "a",
+                    "color": "#67b1e0",
+                    "packs": [
+                        "operation-code-name-generator-macro"
+                    ]
+                }
+            ]
+        }
+    ],
+    "packs": [
+        {
+            "name": "firearms",
+            "label": "Firearms",
+            "system": "deltagreen",
+            "path": "packs/firearms",
+            "type": "Item",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "armor",
+            "label": "Armor",
+            "system": "deltagreen",
+            "path": "packs/armor",
+            "type": "Item",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "hand-to-hand-weapons",
+            "label": "Hand-to-Hand Weapons",
+            "system": "deltagreen",
+            "path": "packs/hand-to-hand-weapons",
+            "type": "Item",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "agent-pregens",
+            "label": "Agent Pregens",
+            "system": "deltagreen",
+            "path": "packs/pregens",
+            "type": "Actor",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "operation-code-name-generator-tables",
+            "label": "Operation Code Name Generator Tables",
+            "system": "deltagreen",
+            "path": "packs/operation-code-name-generator",
+            "type": "RollTable",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        },
+        {
+            "name": "operation-code-name-generator-macro",
+            "label": "Operation Code Name Generator Macro",
+            "system": "deltagreen",
+            "path": "packs/operation-code-name-generator-macro",
+            "type": "Macro",
+            "flags": {},
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            }
+        }
+    ],
+    "manifest": "https://github.com/deltagreen-foundryvtt/delta-green-foundry-vtt-system/releases/latest/download/system.json",
+    "download": "https://github.com/deltagreen-foundryvtt/delta-green-foundry-vtt-system/releases/download/v1.7.0/deltagreen.zip",
+    "grid": {
+        "distance": 1,
+        "units": "m"
+    },
+    "primaryTokenAttribute": "health",
+    "secondaryTokenAttribute": "wp",
+    "documentTypes": {
+        "Actor": {
+            "agent": {
+                "htmlFields": [
+                    "physical.description"
+                ]
+            },
+            "unnatural": {
+                "htmlFields": [
+                    "notes"
+                ]
+            },
+            "npc": {
+                "htmlFields": [
+                    "notes"
+                ]
+            },
+            "vehicle": {
+                "htmlFields": [
+                    "description"
+                ]
+            }
+        },
+        "Item": {
+            "weapon": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "armor": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "motivation": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "bond": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "gear": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "tome": {
+                "htmlFields": [
+                    "description",
+                    "handlerNotes"
+                ]
+            },
+            "ritual": {
+                "htmlFields": [
+                    "description",
+                    "handlerNotes"
+                ]
+            }
+        }
+    }
+}

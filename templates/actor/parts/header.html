@@ -1,0 +1,42 @@
+<header class="sheet-header">
+    <div class="header-fields">
+        {{!-- Name, Profession, Portrait --}}
+        <div class="header-top flexrow">
+            <img class="profile-img"
+                 src="{{actor.img}}"
+                 alt="{{actor.name}}"
+                 data-action="editImage"
+                 data-edit="img"
+                 height="150"
+                 width="100" />
+            <div>
+                <div>
+                    <h1 class="charname">
+                        <input name="name"
+                               type="text"
+                               value="{{actor.name}}"
+                               data-tooltip="{{localize 'DG.AgentNameFieldTooltip' }}" />
+                    </h1>
+                </div>
+                <div class="profession">
+                    <h2 class="profession">
+                        <input name="system.biography.profession"
+                               type="text"
+                               value="{{actor.system.biography.profession}}"
+                               placeholder="{{subnameInfoPlaceholder}}" />
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="resources grid grid-3col">
+            {{!-- HP --}}
+            {{> "systems/deltagreen/templates/actor/partials/health-partial.html" }}
+            {{#if (ne actor.type "vehicle") }}
+                {{!-- WP --}}
+                {{> "systems/deltagreen/templates/actor/partials/willpower-partial.html" }}
+                {{!-- Sanity --}}
+                {{> "systems/deltagreen/templates/actor/partials/sanity-partial.html" }}
+            {{/if}}
+        </div>
+    </div>
+</header>
