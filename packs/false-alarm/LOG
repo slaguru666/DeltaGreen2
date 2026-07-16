@@ -1,5 +1,3 @@
-2026/07/16-23:21:11.101727 173db3000 Delete type=3 #1
-2026/07/16-23:21:11.104667 17464b000 Level-0 table #5: started
-2026/07/16-23:21:11.105248 17464b000 Level-0 table #5: 28865 bytes OK
-2026/07/16-23:21:11.105405 17464b000 Delete type=0 #3
-2026/07/16-23:21:11.105503 17464b000 Manual compaction at level-0 from '!adventures!5zf355zpx5s1ux56' @ 72057594037927935 : 1 .. '!adventures!5zf355zpx5s1ux56' @ 0 : 0; will stop at (end)
+2026/07/17-00:01:55.659195 16ea8f000 Recovering log #4
+2026/07/17-00:01:55.660325 16ea8f000 Delete type=0 #4
+2026/07/17-00:01:55.660363 16ea8f000 Delete type=3 #2

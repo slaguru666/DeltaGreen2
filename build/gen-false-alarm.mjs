@@ -250,7 +250,7 @@ const journal_audio = journal("07-audio", "⑦ HANDOUT — Final Transmission (A
 ]);
 
 const journal_tear = journal("08-tear", "⑧ HANDOUT — THE TEAR (climax only)", [
-  imagePage("The Manifestation", `${A}/handout-entity.svg`, "DO NOT REVEAL until the broadcast peaks."),
+  imagePage("The Manifestation", `${A}/handout-entity.png`, "DO NOT REVEAL until the broadcast peaks."),
   textPage("Reveal notes",
     "<p><b>Hold this image back</b> until the radar dish activates and the entity bleeds through. The air is static-charged, everyone's hair stands on end, and a shifting, non-Euclidean <b>fractal silhouette</b> tears open at the centre of the dish. Presence costs <b>1D6/1D20 SAN</b>. Bullets pass through and warp uselessly. See <em>GM — NPCs &amp; The Threat</em>.</p>"),
 ]);
