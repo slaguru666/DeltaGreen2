@@ -539,10 +539,19 @@
 
 #pause.dg2-pause {
   background: none;
+}
+
+/* Layout ONLY while actually paused - never override Foundry's hidden
+   (unpaused) state, or the stock GAME PAUSED markup shows after unpausing. */
+#pause.dg2-pause.paused {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
+}
+
+#pause.dg2-pause:not(.paused) {
+  display: none;
 }
 
 #pause.dg2-pause img { display: none; }
