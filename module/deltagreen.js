@@ -37,6 +37,24 @@ import RitualItemData from "./data/item/ritual.js";
 const { Actors, Items } = foundry.documents.collections;
 
 Hooks.once("init", async () => {
+  // Own the pause UI: applying our overlay inside _onRender means it is part
+  // of EVERY render of the pause application - no hook/timing races.
+  try {
+    const BasePause = foundry.applications?.ui?.GamePause;
+    if (BasePause) {
+      class DG2GamePause extends BasePause {
+        /** @override */
+        async _onRender(context, options) {
+          await super._onRender?.(context, options);
+          applyDG2PauseOverlay(this.element);
+        }
+      }
+      CONFIG.ui.pause = DG2GamePause;
+    }
+  } catch (ex) {
+    console.warn("Delta Green 2 | could not register pause subclass", ex);
+  }
+
   Object.assign(CONFIG.Actor.dataModels, {
     // The keys are the types defined in system.json documentTypes.Actor
     agent: AgentData,
@@ -266,8 +284,11 @@ Hooks.on("renderGamePause", (_app, html) => {
 });
 
 Hooks.on("pauseGame", () => {
-  // Run after Foundry finishes its own pause render/toggle.
-  setTimeout(() => applyDG2PauseOverlay(), 60);
+  // Fallback for cores where the pause subclass isn't registered: re-apply
+  // after Foundry's own render, with retries to outlast a slow re-render.
+  for (const delay of [50, 250, 700]) {
+    setTimeout(() => applyDG2PauseOverlay(), delay);
+  }
 });
 
 Hooks.once("ready", () => applyDG2PauseOverlay());
