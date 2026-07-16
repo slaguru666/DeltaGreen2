@@ -221,16 +221,25 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
   }
 });
 
-Hooks.on("renderGamePause", function (_, html, options) {
-  if (options.cssClass !== "paused") return;
-
+/**
+ * Replace the stock pause spinner with the DG2 radar-scope animation.
+ * Idempotent: safe to call on every render/toggle; skips if already applied.
+ * Wired to BOTH renderGamePause and pauseGame so the scope appears no matter
+ * which path Foundry takes when the pause state changes.
+ */
+function applyDG2PauseOverlay(element) {
   try {
-    const caption = game.i18n.translations.DG?.MissionPaused ?? "Mission Paused";
-    const sub = game.i18n.translations.DG2?.PausedSub ?? "ALL STATIONS HOLD // AWAITING HANDLER";
+    const el = element ?? document.getElementById("pause");
+    if (!el || !game.paused) return;
+    if (el.querySelector(".dg2-pause-scope")) return; // already applied
 
-    // Replace the default spinner with a DG2 radar-scope pause animation.
-    html.classList.add("dg2-pause");
-    html.innerHTML = `
+    const caption = game.i18n.translations.DG?.MissionPaused ?? "Mission Paused";
+    const sub =
+      game.i18n.translations.DG2?.PausedSub ??
+      "All stations hold // awaiting Handler";
+
+    el.classList.add("dg2-pause");
+    el.innerHTML = `
       <div class="dg2-pause-scope" aria-hidden="true">
         <span class="dg2-pause-ring r1"></span>
         <span class="dg2-pause-ring r2"></span>
@@ -246,10 +255,22 @@ Hooks.on("renderGamePause", function (_, html, options) {
         <span class="dg2-pause-title">${caption}</span>
         <span class="dg2-pause-sub">${sub}</span>
       </figcaption>`;
-  } catch {
-    // noop
+  } catch (ex) {
+    console.warn("Delta Green 2 | pause overlay failed", ex);
   }
+}
+
+Hooks.on("renderGamePause", (_app, html) => {
+  const el = html instanceof HTMLElement ? html : html?.[0];
+  applyDG2PauseOverlay(el);
 });
+
+Hooks.on("pauseGame", () => {
+  // Run after Foundry finishes its own pause render/toggle.
+  setTimeout(() => applyDG2PauseOverlay(), 60);
+});
+
+Hooks.once("ready", () => applyDG2PauseOverlay());
 
 function addEventListenerToChatMessage(element) {
   element.addEventListener("click", (event) => {

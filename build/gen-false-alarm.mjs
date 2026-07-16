@@ -95,7 +95,7 @@ function npcActor({ key, name, type, img, token, stats, health, skills, notes, s
 
 const aRostova = npcActor({
   key: "rostova", name: "Dr. Elena Rostova", type: "npc",
-  img: `${A}/token-rostova.svg`, token: `${A}/token-rostova.svg`,
+  img: `${A}/token-rostova.png`, token: `${A}/token-rostova.png`,
   stats: { str: 10, con: 10, dex: 11, int: 15, pow: 12, cha: 11 }, health: 10, san: 0,
   skills: { computer_science: 70, science: 0, sigint: 40, first_aid: 30, alertness: 40 },
   shortDescription: "FAA facility technician — deceased, flash-frozen.",
@@ -104,7 +104,7 @@ const aRostova = npcActor({
 
 const aVance = npcActor({
   key: "vance", name: "Deputy Marcus Vance (Changed)", type: "unnatural",
-  img: `${A}/token-vance.svg`, token: `${A}/token-vance.svg`,
+  img: `${A}/token-vance.png`, token: `${A}/token-vance.png`,
   stats: { str: 17, con: 16, dex: 16, int: 6, pow: 15, cha: 3 }, health: 16,
   san: { failed: "1D6", success: "1" },
   skills: { alertness: 60, athletics: 70, dodge: 50, melee_weapons: 65, unarmed_combat: 55 },
@@ -115,7 +115,7 @@ const aVance = npcActor({
 
 const aTear = npcActor({
   key: "tear", name: "The Tear (Static Between Stations)", type: "unnatural",
-  img: `${A}/token-entity.svg`, token: `${A}/token-entity.svg`,
+  img: `${A}/token-entity.png`, token: `${A}/token-entity.png`,
   stats: { str: 20, con: 30, dex: 20, int: 20, pow: 25, cha: 1 }, health: 30,
   san: { failed: "1D20", success: "1D6" },
   skills: { alertness: 90, dodge: 80 },
