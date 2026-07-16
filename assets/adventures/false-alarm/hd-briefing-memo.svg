@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1400" font-family="Courier New, monospace">
+  <rect width="1000" height="1400" fill="#0e1215"/>
+  <rect x="34" y="34" width="932" height="1332" fill="#12171b" stroke="#2c3941" stroke-width="2"/>
+  <!-- classification bars -->
+  <rect x="34" y="34" width="932" height="40" fill="#5a1a12"/>
+  <text x="500" y="62" fill="#ffd9d0" font-size="24" text-anchor="middle" letter-spacing="6">TOP SECRET // GALVANIZE // NOFORN</text>
+  <rect x="34" y="1326" width="932" height="40" fill="#5a1a12"/>
+  <text x="500" y="1354" fill="#ffd9d0" font-size="24" text-anchor="middle" letter-spacing="6">TOP SECRET // GALVANIZE // NOFORN</text>
+
+  <!-- letterhead -->
+  <g transform="translate(70 110)">
+    <circle cx="26" cy="10" r="26" fill="none" stroke="#8aa353" stroke-width="2"/>
+    <path d="M26 -10 L44 24 L8 24 Z" fill="none" stroke="#8aa353" stroke-width="2"/>
+    <text x="72" y="6" fill="#dfe8ee" font-size="30" letter-spacing="2">OUTLAW OPERATIONS DIRECTIVE</text>
+    <text x="72" y="34" fill="#8aa353" font-size="18" letter-spacing="1">A-CELL // FLASH PRECEDENCE // DESTROY AFTER READING</text>
+  </g>
+  <line x1="70" y1="164" x2="930" y2="164" stroke="#2c3941" stroke-width="1"/>
+
+  <!-- header fields -->
+  <g fill="#9fb0b8" font-size="18">
+    <text x="70" y="196">OP NAME:</text><text x="230" y="196" fill="#dfe8ee">FALSE ALARM</text>
+    <text x="600" y="196">DTG:</text><text x="670" y="196" fill="#dfe8ee">[TONIGHT] 2100Z</text>
+    <text x="70" y="224">HANDLER:</text><text x="230" y="224" fill="#dfe8ee">&#9608;&#9608;&#9608;&#9608;&#9608; ("PROVOST")</text>
+    <text x="600" y="224">EXPECT:</text><text x="670" y="224" fill="#dfe8ee">3&#8211;4 HRS</text>
+    <text x="70" y="252">COVER:</text><text x="230" y="252" fill="#dfe8ee">JOINT FAA / NWS FIELD TEAM</text>
+  </g>
+  <line x1="70" y1="272" x2="930" y2="272" stroke="#2c3941" stroke-width="1"/>
+
+  <!-- body -->
+  <g fill="#cfd8dd" font-size="18.5">
+    <text x="70" y="308" fill="#8aa353" font-size="20" letter-spacing="2">1. SITUATION</text>
+    <text x="70" y="336">At 0312 local, FAA long-range radar Site ME-07 ("SABLE</text>
+    <text x="70" y="360">RIDGE"), an automated station in the North Maine Woods,</text>
+    <text x="70" y="384">transmitted a CORRUPTED DATA LOOP and went dark. It has</text>
+    <text x="70" y="408">not answered remote reboot. Aroostook County Deputy</text>
+    <text x="70" y="432">MARCUS VANCE responded at approx. 0500 and has not</text>
+    <text x="70" y="456">checked in. We are watching this because the pre-crash</text>
+    <text x="70" y="480">frames logged a contact that is <tspan fill="#e0a0a0">not consistent with any</tspan></text>
+    <text x="70" y="504" fill="#e0a0a0">aircraft.</text>
+
+    <text x="70" y="546" fill="#8aa353" font-size="20" letter-spacing="2">2. MISSION</text>
+    <text x="70" y="574">Proceed to Site ME-07 and, in order of priority:</text>
+    <text x="90" y="602">a. ERASE all unnatural data &#8212; on-site log drive AND</text>
+    <text x="110" y="626">the FAA remote cloud backups.</text>
+    <text x="90" y="654">b. RECOVER or TERMINATE Deputy Vance.</text>
+    <text x="90" y="682">c. SECURE the facility.</text>
+    <text x="90" y="710">d. COVER the incident as a catastrophic severe-weather-</text>
+    <text x="110" y="734">generator failure.</text>
+
+    <text x="70" y="776" fill="#8aa353" font-size="20" letter-spacing="2">3. EXECUTION &amp; ROE</text>
+    <text x="70" y="804">You are FAA/NWS on paper. The county has been told a</text>
+    <text x="70" y="828">specialist team is inbound; the substation will not</text>
+    <text x="70" y="852">interfere. Weapons discreet. NO local casualties that</text>
+    <text x="70" y="876">cannot be explained by weather or wildlife. If any Agent</text>
+    <text x="70" y="900">is compromised by what is on that ridge, the mission</text>
+    <text x="70" y="924">takes precedence over the Agent. You know what that means.</text>
+
+    <text x="70" y="966" fill="#8aa353" font-size="20" letter-spacing="2">4. SIGNAL / COMMS</text>
+    <text x="70" y="994">Cellular is dead past the Notch. Encrypted VHF, callsign</text>
+    <text x="70" y="1018">OUTLAW-6. <tspan fill="#e0a0a0">If your radios begin to answer you,</tspan></text>
+    <text x="70" y="1042"><tspan fill="#e0a0a0">STOP TRANSMITTING.</tspan> Weather window closes at dawn.</text>
+
+    <text x="70" y="1084" fill="#8aa353" font-size="20" letter-spacing="2">5. ATTACHMENTS</text>
+    <text x="70" y="1112">A &#8212; Site fact sheet (ME-07)    C &#8212; County Ledger, wk.</text>
+    <text x="70" y="1136">B &#8212; Regional map              D &#8212; Pattern of activity</text>
+    <text x="70" y="1160">E &#8212; Persons of interest (Vance / Rostova)</text>
+  </g>
+
+  <!-- stamp -->
+  <g transform="translate(720 1120) rotate(-12)">
+    <rect x="-8" y="-46" width="220" height="84" fill="none" stroke="#8b2018" stroke-width="4" rx="6"/>
+    <text x="102" y="-14" fill="#b83226" font-size="26" text-anchor="middle" letter-spacing="2">GREEN BOX</text>
+    <text x="102" y="18" fill="#b83226" font-size="20" text-anchor="middle">EYES ONLY</text>
+  </g>
+</svg>

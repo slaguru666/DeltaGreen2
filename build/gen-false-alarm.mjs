@@ -141,35 +141,70 @@ function journal(key, name, pages) {
     _key: undefined };
 }
 
-const journal_briefing = journal("01-briefing", "① BRIEFING — Operation FALSE ALARM", [
-  imagePage("Operation File", `${A}/cover.svg`, "TOP SECRET // DELTA GREEN — EYES ONLY"),
+const journal_briefing = journal("01-briefing", "① OPERATIONAL BRIEFING", [
+  imagePage("A-Cell Operations Directive", `${A}/hd-briefing-memo.svg`, "Hand this to the players. TOP SECRET // GALVANIZE // NOFORN."),
   textPage("Your Cover &amp; Your Handler",
-    "<p>You are federal law-enforcement officers and specialists. Your Delta Green handler in <b>A-Cell</b> has pulled you off the books for the night. Cover story: a joint <b>FAA / NWS</b> team responding to a &#8220;severe weather generator failure&#8221; at a remote automated radar station.</p><p>You were briefed by phone. There was no paperwork. There will be none.</p>"),
+    "<p>You are federal law-enforcement officers and specialists. Your Delta Green handler in <b>A-Cell</b> &mdash; callsign <b>&#8220;Provost&#8221;</b> &mdash; has pulled you off the books for the night. Cover story: a joint <b>FAA / NWS</b> team responding to a &#8220;severe weather-generator failure&#8221; at a remote automated radar station in the North Maine Woods.</p><p>You were briefed by phone. There was no paperwork. There will be none. The county has been told a specialist team is inbound and will not interfere.</p>"),
   textPage("The Hook",
-    "<p>Six hours ago, a standard FAA radar facility in the snowbound wilderness of <b>northern Maine</b> abruptly went offline &mdash; after transmitting a <b>corrupted data loop</b>. A local sheriff's deputy, <b>Marcus Vance</b>, drove out to investigate. He never checked back in.</p>"),
+    "<p>At <b>0312 local</b>, FAA long-range radar <b>Site ME-07 (&#8220;Sable Ridge&#8221;)</b> transmitted a <b>corrupted data loop</b> and went dark. It will not answer a remote reboot. Aroostook County deputy <b>Marcus Vance</b> drove up at about 0500 to investigate. He never checked back in.</p><p>A-Cell is interested because the pre-crash frames logged a contact that is <em>not consistent with any aircraft.</em></p>"),
   textPage("The Mission",
-    "<ol><li><b>Erase any unnatural data</b> — the facility log and the FAA's remote cloud backups.</li><li><b>Recover or terminate Deputy Vance.</b></li><li><b>Secure the facility.</b></li><li><b>Cover it up</b> as a severe weather-generator failure.</li></ol><p>Time, weather, and whatever is out there are all against you. Runtime: 3&ndash;4 hours.</p>"),
+    "<ol><li><b>Erase any unnatural data</b> &mdash; the on-site log drive <em>and</em> the FAA's remote cloud backups.</li><li><b>Recover or terminate Deputy Vance.</b></li><li><b>Secure the facility.</b></li><li><b>Cover it up</b> as a severe weather-generator failure.</li></ol><p>Weapons discreet. No local casualties that can't be blamed on weather or wildlife. If an Agent is compromised by what's on that ridge, the mission comes first. Runtime: 3&ndash;4 hours.</p>"),
+  textPage("Signal &amp; The Weather",
+    "<p>Cellular dies about three miles up the Ridge Road. You have encrypted VHF, callsign <b>OUTLAW-6</b>. <b>If your radios begin to answer you, stop transmitting.</b></p><p>Heavy snow tonight; lows to &minus;18&deg;F on high ground; the road is impassable by dawn. Whatever you're going to do, do it before first light.</p>"),
 ]);
 
-const journal_radar = journal("02-radar", "② HANDOUT — Radar Terminal Log", [
+const journal_site = journal("02-site", "② THE SITE — FAA Sable Ridge", [
+  imagePage("Site Fact Sheet (ME-07)", `${A}/hd-site-dossier.svg`, "Attachment A. Player-facing."),
+  textPage("What the site is",
+    "<p><b>FAA Site ME-07 &#8220;Sable Ridge&#8221;</b> is an automated <b>ARSR-4 long-range air-route surveillance radar</b> &mdash; a joint FAA / USAF / NWS installation filling a coverage gap over the Canadian border approaches. It sits at 2,140 ft on an exposed ridge in the North Maine Woods, fourteen gravel miles up the Ridge Road from the nearest village.</p><p>It is <b>unmanned.</b> A contractor (Sygnal Dynamics LLC) services it four times a year. Nobody lives within nine miles. Grid power with a diesel backup generator; a satellite uplink; no cellular. A single chain-link compound holds one concrete equipment building and the geodesic radar dome.</p>"),
+  textPage("Why it matters here",
+    "<p>The ridge had a reputation long before the radar. Trappers avoided it; compasses spin near the summit; the old settler families say it &#8220;answers whistles.&#8221; When the FAA automated the site in <b>2016</b> and left a high-power transmitter running unattended on that ridge, ham operators started logging a faint rhythmic carrier on quiet nights &mdash; &#8220;the Sable hum.&#8221;</p><p>About fourteen months ago the site's own self-diagnostics began logging <b>phantom returns</b>: contacts with no transponder and no motion vector that vanish between sweeps. The FAA called it receiver noise and, eventually, sent a technician. See <em>&#9314; The Area</em> and <em>&#9317; Recent Activity</em>.</p>"),
+]);
+
+const journal_area = journal("03-area", "③ THE AREA — Corliss Notch &amp; the North Woods", [
+  imagePage("Regional Map", `${A}/hd-regional-map.svg`, "Attachment B. Player-facing."),
+  textPage("Corliss Notch, Maine",
+    "<p>An unincorporated village of about <b>310 people</b> in Aroostook County, at the edge of the North Maine Woods. A general store with the only gas for forty miles, the <b>Notch Diner</b>, a Grange hall, a white Congregational church, a volunteer fire department, and a two-deputy <b>sheriff's substation</b> that Marcus Vance runs mostly alone.</p><p>It is a logging-and-trapping town losing its young people. Everyone knows everyone. Strangers are noticed &mdash; your cover will be tested at the diner if you stop. The town is fourteen miles and a locked winter gate from the ridge.</p>"),
+  textPage("The land &amp; the cold",
+    "<p>Dense spruce and fir, frozen bogs, and <b>Cold Cauldron Pond</b> below the ridge &mdash; a deep, spring-fed pond that &#8220;never quite freezes right,&#8221; locals say. This winter is the hardest in forty years; the almanac calls it a record cold snap. Around Sable Ridge the temperature runs colder still, in a way the weather service can't explain.</p><p>The Ridge Road is gravel, gated in winter, and yours to open. Past mile three there is no cell signal, no houses, and no help.</p>"),
+  textPage("Local legend (GM colour)",
+    "<p>Old-timers call the ridge <b>&#8220;the Whistle.&#8221;</b> The stories are consistent across a century: the ridge <b>answers</b> &mdash; a whistle, a shout, later a radio &mdash; and if you answer it back, and keep answering, it draws you off into the cold. An 1888 hunting diary in the Grange archive records a party that &#8220;followed a voice they took for a lost man&#8221; and lost two of their own. In 1978 a USGS survey team abandoned a cabin on the ridge after &#8220;equipment fouling&#8221; and one member's breakdown; the report was buried. Locals don't talk about it to outsiders. They just don't go up there after dark.</p>"),
+]);
+
+const journal_activity = journal("04-activity", "④ RECENT ACTIVITY — Pattern of Events", [
+  imagePage("The Aroostook County Ledger", `${A}/hd-newspaper.svg`, "Attachment C. This week's local paper &mdash; hand to players."),
+  imagePage("Pattern of Activity", `${A}/hd-timeline.svg`, "Attachment D. The escalation, years to hours."),
+  textPage("What has been happening",
+    "<p>Read the timeline (Attachment D) and the county paper (Attachment C) as the record of a curve that is steepening. In plain terms, working backward from tonight:</p><ul><li><b>Years:</b> the ridge's old reputation; the &#8220;Sable hum&#8221; after automation in 2016; a 1978 survey team that fled.</li><li><b>~14 months:</b> the first phantom returns on the radar &mdash; the thing beginning to look back down the beam.</li><li><b>~3 months (autumn):</b> livestock and pets found &#8220;frozen through&#8221; with no wounds &mdash; one dog solid in a heated barn. Radio &#8220;bleed&#8221; grows; operators say the static answers them, and twice repeated a name.</li><li><b>~10 weeks:</b> the <b>Petrie brothers</b> vanish near Cold Cauldron Pond, truck running, radio tuned to static. Never found.</li><li><b>~6 weeks:</b> FAA schedules the service call. A teenager livestreams &#8220;breathing static&#8221; from the road, then deletes it.</li><li><b>~2 weeks:</b> Dr. Rostova arrives; her calls home turn strange &mdash; the array is &#8220;receiving more than it transmits.&#8221; The cold deepens around the dome.</li><li><b>~4 days:</b> Deputy Vance, rattled after a welfare check, calls the site over and over.</li><li><b>~18 hours:</b> the corrupted loop; the site goes dark.</li><li><b>~6 hours &mdash; now:</b> Vance drives up alone. Silence. You are activated.</li></ul>"),
+]);
+
+const journal_persons = journal("05-persons", "⑤ PERSONS OF INTEREST", [
+  imagePage("Vance &amp; Rostova", `${A}/hd-personnel.svg`, "Attachment E. Player-facing dossiers."),
+  textPage("Deputy Marcus Vance, 34",
+    "<p>Aroostook County deputy, a Corliss Notch native and an <b>Army signals veteran</b> &mdash; which may be exactly why the thing on the ridge could reach him: he speaks radio. Steady, well-liked, nine years on the county, running the one-man Notch substation.</p><p>He logged four welfare checks on the Ridge Road this month. Dispatch marked him &#8220;rattled&#8221; after the last, when a trucker's CB &#8220;said his kids' names.&#8221; He called the site repeatedly the day it went dark, then drove up alone. <b>Recover him if you can</b> &mdash; he is a local hero, and his body cannot simply vanish.</p>"),
+  textPage("Dr. Elena Rostova, 41",
+    "<p>FAA contract field engineer (Sygnal Dynamics LLC), fifteen years on remote arrays. Meticulous, skeptical, not a fanciful woman. Sent up two weeks ago to clear the site's recurring &#8220;phantom return&#8221; fault.</p><p>Her early calls home were routine. Then, per her sister in Vermont, she grew &#8220;off,&#8221; saying the array was <b>&#8220;receiving more than it transmits&#8221;</b> and the readings &#8220;don't make sense in three dimensions.&#8221; Last contact four days ago. <b>Her work notes are a priority recovery;</b> sanitize the contract trail behind her.</p>"),
+]);
+
+const journal_radar = journal("06-radar", "⑥ HANDOUT — Radar Terminal Log", [
   imagePage("ASR-11 Final Frames", `${A}/handout-radar-log.svg`, "The last thing the dish saw before it crashed."),
   textPage("What it shows",
     "<p>Show players on a <b>Computer Science</b> success accessing the data log. The radar <b>did not track a physical aircraft.</b> It tracked a <b>&#8220;geometric shadow&#8221;</b> that hovered directly over the dish &mdash; no transponder, no altitude, no motion vector &mdash; and then the system crashed into a corrupted loop.</p>"),
 ]);
 
-const journal_audio = journal("03-audio", "③ HANDOUT — Final Transmission (Audio)", [
+const journal_audio = journal("07-audio", "⑦ HANDOUT — Final Transmission (Audio)", [
   imagePage("Static Capture", `${A}/handout-waveform.svg`, "Rhythmic, oscillating static — a six-second loop."),
   textPage("Listening closely",
     "<p>Playing back the audio from the final transmission (<b>SIGINT</b> or <b>Science</b>) reveals a rhythmic, oscillating static. <b>Listening to it closely requires a Sanity check (0/1D4).</b></p><p>On a success, the listener notices a hidden, low-frequency <b>human voice</b> buried under the static &mdash; whispering the <b>Agents' own names.</b> (Handler: use the players' real character names. Whisper them.)</p>"),
 ]);
 
-const journal_tear = journal("04-tear", "④ HANDOUT — THE TEAR (climax only)", [
+const journal_tear = journal("08-tear", "⑧ HANDOUT — THE TEAR (climax only)", [
   imagePage("The Manifestation", `${A}/handout-entity.svg`, "DO NOT REVEAL until the broadcast peaks."),
   textPage("Reveal notes",
     "<p><b>Hold this image back</b> until the radar dish activates and the entity bleeds through. The air is static-charged, everyone's hair stands on end, and a shifting, non-Euclidean <b>fractal silhouette</b> tears open at the centre of the dish. Presence costs <b>1D6/1D20 SAN</b>. Bullets pass through and warp uselessly. See <em>GM — NPCs &amp; The Threat</em>.</p>"),
 ]);
 
-const journal_gm_scenes = journal("05-gm-scenes", "⑤ GM — Scene Guide &amp; Clues", [
+const journal_gm_scenes = journal("09-gm-scenes", "⑨ GM — Scene Guide &amp; Clues", [
   textPage("Scene 1 — The Arrival",
     "<p>A fenced compound: one concrete equipment building and a massive geodesic radar dome over the pines. Heavy snow.</p><ul><li>The outer chain-link fence has been <b>cut from the inside out.</b></li><li><b>Deputy's cruiser</b> by the gate: door wide open, engine dead, interior coated in thick frost. <b>Forensics/Search:</b> his service weapon is in the footwell, <b>missing three rounds &mdash; no bullet holes in the car.</b></li><li><b>Survival/Tracking:</b> footprints lead from the driver's side into the woods, spaced <b>~8 feet apart</b> &mdash; as if sprinting, or dragged in massive strides.</li></ul>"),
   textPage("Scene 2 — The Server Room",
@@ -180,21 +215,35 @@ const journal_gm_scenes = journal("05-gm-scenes", "⑤ GM — Scene Guide &amp; 
     "<p>Whether Vance succeeds or the Agents trigger it during the fight, the dish activates, spins wildly, and projects a beam of invisible localised EM radiation. <b>The Tear</b> bleeds through (Handout ④).</p><p>It cannot be shot. To close it, <b>cut the primary power</b> — blow the backup generator outside, or manually overload the main transformer inside (lethal shock + <b>1D6/1D20 SAN</b>). When power dies, the tear snaps back and the vacuum <b>implodes the dome.</b></p>"),
 ]);
 
-const journal_gm_threat = journal("06-gm-threat", "⑥ GM — NPCs &amp; The Threat", [
+const journal_gm_threat = journal("10-gm-threat", "⑩ GM — NPCs &amp; The Threat", [
   textPage("Dr. Elena Rostova", aRostova.system.notes),
   textPage("Deputy Marcus Vance (Changed)", aVance.system.notes),
   textPage("The Tear", aTear.system.notes),
 ]);
 
-const journal_gm_after = journal("07-gm-after", "⑦ GM — Cover-Up &amp; Aftermath", [
-  textPage("Loose ends",
-    "<ul><li><b>Burn</b> the frozen remains of Dr. Rostova (Thermite Charge) and manage her FAA record and next of kin.</li><li><b>Stage the cruiser</b> as a horrific wildlife attack or a vehicular accident.</li><li><b>Wipe the FAA's remote cloud backups</b> (Computer Science) as well as the on-site drive.</li><li>The imploded dome sells the &#8220;catastrophic weather-generator failure&#8221; on its own — if nothing contradicts it.</li></ul>"),
-  textPage("Sanity rewards",
-    "<p>Eliminating the threat grants <b>+1D4 SAN</b>, minus any losses from collateral damage or a failed cover-up. An Agent who overloaded the transformer by hand carries the worst of it — if they lived.</p>"),
+const journal_gm_truth = journal("11-gm-truth", "⑪ GM — The Truth (What's Really Happening)", [
+  textPage("The static between stations",
+    "<p>The entity has no name and no shape a human keeps. Think of it as a <b>place adjacent to this one</b> that perceives and moves through <b>resonance</b> &mdash; frequency, rhythm, the act of a signal answered by a signal. It has brushed against Sable Ridge for as long as anyone has records: the spinning compasses, the ridge that &#8220;answers,&#8221; the hunters who followed a voice. For most of history it could only whisper, and only to those who whistled back.</p>"),
+  textPage("Why now — the beacon",
+    "<p>In 2016 the FAA left a <b>high-power radar transmitter running unattended</b> on the one ridge that had always half-listened. Years of steady transmission gave the entity a <b>stable channel</b> &mdash; a doorway propped a little further open every night. The &#8220;phantom returns&#8221; the diagnostics logged were it <b>looking back down the beam.</b> The frozen animals, the radio that answers, the Petrie brothers drawn onto the ice &mdash; that is it learning to reach through and feed, pulling warmth and living things into the cold on the other side.</p>"),
+  textPage("Rostova, Vance, and the doorway",
+    "<p>Dr. Rostova's servicing <b>tightened the coupling</b> &mdash; she tuned the array and, without knowing it, tuned the door. The corrupted data loop was the entity <b>learning to speak in our signal.</b> It took her first (flash-frozen at the console, the cold bleeding backward through the channel). Then it reached down <b>Deputy Vance's radio</b> &mdash; the one man for miles who spoke fluent signal &mdash; and remade him into an <b>instrument</b>: blind him so nothing distracts, and set him rewiring the transmitter to broadcast the lure at full power and <b>open the way completely.</b></p><p>This is why every layer of the timeline connects: folklore, the hum, the phantom returns, the deaths, the technician, the deputy. It has been one slow inhale. Tonight it exhales.</p>"),
+  textPage("How it ends",
+    "<p>The tear cannot be fought &mdash; only <b>starved of signal.</b> Cut the primary power (blow the outside generator, or overload the dome transformer by hand at lethal cost) and the channel collapses: the entity snaps back and the vacuum implodes the dome. If the Agents <b>fail</b>, the broadcast completes, the doorway holds open, and Sable Ridge becomes a permanent cold spot that swallows the Notch over the following winter &mdash; a much larger Delta Green problem, later.</p>"),
 ]);
 
-const journalArr = [journal_briefing, journal_radar, journal_audio, journal_tear, journal_gm_scenes, journal_gm_threat, journal_gm_after]
-  .map((j) => { delete j._key; return j; });
+const journal_gm_after = journal("12-gm-after", "⑫ GM — Cover-Up &amp; Aftermath", [
+  textPage("Loose ends",
+    "<ul><li><b>Burn</b> the frozen remains of Dr. Rostova (Thermite Charge) and manage her FAA record and next of kin (the sister in Vermont).</li><li><b>Stage the cruiser</b> as a horrific wildlife attack or a vehicular accident. Recover Vance's body if at all possible &mdash; the Notch will search for its deputy.</li><li><b>Wipe the FAA's remote cloud backups</b> (Computer Science) as well as the on-site drive.</li><li>The imploded dome sells the &#8220;catastrophic weather-generator failure&#8221; on its own &mdash; if nothing contradicts it. Loose talk in Corliss Notch is the real threat to the cover.</li></ul>"),
+  textPage("Sanity rewards",
+    "<p>Eliminating the threat grants <b>+1D4 SAN</b>, minus any losses from collateral damage or a failed cover-up. An Agent who overloaded the transformer by hand carries the worst of it &mdash; if they lived. If the broadcast completed and the Agents ran, no reward: the ridge is still open, and A-Cell will be back.</p>"),
+]);
+
+const journalArr = [
+  journal_briefing, journal_site, journal_area, journal_activity, journal_persons,
+  journal_radar, journal_audio, journal_tear,
+  journal_gm_scenes, journal_gm_threat, journal_gm_truth, journal_gm_after,
+].map((j) => { delete j._key; return j; });
 
 // ---------------------------------------------------------------- scenes
 function gridCfg() { return { type: 1, size: 100, style: "solidLines", thickness: 1, color: "#59ff87", alpha: 0.12, distance: 5, units: "ft" }; }
@@ -229,7 +278,7 @@ const adventure = {
   name: "Operation FALSE ALARM",
   img: `${A}/cover.svg`,
   caption: "A tight 3–4 hour Delta Green shotgun scenario — a remote Maine radar station, and the static between stations.",
-  description: "<h2>Operation FALSE ALARM</h2><p>A remote automated FAA radar station in snowbound northern Maine has gone dark after transmitting a corrupted data loop, and the deputy who went to look never came back. An extradimensional entity is mimicking radio frequencies, drawing humans into the freezing dark.</p><p><b>Importing this adventure</b> creates four <em>Operation FALSE ALARM</em> folders — Actors, Items, Journals and Scenes. Start players in the <b>① Briefing</b> journal; run the three scenes in order; keep the GM journals (⑤⑥⑦) for yourself. Handout ④ (The Tear) is for the climax only.</p><p><em>3–4 hours · 4–6 Agents.</em></p>",
+  description: "<h2>Operation FALSE ALARM</h2><p>A remote automated FAA radar station in snowbound northern Maine has gone dark after transmitting a corrupted data loop, and the deputy who went to look never came back. An extradimensional entity is mimicking radio frequencies, drawing humans into the freezing dark.</p><p><b>Importing this adventure</b> creates four <em>Operation FALSE ALARM</em> folders — Actors, Items, Journals and Scenes.</p><p><b>Journals ①–⑤</b> are the players' intelligence packet — a full A-Cell briefing with six document handouts (operational memo, site fact sheet, regional map, the local newspaper, an activity timeline, and personnel dossiers) plus setting write-ups on the site, the town of Corliss Notch, and the years-long escalation. <b>⑥–⑧</b> are the in-scene handouts (radar log, static transmission, the Tear — climax only). <b>⑨–⑫</b> are GM-only: scene clues, NPC/threat rules, the truth of what's happening, and the cover-up.</p><p>Run the three scenes in order. <em>3–4 hours · 4–6 Agents.</em></p>",
   sort: 0, folder: null,
   folders, actors, items, journal: journalArr, scenes,
   cards: [], playlists: [], tables: [], macros: [], combats: [],

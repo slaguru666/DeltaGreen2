@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="Courier New, monospace">
+  <defs>
+    <pattern id="rgrid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#161f24" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1400" height="1000" fill="#0a0e11"/>
+  <rect width="1400" height="1000" fill="url(#rgrid)"/>
+
+  <!-- forest stipple -->
+  <g fill="#c9d6dd" opacity="0.10">
+    <circle cx="200" cy="180" r="2"/><circle cx="500" cy="120" r="2"/><circle cx="900" cy="200" r="2"/>
+    <circle cx="1200" cy="300" r="2"/><circle cx="300" cy="700" r="2"/><circle cx="1100" cy="800" r="2"/>
+    <circle cx="700" cy="820" r="2"/><circle cx="1000" cy="560" r="2"/><circle cx="250" cy="480" r="2"/>
+  </g>
+
+  <!-- frozen lake -->
+  <g>
+    <path d="M240 560 C 300 480 460 470 520 540 C 600 620 520 720 400 720 C 300 720 200 660 240 560 Z" fill="#0d1a20" stroke="#3d6b7a" stroke-width="2"/>
+    <text x="360" y="640" fill="#5f97a8" font-size="22" text-anchor="middle">COLD CAULDRON</text>
+    <text x="360" y="666" fill="#3d6b7a" font-size="16" text-anchor="middle">POND (frozen)</text>
+    <text x="470" y="500" fill="#8b2018" font-size="15">&#10015; Petrie bros. last seen</text>
+  </g>
+
+  <!-- ridge -->
+  <g>
+    <path d="M820 300 L900 240 L980 300 L1060 250 L1140 310 L1080 360 L980 340 L900 360 L840 340 Z" fill="none" stroke="#8a94a0" stroke-width="3"/>
+    <path d="M840 340 L900 360 L980 340 L1080 360" stroke="#5c6b73" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
+    <text x="980" y="230" fill="#dfe8ee" font-size="24" text-anchor="middle" letter-spacing="1">SABLE RIDGE</text>
+    <text x="980" y="400" fill="#5c6b73" font-size="15" text-anchor="middle">2,140 ft &#183; "the Whistle"</text>
+  </g>
+  <!-- radar site marker on ridge -->
+  <g transform="translate(1000 300)">
+    <circle r="20" fill="none" stroke="#8aa353" stroke-width="3"/><circle r="5" fill="#8aa353"/>
+    <path d="M0 -20 V-34 M0 20 V34 M-20 0 H-34 M20 0 H34" stroke="#8aa353" stroke-width="2"/>
+    <text x="34" y="-24" fill="#8aa353" font-size="16">SITE ME-07</text>
+  </g>
+
+  <!-- town -->
+  <g transform="translate(320 300)">
+    <rect x="-14" y="-14" width="28" height="28" fill="#dfe8ee"/>
+    <text x="26" y="0" fill="#dfe8ee" font-size="24">CORLISS NOTCH</text>
+    <text x="26" y="26" fill="#5c6b73" font-size="15">pop. ~310 &#183; sheriff substation</text>
+  </g>
+
+  <!-- ridge road -->
+  <path d="M340 320 C 500 340 620 300 760 320 C 860 334 940 320 1000 300" fill="none" stroke="#7a6b3a" stroke-width="5" stroke-dasharray="14 8"/>
+  <text x="640" y="300" fill="#a08b4a" font-size="17" transform="rotate(-4 640 300)">RIDGE ROAD (gravel, gated in winter) &#8212; 14 mi</text>
+  <!-- mile 3 comms note -->
+  <g transform="translate(560 328)"><circle r="6" fill="#b83226"/><text x="12" y="6" fill="#b83226" font-size="14">mi.3: cellular ends</text></g>
+
+  <!-- county road out -->
+  <path d="M320 314 L120 240" stroke="#4a5560" stroke-width="4"/>
+  <text x="120" y="220" fill="#7a8590" font-size="16">to US-1 / county seat</text>
+
+  <!-- scale + compass -->
+  <g transform="translate(1180 860)">
+    <path d="M0 -40 L14 20 L0 8 L-14 20 Z" fill="#8aa353"/><text x="-6" y="-50" fill="#8aa353" font-size="20">N</text>
+  </g>
+  <g transform="translate(90 900)">
+    <line x1="0" y1="0" x2="160" y2="0" stroke="#dfe8ee" stroke-width="3"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#dfe8ee" stroke-width="3"/><line x1="160" y1="-8" x2="160" y2="8" stroke="#dfe8ee" stroke-width="3"/>
+    <text x="80" y="28" fill="#9fb0b8" font-size="16" text-anchor="middle">5 MILES</text>
+  </g>
+
+  <!-- title -->
+  <g transform="translate(40 40)">
+    <rect width="520" height="96" fill="#0c1116" stroke="#8aa353" stroke-width="2"/>
+    <text x="20" y="42" fill="#dfe8ee" font-size="28" letter-spacing="2">ATTACHMENT B &#8212; REGIONAL</text>
+    <text x="20" y="74" fill="#8aa353" font-size="19">Aroostook Co., ME &#183; North Maine Woods</text>
+  </g>
+</svg>

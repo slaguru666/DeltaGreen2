@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1400" font-family="Courier New, monospace">
+  <rect width="1000" height="1400" fill="#0e1215"/>
+  <rect x="34" y="34" width="932" height="1332" fill="#12171b" stroke="#2c3941" stroke-width="2"/>
+  <rect x="34" y="34" width="932" height="34" fill="#243019"/>
+  <text x="500" y="58" fill="#c9dd9e" font-size="20" text-anchor="middle" letter-spacing="4">ATTACHMENT A // FAA SITE FACT SHEET // FOUO</text>
+
+  <text x="70" y="118" fill="#dfe8ee" font-size="34" letter-spacing="1">SITE ME-07 "SABLE RIDGE"</text>
+  <text x="70" y="150" fill="#8aa353" font-size="19">ARSR-4 Long-Range Air Route Surveillance Radar (automated)</text>
+  <line x1="70" y1="172" x2="930" y2="172" stroke="#2c3941"/>
+
+  <!-- spec table -->
+  <g font-size="18">
+    <g fill="#9fb0b8">
+      <text x="70" y="212">DESIGNATION</text><text x="70" y="248">OPERATOR</text><text x="70" y="284">LOCATION</text>
+      <text x="70" y="320">ELEVATION</text><text x="70" y="356">POWER</text><text x="70" y="392">STAFFING</text>
+      <text x="70" y="428">ACCESS</text><text x="70" y="464">COMMS</text><text x="70" y="500">STATUS</text>
+    </g>
+    <g fill="#dfe8ee">
+      <text x="330" y="212">FAA ME-07 (jt. FAA / USAF / NWS)</text>
+      <text x="330" y="248">FAA; maint. by SYGNAL DYNAMICS LLC</text>
+      <text x="330" y="284">Sable Ridge, Aroostook Co., ME</text>
+      <text x="330" y="320">2,140 ft; treeline ridge, exposed</text>
+      <text x="330" y="356">Grid + diesel backup generator</text>
+      <text x="330" y="392">UNMANNED. Quarterly contract svc.</text>
+      <text x="330" y="428">14 mi gravel "Ridge Road" from Corliss Notch</text>
+      <text x="330" y="464">Satellite uplink; no cellular past mi. 3</text>
+      <text x="330" y="500" fill="#e0a0a0">OFFLINE 0312 LOCAL &#8212; CORRUPTED LOOP</text>
+    </g>
+  </g>
+  <line x1="70" y1="524" x2="930" y2="524" stroke="#2c3941"/>
+
+  <!-- mini elevation schematic -->
+  <g transform="translate(70 560)">
+    <text x="0" y="0" fill="#8aa353" font-size="18">LAYOUT (not to scale)</text>
+    <rect x="0" y="20" width="500" height="230" fill="#0c1116" stroke="#3a474e"/>
+    <circle cx="150" cy="135" r="80" fill="none" stroke="#dfe8ee" stroke-width="3"/>
+    <polygon points="150,55 219,95 219,175 150,215 81,175 81,95" fill="none" stroke="#5c6b73" stroke-width="1.5"/>
+    <text x="150" y="245" fill="#9fb0b8" font-size="14" text-anchor="middle">DOME</text>
+    <rect x="300" y="110" width="120" height="80" fill="none" stroke="#dfe8ee" stroke-width="2"/>
+    <text x="360" y="245" fill="#9fb0b8" font-size="14" text-anchor="middle">EQUIP BLDG</text>
+    <rect x="8" y="28" width="484" height="214" fill="none" stroke="#5c6b73" stroke-width="1" stroke-dasharray="6 6"/>
+  </g>
+
+  <!-- purpose / notes -->
+  <g fill="#cfd8dd" font-size="18">
+    <text x="600" y="580" fill="#8aa353" font-size="18">PURPOSE</text>
+    <text x="600" y="608">Fills a coverage gap over the</text>
+    <text x="600" y="632">Canadian border approaches.</text>
+    <text x="600" y="656">Feeds ARTCC and NWS. Runs</text>
+    <text x="600" y="680">itself; a technician visits four</text>
+    <text x="600" y="704">times a year. Nobody lives</text>
+    <text x="600" y="728">within nine miles.</text>
+  </g>
+
+  <line x1="70" y1="840" x2="930" y2="840" stroke="#2c3941"/>
+  <text x="70" y="880" fill="#8aa353" font-size="20" letter-spacing="2">MAINTENANCE / ANOMALY HISTORY</text>
+  <g fill="#cfd8dd" font-size="17.5">
+    <text x="70" y="914">2016  &#8212;  Site automated. Local operators log a faint</text>
+    <text x="100" y="938">rhythmic carrier at night ("the Sable hum"); dismissed.</text>
+    <text x="70" y="972">~14 mo  &#8212;  Self-diagnostics begin logging PHANTOM RETURNS:</text>
+    <text x="100" y="996">contacts with no transponder, no motion vector, that</text>
+    <text x="100" y="1020">vanish between sweeps. Flagged as receiver noise.</text>
+    <text x="70" y="1054">~6 wk  &#8212;  Phantom returns escalate. FAA schedules a</text>
+    <text x="100" y="1078">service call. Dr. E. ROSTOVA (contractor) dispatched.</text>
+    <text x="70" y="1112">~2 wk  &#8212;  Rostova on site. Reports the array is</text>
+    <text x="100" y="1136" fill="#e0a0a0">"receiving more than it transmits."</text>
+    <text x="70" y="1170">~18 hr  &#8212;  Corrupted data loop. Site dark. No reboot.</text>
+  </g>
+
+  <g transform="translate(700 980) rotate(-8)">
+    <rect x="0" y="0" width="200" height="66" fill="none" stroke="#8b2018" stroke-width="4" rx="6"/>
+    <text x="100" y="30" fill="#b83226" font-size="20" text-anchor="middle">FLAGGED</text>
+    <text x="100" y="52" fill="#b83226" font-size="15" text-anchor="middle">RECURRING FAULT</text>
+  </g>
+  <rect x="34" y="1332" width="932" height="34" fill="#243019"/>
+  <text x="500" y="1356" fill="#c9dd9e" font-size="18" text-anchor="middle" letter-spacing="3">FOR OFFICIAL USE ONLY</text>
+</svg>

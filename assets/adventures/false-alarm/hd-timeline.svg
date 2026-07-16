@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500" font-family="Courier New, monospace">
+  <rect width="1000" height="1500" fill="#0e1215"/>
+  <rect x="34" y="34" width="932" height="1432" fill="#12171b" stroke="#2c3941" stroke-width="2"/>
+  <rect x="34" y="34" width="932" height="34" fill="#243019"/>
+  <text x="500" y="58" fill="#c9dd9e" font-size="20" text-anchor="middle" letter-spacing="3">ATTACHMENT D // PATTERN OF ACTIVITY // SABLE RIDGE</text>
+
+  <text x="70" y="118" fill="#dfe8ee" font-size="30">ESCALATION &#8212; ME-07 / CORLISS NOTCH</text>
+  <text x="70" y="146" fill="#8aa353" font-size="17">A-Cell analytic reconstruction. Confidence: MODERATE.</text>
+
+  <!-- spine -->
+  <line x1="150" y1="180" x2="150" y2="1400" stroke="#3a474e" stroke-width="3"/>
+
+  <!-- entries -->
+  <g font-size="17.5">
+    <!-- node macro simulated per entry -->
+    <g>
+      <circle cx="150" cy="210" r="9" fill="#5c6b73"/>
+      <text x="182" y="204" fill="#8a94a0" font-size="16">FOLKLORE / pre-1900</text>
+      <text x="182" y="230" fill="#cfd8dd">Trappers avoid the ridge; compasses spin. Locals</text>
+      <text x="182" y="254" fill="#cfd8dd">say it "answers whistles." An 1888 diary records a</text>
+      <text x="182" y="278" fill="#cfd8dd">hunting party that "followed a voice" and lost two.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="330" r="9" fill="#5c6b73"/>
+      <text x="182" y="324" fill="#8a94a0" font-size="16">1978</text>
+      <text x="182" y="350" fill="#cfd8dd">A USGS survey team abandons a ridge cabin after</text>
+      <text x="182" y="374" fill="#cfd8dd">"equipment fouling" and one member's breakdown.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="426" r="9" fill="#6b93b8"/>
+      <text x="182" y="420" fill="#8a94a0" font-size="16">2016</text>
+      <text x="182" y="446" fill="#cfd8dd">Site automated. High-power radar runs unmanned.</text>
+      <text x="182" y="470" fill="#cfd8dd">Operators log a faint nightly carrier: "the Sable hum."</text>
+    </g>
+    <g>
+      <circle cx="150" cy="522" r="9" fill="#6b93b8"/>
+      <text x="182" y="516" fill="#8a94a0" font-size="16">~14 MONTHS AGO</text>
+      <text x="182" y="542" fill="#cfd8dd">First PHANTOM RETURNS in self-diagnostics: contacts</text>
+      <text x="182" y="566" fill="#cfd8dd">with no transponder, no vector, gone between sweeps.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="618" r="9" fill="#8aa353"/>
+      <text x="182" y="612" fill="#8a94a0" font-size="16">~3 MONTHS AGO (autumn)</text>
+      <text x="182" y="638" fill="#cfd8dd">Livestock and pets die "frozen through," no wounds &#8212;</text>
+      <text x="182" y="662" fill="#cfd8dd">one dog solid in a heated barn. Radio "bleed" grows;</text>
+      <text x="182" y="686" fill="#cfd8dd">operators say the static answers, and twice "said a name."</text>
+    </g>
+    <g>
+      <circle cx="150" cy="742" r="9" fill="#8aa353"/>
+      <text x="182" y="736" fill="#8a94a0" font-size="16">~10 WEEKS AGO (October)</text>
+      <text x="182" y="762" fill="#cfd8dd">The Petrie brothers vanish near Cold Cauldron Pond.</text>
+      <text x="182" y="786" fill="#cfd8dd">Truck found running, radio tuned to static. Search fails.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="842" r="9" fill="#c98a3a"/>
+      <text x="182" y="836" fill="#8a94a0" font-size="16">~6 WEEKS AGO</text>
+      <text x="182" y="862" fill="#cfd8dd">FAA flags escalating phantom returns; schedules service.</text>
+      <text x="182" y="886" fill="#cfd8dd">A teen livestreams "breathing static" from the road,</text>
+      <text x="182" y="910" fill="#cfd8dd">then deletes it and will not discuss it.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="966" r="9" fill="#c98a3a"/>
+      <text x="182" y="960" fill="#8a94a0" font-size="16">~2 WEEKS AGO</text>
+      <text x="182" y="986" fill="#cfd8dd">Dr. Rostova arrives to service the array. Calls home</text>
+      <text x="182" y="1010" fill="#cfd8dd">turn strange: it is "receiving more than it transmits."</text>
+      <text x="182" y="1034" fill="#cfd8dd">Anomalous cold settles around the dome.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="1090" r="9" fill="#d4553c"/>
+      <text x="182" y="1084" fill="#8a94a0" font-size="16">~4 DAYS AGO</text>
+      <text x="182" y="1110" fill="#cfd8dd">Deputy Vance checks the road after a trucker's CB</text>
+      <text x="182" y="1134" fill="#cfd8dd">"said his kids' names." He grows agitated; calls the</text>
+      <text x="182" y="1158" fill="#cfd8dd">site again and again.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="1214" r="9" fill="#d4553c"/>
+      <text x="182" y="1208" fill="#8a94a0" font-size="16">~18 HOURS AGO</text>
+      <text x="182" y="1234" fill="#e0a0a0">CORRUPTED DATA LOOP transmits. Site goes dark.</text>
+      <text x="182" y="1258" fill="#cfd8dd">No remote reboot. Failsafe alerts trip.</text>
+    </g>
+    <g>
+      <circle cx="150" cy="1314" r="11" fill="#ff5a44"/>
+      <text x="182" y="1308" fill="#8a94a0" font-size="16">~6 HOURS AGO &#8212; NOW</text>
+      <text x="182" y="1334" fill="#e0a0a0">Vance drives up alone. No check-in. You are activated.</text>
+      <text x="182" y="1362" fill="#8aa353">&#9658; The curve is steepening. Whatever it is, it is</text>
+      <text x="182" y="1386" fill="#8aa353">almost finished learning how to reach through.</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1500" font-family="Georgia, 'Times New Roman', serif">
+  <rect width="1100" height="1500" fill="#12100c"/>
+  <rect x="30" y="30" width="1040" height="1440" fill="#171410" stroke="#3a352b" stroke-width="2"/>
+
+  <!-- masthead -->
+  <text x="550" y="104" fill="#e8e2d4" font-size="58" text-anchor="middle" letter-spacing="2">The Aroostook County Ledger</text>
+  <line x1="70" y1="128" x2="1030" y2="128" stroke="#6b6350" stroke-width="3"/>
+  <text x="70" y="152" fill="#a89f88" font-size="17" font-family="Courier New, monospace">EST. 1911 &#183; CORLISS NOTCH, MAINE</text>
+  <text x="1030" y="152" fill="#a89f88" font-size="17" text-anchor="end" font-family="Courier New, monospace">THURSDAY &#183; 25 CENTS &#183; VOL. CXI</text>
+  <line x1="70" y1="166" x2="1030" y2="166" stroke="#6b6350" stroke-width="1"/>
+
+  <!-- lead headline -->
+  <text x="70" y="230" fill="#e8e2d4" font-size="46" letter-spacing="1">Search for Petrie Brothers</text>
+  <text x="70" y="278" fill="#e8e2d4" font-size="46" letter-spacing="1">Called Off After Nine Days</text>
+  <text x="70" y="312" fill="#a89f88" font-size="18" font-style="italic">Moose hunters vanished near Cold Cauldron Pond; truck found running, radio tuned to static</text>
+  <line x1="70" y1="330" x2="1030" y2="330" stroke="#3a352b"/>
+
+  <g fill="#c9c2b0" font-size="18.5">
+    <text x="70" y="366">Warden Service has suspended the</text>
+    <text x="70" y="392">search for Dale and Roy Petrie, of</text>
+    <text x="70" y="418">Corliss Notch, missing since the</text>
+    <text x="70" y="444">15th. Dogs lost the scent at the</text>
+    <text x="70" y="470">pond's edge. "It just stopped,"</text>
+    <text x="70" y="496">one handler said. Family disputes</text>
+    <text x="70" y="522">the decision. It is the second</text>
+    <text x="70" y="548">disappearance on the ridge road</text>
+    <text x="70" y="574">this season the Ledger is aware of.</text>
+  </g>
+
+  <line x1="560" y1="350" x2="560" y2="1150" stroke="#3a352b"/>
+
+  <!-- column 2: livestock -->
+  <text x="600" y="366" fill="#e8e2d4" font-size="30">Livestock Deaths</text>
+  <text x="600" y="400" fill="#e8e2d4" font-size="30">Baffle Vets</text>
+  <g fill="#c9c2b0" font-size="17.5">
+    <text x="600" y="436">A dozen animals across three farms</text>
+    <text x="600" y="460">have died without wound or illness</text>
+    <text x="600" y="484">since October, several found</text>
+    <text x="600" y="508" fill="#e0ccc0">"frozen through" in heated barns.</text>
+    <text x="600" y="532">A county vet calls it "nothing I</text>
+    <text x="600" y="556">can put a name to." Wardens blame</text>
+    <text x="600" y="580">an unusually hard cold snap.</text>
+  </g>
+
+  <!-- column 2b: radio -->
+  <line x1="600" y1="606" x2="1030" y2="606" stroke="#3a352b"/>
+  <text x="600" y="646" fill="#e8e2d4" font-size="28">"The Radio Talks</text>
+  <text x="600" y="678" fill="#e8e2d4" font-size="28">Back," Say Locals</text>
+  <g fill="#c9c2b0" font-size="17.5">
+    <text x="600" y="714">Ham and CB operators near the</text>
+    <text x="600" y="738">Notch report a rhythmic static on</text>
+    <text x="600" y="762">quiet nights that "answers" them &#8212;</text>
+    <text x="600" y="786">and, two say, repeated a name.</text>
+    <text x="600" y="810">Old-timers shrug: the ridge, they</text>
+    <text x="600" y="834">say, has "always whistled back."</text>
+    <text x="600" y="858">The FAA blames its own equipment.</text>
+  </g>
+
+  <!-- lead col continues: deputy brief -->
+  <line x1="70" y1="600" x2="540" y2="600" stroke="#3a352b"/>
+  <text x="70" y="640" fill="#e8e2d4" font-size="28">Deputy Urges Calm</text>
+  <g fill="#c9c2b0" font-size="17.5">
+    <text x="70" y="676">Dep. Marcus Vance, who mans the</text>
+    <text x="70" y="700">Notch substation, asked residents</text>
+    <text x="70" y="724">to "stay off the ridge road after</text>
+    <text x="70" y="748">dark and quit scaring each other."</text>
+    <text x="70" y="772">Vance, a Notch native and Army</text>
+    <text x="70" y="796">veteran, has logged four welfare</text>
+    <text x="70" y="820">checks on the road this month.</text>
+    <text x="70" y="844" fill="#a89f88" font-style="italic">"There's a weather station up</text>
+    <text x="70" y="868" fill="#a89f88" font-style="italic">there acting up. That's all it is."</text>
+  </g>
+
+  <!-- photo placeholder box -->
+  <g transform="translate(70 910)">
+    <rect width="470" height="200" fill="#0d1216" stroke="#3a352b" stroke-width="2"/>
+    <path d="M40 160 L150 70 L240 150 L320 100 L430 170" fill="none" stroke="#4a5560" stroke-width="2"/>
+    <circle cx="150" cy="70" r="60" fill="none" stroke="#5c6b73" stroke-width="2"/>
+    <polygon points="150,20 200,50 200,110 150,140 100,110 100,50" fill="none" stroke="#4a5560" stroke-width="1"/>
+    <text x="235" y="190" fill="#6b6350" font-size="15" text-anchor="middle" font-family="Courier New, monospace">FILE: the radar dome on Sable Ridge, last summer</text>
+  </g>
+
+  <!-- weather box -->
+  <g transform="translate(600 900)">
+    <rect width="430" height="210" fill="#0d1216" stroke="#3a352b" stroke-width="2"/>
+    <text x="20" y="40" fill="#e8e2d4" font-size="24" font-family="Courier New, monospace">FORECAST</text>
+    <text x="20" y="78" fill="#c9c2b0" font-size="18" font-family="Courier New, monospace">Tonight: heavy snow, wind.</text>
+    <text x="20" y="106" fill="#c9c2b0" font-size="18" font-family="Courier New, monospace">Lows to &#8722;18&#176;F on high ground.</text>
+    <text x="20" y="134" fill="#c9c2b0" font-size="18" font-family="Courier New, monospace">Roads impassable by dawn.</text>
+    <text x="20" y="176" fill="#a89f88" font-size="16" font-family="Courier New, monospace">"Coldest snap in forty years,"</text>
+    <text x="20" y="198" fill="#a89f88" font-size="16" font-family="Courier New, monospace">says the county almanac.</text>
+  </g>
+
+  <line x1="70" y1="1160" x2="1030" y2="1160" stroke="#6b6350" stroke-width="2"/>
+  <text x="550" y="1210" fill="#8a8168" font-size="18" text-anchor="middle" font-style="italic">Church supper Sat. &#183; Plow schedule p.4 &#183; Petrie reward fund p.6 &#183; Grange meeting cancelled</text>
+</svg>

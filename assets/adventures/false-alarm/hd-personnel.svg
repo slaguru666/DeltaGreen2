@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="Courier New, monospace">
+  <rect width="1400" height="1000" fill="#0e1215"/>
+  <rect x="30" y="30" width="1340" height="940" fill="#12171b" stroke="#2c3941" stroke-width="2"/>
+  <rect x="30" y="30" width="1340" height="34" fill="#243019"/>
+  <text x="700" y="54" fill="#c9dd9e" font-size="20" text-anchor="middle" letter-spacing="4">ATTACHMENT E // PERSONS OF INTEREST // FOUO</text>
+
+  <line x1="700" y1="90" x2="700" y2="950" stroke="#2c3941" stroke-width="1"/>
+
+  <!-- LEFT: Vance -->
+  <g>
+    <text x="70" y="128" fill="#dfe8ee" font-size="30">VANCE, Marcus J.</text>
+    <text x="70" y="158" fill="#8aa353" font-size="18">Deputy Sheriff &#8212; Aroostook Co. S.O.</text>
+    <!-- photo box -->
+    <g transform="translate(70 186)">
+      <rect width="180" height="220" fill="#0c1116" stroke="#3a474e" stroke-width="2"/>
+      <g fill="#8a94a0"><path d="M90 70 a34 34 0 1 1 0.1 0z"/><path d="M30 210 c0 -50 40 -80 60 -80 s60 30 60 80z"/></g>
+      <text x="90" y="245" fill="#5c6b73" font-size="13" text-anchor="middle">ID PHOTO</text>
+    </g>
+    <g font-size="17" transform="translate(280 200)">
+      <g fill="#9fb0b8"><text y="0">AGE</text><text y="34">HEIGHT</text><text y="68">PRIOR SVC</text><text y="102">HOME</text><text y="136">STATUS</text></g>
+      <g fill="#dfe8ee"><text x="150" y="0">34</text><text x="150" y="34">6'1"</text><text x="150" y="68">US ARMY (Signals)</text><text x="150" y="102">Corliss Notch (native)</text><text x="150" y="136" fill="#e0a0a0">MISSING &#8212; last at ME-07</text></g>
+    </g>
+    <line x1="70" y1="440" x2="640" y2="440" stroke="#2c3941"/>
+    <g fill="#cfd8dd" font-size="17">
+      <text x="70" y="476" fill="#8aa353" font-size="17">JACKET</text>
+      <text x="70" y="504">Steady, well-liked, dry sense of humor. Nine</text>
+      <text x="70" y="528">years on the county. Runs the one-man Notch</text>
+      <text x="70" y="552">substation. Army signals background &#8212; he knows</text>
+      <text x="70" y="576">radios, which may be why it reached him.</text>
+      <text x="70" y="616" fill="#8aa353" font-size="17">RECENT</text>
+      <text x="70" y="644">Four welfare checks on the ridge road this</text>
+      <text x="70" y="668">month. Dispatch logs him "rattled" after the</text>
+      <text x="70" y="692">last one; a trucker's CB had "said his kids'</text>
+      <text x="70" y="716">names." Called the site repeatedly the day</text>
+      <text x="70" y="740">it went dark. Drove up alone at 0500.</text>
+      <text x="70" y="784" fill="#e0a0a0" font-size="16">Handler note: recover if possible. He is a</text>
+      <text x="70" y="808" fill="#e0a0a0" font-size="16">local hero. His body cannot simply vanish.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: Rostova -->
+  <g>
+    <text x="740" y="128" fill="#dfe8ee" font-size="30">ROSTOVA, Elena K., Ph.D.</text>
+    <text x="740" y="158" fill="#8aa353" font-size="18">Field Engineer &#8212; Sygnal Dynamics LLC (FAA contr.)</text>
+    <g transform="translate(740 186)">
+      <rect width="180" height="220" fill="#0c1116" stroke="#3a474e" stroke-width="2"/>
+      <g fill="#8a94a0"><path d="M90 70 a34 34 0 1 1 0.1 0z"/><path d="M30 210 c0 -50 40 -80 60 -80 s60 30 60 80z"/></g>
+      <text x="90" y="245" fill="#5c6b73" font-size="13" text-anchor="middle">ID PHOTO</text>
+    </g>
+    <g font-size="17" transform="translate(950 200)">
+      <g fill="#9fb0b8"><text y="0">AGE</text><text y="34">SPECIALTY</text><text y="68">CLEARANCE</text><text y="102">KIN</text><text y="136">STATUS</text></g>
+      <g fill="#dfe8ee"><text x="150" y="0">41</text><text x="150" y="34">RF / array systems</text><text x="150" y="68">FAA SECRET</text><text x="150" y="102">sister, Vermont</text><text x="150" y="136" fill="#e0a0a0">UNRESPONSIVE &#8212; on site</text></g>
+    </g>
+    <line x1="740" y1="440" x2="1320" y2="440" stroke="#2c3941"/>
+    <g fill="#cfd8dd" font-size="17">
+      <text x="740" y="476" fill="#8aa353" font-size="17">JACKET</text>
+      <text x="740" y="504">Fifteen years servicing remote arrays.</text>
+      <text x="740" y="528">Meticulous, skeptical, not a fanciful woman.</text>
+      <text x="740" y="552">Sent up ~2 weeks ago to clear the site's</text>
+      <text x="740" y="576">recurring "phantom return" fault.</text>
+      <text x="740" y="616" fill="#8aa353" font-size="17">RECENT</text>
+      <text x="740" y="644">Early calls home routine. Then, per her</text>
+      <text x="740" y="668">sister, she grew "off," saying the array was</text>
+      <text x="740" y="692" fill="#e0a0a0">"receiving more than it transmits"</text>
+      <text x="740" y="716">and the readings "don't make sense in three</text>
+      <text x="740" y="740">dimensions." Last contact four days ago.</text>
+      <text x="740" y="784" fill="#e0a0a0" font-size="16">Handler note: her work notes are a priority</text>
+      <text x="740" y="808" fill="#e0a0a0" font-size="16">recovery. Sanitize the contract trail.</text>
+    </g>
+  </g>
+</svg>
