@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0a0d10"/>
+  <!-- three overlapping entranced townsfolk, eyes closed, faces upturned -->
+  <g fill="#d9d2c4" opacity="0.55">
+    <path d="M120 512 c0 -70 34 -108 76 -108 s76 38 76 108z"/>
+    <g transform="rotate(-6 196 330)"><path d="M196 268 c-30 0 -50 24 -50 58 0 32 20 58 50 58 s50 -26 50 -58 c0 -34 -20 -58 -50 -58z"/></g>
+  </g>
+  <g fill="#d9d2c4" opacity="0.75">
+    <path d="M240 512 c0 -76 36 -116 82 -116 s82 40 82 116z"/>
+    <g transform="rotate(5 322 300)"><path d="M322 232 c-32 0 -54 26 -54 62 0 36 22 62 54 62 s54 -26 54 -62 c0 -36 -22 -62 -54 -62z"/></g>
+  </g>
+  <!-- front figure: teenager, head tipped back, mouth humming -->
+  <g fill="#e8e2d4">
+    <path d="M60 512 c0 -84 40 -128 92 -128 s92 44 92 128z"/>
+    <g transform="rotate(-10 152 260)">
+      <path d="M152 182 c-36 0 -60 28 -60 68 0 40 24 68 60 68 s60 -28 60 -68 c0 -40 -24 -68 -60 -68z"/>
+      <path d="M152 182 c-36 0 -60 28 -60 68 l0 4 c10 -24 30 -36 60 -36 s50 12 60 36 l0 -4 c0 -40 -24 -68 -60 -68z" fill="#a89f88"/>
+    </g>
+  </g>
+  <!-- closed eyes (peaceful, wrong) + humming mouths -->
+  <g stroke="#0a0d10" stroke-width="6" fill="none">
+    <g transform="rotate(-10 152 260)"><path d="M124 252 q14 10 28 0 M166 252 q14 10 28 0 M138 292 q16 -8 32 0"/></g>
+  </g>
+  <g stroke="#0a0d10" stroke-width="5" fill="none" opacity="0.75">
+    <g transform="rotate(5 322 300)"><path d="M300 292 q12 8 24 0 M336 292 q12 8 24 0 M312 326 q14 -6 28 0"/></g>
+  </g>
+  <!-- shared hum: single thin waveform rising -->
+  <path d="M100 150 q40 -30 80 0 t80 0 t80 0 t80 0" stroke="#8aa353" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M140 110 q30 -22 60 0 t60 0 t60 0" stroke="#8aa353" stroke-width="2" fill="none" opacity="0.45"/>
+</svg>

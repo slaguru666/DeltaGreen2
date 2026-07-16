@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1600" font-family="Courier New, monospace">
+  <defs>
+    <pattern id="cgrid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M100 0H0V100" fill="none" stroke="#1d2a30" stroke-width="1"/>
+    </pattern>
+    <g id="cpine"><path d="M0 60 L20 -10 L40 60 Z M6 30 L20 -30 L34 30 Z" fill="#c9d6dd" opacity="0.45"/></g>
+  </defs>
+  <rect width="2200" height="1600" fill="#080a0d"/>
+  <rect width="2200" height="1600" fill="url(#cgrid)"/>
+
+  <!-- treeline both sides -->
+  <g>
+    <use href="#cpine" x="80" y="120"/><use href="#cpine" x="200" y="90"/><use href="#cpine" x="330" y="130"/>
+    <use href="#cpine" x="1750" y="100"/><use href="#cpine" x="1880" y="130"/><use href="#cpine" x="2010" y="95"/>
+    <use href="#cpine" x="90" y="1380"/><use href="#cpine" x="220" y="1420"/><use href="#cpine" x="1900" y="1400"/><use href="#cpine" x="2030" y="1360"/>
+  </g>
+
+  <!-- Ridge Road: gravel band across -->
+  <path d="M0 700 C 400 660 800 740 1200 700 C 1600 660 1900 720 2200 690" fill="none" stroke="#3a3325" stroke-width="150" opacity="0.85"/>
+  <path d="M0 700 C 400 660 800 740 1200 700 C 1600 660 1900 720 2200 690" fill="none" stroke="#7a6b3a" stroke-width="4" stroke-dasharray="26 18"/>
+  <text x="150" y="620" fill="#a08b4a" font-size="26" transform="rotate(-4 150 620)">RIDGE ROAD — MILE 9</text>
+  <text x="1960" y="640" fill="#a08b4a" font-size="22" transform="rotate(-3 1960 640)">to SITE ME-07 →</text>
+  <text x="60" y="800" fill="#a08b4a" font-size="22">← to CORLISS NOTCH</text>
+
+  <!-- winter gate, forced open -->
+  <g transform="translate(430 700)">
+    <rect x="-12" y="-90" width="24" height="180" fill="#9fb0b8"/>
+    <path d="M12 -70 L200 -110" stroke="#9fb0b8" stroke-width="12"/>
+    <text x="30" y="-130" fill="#9fb0b8" font-size="22">WINTER GATE — CHAIN CUT</text>
+  </g>
+
+  <!-- Cold Cauldron Pond, bottom right, thin ice -->
+  <g>
+    <path d="M1450 1080 C 1600 1000 1900 1020 2050 1140 C 2160 1240 2100 1420 1900 1470 C 1650 1530 1400 1420 1400 1260 C 1400 1180 1410 1110 1450 1080 Z"
+      fill="#0d1a20" stroke="#3d6b7a" stroke-width="3"/>
+    <g stroke="#5f97a8" stroke-width="2" opacity="0.6" fill="none">
+      <path d="M1520 1180 L1640 1260 L1600 1350"/>
+      <path d="M1800 1120 L1760 1240 L1880 1300"/>
+    </g>
+    <text x="1750" y="1240" fill="#5f97a8" font-size="26" text-anchor="middle">COLD CAULDRON POND</text>
+    <text x="1750" y="1272" fill="#3d6b7a" font-size="18" text-anchor="middle">ice: THIN — cracks radiate from shore</text>
+  </g>
+
+  <!-- Petrie truck: still here, hood open, running lights -->
+  <g transform="translate(1250 880) rotate(18)">
+    <rect x="-70" y="-150" width="140" height="300" rx="16" fill="#0f1418" stroke="#dfe8ee" stroke-width="4"/>
+    <rect x="-52" y="-120" width="104" height="90" fill="none" stroke="#9fb0b8" stroke-width="3"/>
+    <rect x="-52" y="30" width="104" height="100" fill="none" stroke="#9fb0b8" stroke-width="3"/>
+    <circle cx="-40" cy="-160" r="10" fill="#c9dd9e"/><circle cx="40" cy="-160" r="10" fill="#c9dd9e"/>
+    <text x="0" y="185" fill="#9fb0b8" font-size="20" text-anchor="middle" transform="rotate(-18)">PETRIE PICKUP</text>
+    <text x="0" y="211" fill="#5c6b73" font-size="15" text-anchor="middle" transform="rotate(-18)">10 weeks · engine still idling</text>
+  </g>
+
+  <!-- locals' vehicles blocking road: wood truck + two cars, headlights crossing -->
+  <g transform="translate(820 700) rotate(-84)">
+    <rect x="-80" y="-190" width="160" height="380" rx="10" fill="#0f1418" stroke="#dfe8ee" stroke-width="5"/>
+    <path d="M-80 -60 H80 M-80 60 H80" stroke="#3a474e" stroke-width="2"/>
+    <text x="0" y="230" fill="#9fb0b8" font-size="20" text-anchor="middle" transform="rotate(84)">LOG TRUCK (jackknifed)</text>
+  </g>
+  <g transform="translate(1035 585) rotate(24)">
+    <rect x="-55" y="-105" width="110" height="210" rx="14" fill="#0f1418" stroke="#dfe8ee" stroke-width="4"/>
+    <path d="M-70 -140 L-160 -230 M70 -140 L160 -230" stroke="#c9dd9e" stroke-width="6" opacity="0.5"/>
+    <text x="0" y="145" fill="#9fb0b8" font-size="18" text-anchor="middle" transform="rotate(-24)">SEDAN, doors open</text>
+  </g>
+  <g transform="translate(980 835) rotate(-12)">
+    <rect x="-55" y="-105" width="110" height="210" rx="14" fill="#0f1418" stroke="#dfe8ee" stroke-width="4"/>
+    <text x="0" y="150" fill="#9fb0b8" font-size="18" text-anchor="middle" transform="rotate(12)">DINER'S WAGON</text>
+  </g>
+
+  <!-- the congregation: circle of figures on the road, facing the ridge -->
+  <g transform="translate(1450 620)">
+    <circle r="120" fill="none" stroke="#8aa353" stroke-width="3" stroke-dasharray="8 10"/>
+    <g fill="#c9dd9e">
+      <circle cx="0" cy="-95" r="13"/><circle cx="82" cy="-42" r="13"/><circle cx="88" cy="52" r="13"/>
+      <circle cx="0" cy="98" r="13"/><circle cx="-88" cy="52" r="13"/><circle cx="-82" cy="-42" r="13"/>
+    </g>
+    <circle r="17" fill="#e8cd7a"/>
+    <text x="0" y="-150" fill="#8aa353" font-size="24" text-anchor="middle">THE CONGREGATION</text>
+    <text x="0" y="170" fill="#5c6b73" font-size="17" text-anchor="middle">standing in the snow, unbothered · humming</text>
+    <text x="0" y="24" fill="#7a6b3a" font-size="14" text-anchor="middle">AGNES</text>
+  </g>
+
+  <!-- petrie markers by pond edge -->
+  <g fill="#8fd4e8">
+    <circle cx="1560" cy="1050" r="14"/><circle cx="1640" cy="1085" r="14"/>
+    <text x="1600" y="1020" fill="#8fd4e8" font-size="20" text-anchor="middle">THE RETURNED (×2)</text>
+  </g>
+
+  <!-- title block -->
+  <g transform="translate(40 40)">
+    <rect width="600" height="120" fill="#0a0d10" stroke="#8aa353" stroke-width="2"/>
+    <text x="20" y="46" fill="#dfe8ee" font-size="32" letter-spacing="2">COLD CAULDRON CROSSING</text>
+    <text x="20" y="80" fill="#8aa353" font-size="21">MIDPOINT ENCOUNTER — THE CONGREGATION</text>
+    <text x="20" y="106" fill="#5c6b73" font-size="17">Ridge Road mile 9 · night · heavy snow · 1 sq = 5 ft</text>
+  </g>
+</svg>

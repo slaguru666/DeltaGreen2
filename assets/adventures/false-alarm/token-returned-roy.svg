@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#08171c"/>
+  <g stroke="#3d6b7a" stroke-width="1.5" opacity="0.5">
+    <path d="M80 470 L200 380 L160 320 M430 470 L330 360 L380 290"/>
+  </g>
+  <g fill="#cfe0e6">
+    <!-- heavier build, hunched -->
+    <path d="M256 306c-80 0-130 36-146 96-6 22-9 52-11 110h314c-2-58-5-88-11-110-16-60-66-96-146-96z"/>
+    <!-- head tilted -->
+    <g transform="rotate(-8 256 210)">
+      <path d="M256 124c-44 0-72 32-72 80 0 46 28 84 72 84s72-38 72-84c0-48-28-80-72-80z"/>
+      <path d="M256 124c-44 0-72 32-72 80l0 6c10-26 34-40 72-40s62 14 72 40l0-6c0-48-28-80-72-80z" fill="#8fa6ad"/>
+    </g>
+  </g>
+  <!-- cap frozen to head -->
+  <g transform="rotate(-8 256 210)">
+    <path d="M184 176 C 196 130 316 130 328 176 L328 190 L184 190 Z" fill="#5c6b73"/>
+    <rect x="184" y="184" width="150" height="14" rx="7" fill="#5c6b73"/>
+  </g>
+  <!-- one eye frozen shut, one pinprick -->
+  <g transform="rotate(-8 256 210)">
+    <path d="M214 206 L246 202" stroke="#08171c" stroke-width="8"/>
+    <ellipse cx="286" cy="206" rx="16" ry="20" fill="#08171c"/><circle cx="286" cy="208" r="4" fill="#8fd4e8"/>
+    <!-- jaw hangs, breath of static -->
+    <path d="M230 262 Q258 284 288 258" stroke="#08171c" stroke-width="8" fill="none"/>
+  </g>
+  <g stroke="#bfeaf6" stroke-width="2.5" fill="none" opacity="0.7">
+    <path d="M262 282 q20 14 44 12 M258 288 q10 22 32 30"/>
+  </g>
+  <!-- frost -->
+  <path d="M168 336 Q256 312 344 336" stroke="#bfeaf6" stroke-width="4" fill="none" opacity="0.7"/>
+  <!-- splitting maul over shoulder -->
+  <path d="M356 512 L380 300 q2 -16 14 -12 l6 2 q10 4 6 18 L382 512" fill="#8fa6ad"/>
+  <rect x="352" y="268" width="86" height="40" rx="8" fill="#8fa6ad" transform="rotate(-14 395 288)"/>
+</svg>

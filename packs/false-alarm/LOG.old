@@ -1,5 +1,0 @@
-2026/07/16-22:12:46.303554 1737b7000 Delete type=3 #1
-2026/07/16-22:12:46.305623 17404f000 Level-0 table #5: started
-2026/07/16-22:12:46.305975 17404f000 Level-0 table #5: 19548 bytes OK
-2026/07/16-22:12:46.306072 17404f000 Delete type=0 #3
-2026/07/16-22:12:46.306136 17404f000 Manual compaction at level-0 from '!adventures!5zf355zpx5s1ux56' @ 72057594037927935 : 1 .. '!adventures!5zf355zpx5s1ux56' @ 0 : 0; will stop at (end)

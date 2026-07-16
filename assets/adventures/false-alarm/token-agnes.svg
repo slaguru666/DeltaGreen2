@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0a0d10"/>
+  <!-- static halo: concentric broadcast rings -->
+  <g stroke="#e8cd7a" fill="none" opacity="0.35">
+    <circle cx="256" cy="220" r="150" stroke-width="2"/>
+    <circle cx="256" cy="220" r="190" stroke-width="1.5" stroke-dasharray="10 8"/>
+    <circle cx="256" cy="220" r="230" stroke-width="1" stroke-dasharray="4 12"/>
+  </g>
+  <g fill="#e8e2d4">
+    <!-- shawled shoulders -->
+    <path d="M256 318c-70 0-116 32-132 90-6 22-9 46-11 104h286c-2-58-5-82-11-104-16-58-62-90-132-90z"/>
+    <!-- head, gaunt -->
+    <path d="M256 122c-42 0-70 32-70 80 0 44 28 80 70 80s70-36 70-80c0-48-28-80-70-80z"/>
+    <!-- severe pulled-back hair -->
+    <path d="M256 122c-42 0-70 32-70 80 0 4 0 8 1 12 8-24 32-38 69-38s61 14 69 38c1-4 1-8 1-12 0-48-28-80-70-80z" fill="#b8b2a4"/>
+    <!-- bun -->
+    <circle cx="256" cy="118" r="22" fill="#b8b2a4"/>
+  </g>
+  <!-- headset band + earpiece pressed to ear -->
+  <path d="M186 170 C 200 120 312 120 326 170" stroke="#4a5560" stroke-width="12" fill="none"/>
+  <circle cx="188" cy="196" r="26" fill="#4a5560"/><circle cx="188" cy="196" r="12" fill="#0a0d10"/>
+  <!-- blank white eyes -->
+  <g fill="#f5f5ef"><ellipse cx="228" cy="200" rx="13" ry="9"/><ellipse cx="284" cy="200" rx="13" ry="9"/></g>
+  <!-- mouth open, speaking someone else's words: static pouring out -->
+  <ellipse cx="256" cy="252" rx="16" ry="22" fill="#0a0d10"/>
+  <g stroke="#e8cd7a" stroke-width="3" fill="none" opacity="0.9">
+    <path d="M256 260 q30 6 44 30 M256 264 q-28 8 -40 32 M256 268 q6 30 0 52"/>
+  </g>
+  <!-- frost on collar -->
+  <path d="M170 340 Q256 316 342 340" stroke="#bfeaf6" stroke-width="4" fill="none" opacity="0.6"/>
+  <!-- shawl folds -->
+  <path d="M210 360 L226 512 M302 360 L286 512" stroke="#0a0d10" stroke-width="5" opacity="0.6"/>
+</svg>
