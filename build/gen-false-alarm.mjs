@@ -246,7 +246,7 @@ const journalArr = [
 ].map((j) => { delete j._key; return j; });
 
 // ---------------------------------------------------------------- scenes
-function gridCfg() { return { type: 1, size: 100, style: "solidLines", thickness: 1, color: "#59ff87", alpha: 0.12, distance: 5, units: "ft" }; }
+function gridCfg() { return { type: 1, size: 200, style: "solidLines", thickness: 1, color: "#59ff87", alpha: 0.10, distance: 5, units: "ft" }; }
 function sceneToken(actor, x, y, hidden = false) {
   const tid = id(`fa-tok-${actor._id}-${x}-${y}`);
   return { _id: tid, name: actor.name, actorId: actor._id, actorLink: false,
@@ -264,11 +264,12 @@ function scene(key, name, bg, w, h, tokens, notesFlag) {
     folder: fScenes._id, sort: 0, ownership: { default: 0 }, flags: {}, _stats: STATS,
   };
 }
+// Maps are 2x PNGs (200 px / 5-ft square) so they stay crisp when zoomed in.
 const scenes = [
-  scene("1-arrival", "Scene 1 — The Arrival (Compound)", "map-compound.svg", 2600, 1800, []),
-  scene("2-server", "Scene 2 — The Server Room", "map-server-room.svg", 1800, 1400, [sceneToken(aRostova, 900, 780)]),
-  scene("3-dome", "Scene 3 — The Radar Dome", "map-radar-dome.svg", 2000, 2000,
-    [sceneToken(aVance, 1000, 1000), sceneToken(aTear, 1000, 1000, true)]),
+  scene("1-arrival", "Scene 1 — The Arrival (Compound)", "map-compound.png", 5200, 3600, []),
+  scene("2-server", "Scene 2 — The Server Room", "map-server-room.png", 3600, 2800, [sceneToken(aRostova, 1800, 1560)]),
+  scene("3-dome", "Scene 3 — The Radar Dome", "map-radar-dome.png", 4000, 4000,
+    [sceneToken(aVance, 2000, 2000), sceneToken(aTear, 2000, 2000, true)]),
 ];
 
 // ---------------------------------------------------------------- adventure
