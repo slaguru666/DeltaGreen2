@@ -531,3 +531,140 @@
   border: 1px solid var(--dg2-hairline);
   border-radius: 4px;
 }
+
+
+/* ------------------------------------------------------------------ */
+/* Delta Green 2 - pause overlay (radar scope)                         */
+/* ------------------------------------------------------------------ */
+
+#pause.dg2-pause {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#pause.dg2-pause img { display: none; }
+
+.dg2-pause-scope {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(138, 163, 83, 0.5);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(138, 163, 83, 0.10), rgba(10, 13, 16, 0.85) 70%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.75), inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.dg2-pause-ring {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  border: 1px solid rgba(138, 163, 83, 0.30); border-radius: 50%;
+}
+.dg2-pause-ring.r1 { width: 32%; height: 32%; }
+.dg2-pause-ring.r2 { width: 64%; height: 64%; }
+.dg2-pause-ring.r3 { width: 94%; height: 94%; }
+
+.dg2-pause-cross::before, .dg2-pause-cross::after {
+  content: ""; position: absolute; background: rgba(138, 163, 83, 0.22);
+}
+.dg2-pause-cross::before { left: 50%; top: 4%; bottom: 4%; width: 1px; }
+.dg2-pause-cross::after { top: 50%; left: 4%; right: 4%; height: 1px; }
+
+.dg2-pause-wedge {
+  position: absolute; inset: 0; border-radius: 50%;
+  animation: dg2-pause-spin 4s linear infinite;
+  background: conic-gradient(from 0deg at 50% 50%,
+    rgba(214, 240, 170, 0.85) 0deg,
+    rgba(138, 163, 83, 0) 6deg,
+    rgba(138, 163, 83, 0) 240deg,
+    rgba(138, 163, 83, 0.16) 310deg,
+    rgba(138, 163, 83, 0.45) 348deg,
+    rgba(214, 240, 170, 0.85) 360deg);
+}
+
+.dg2-pause-beam {
+  position: absolute; left: calc(50% - 1.5px); top: 3%; width: 3px; height: 47%;
+  transform-origin: bottom center;
+  animation: dg2-pause-spin 4s linear infinite;
+  background: linear-gradient(to top, rgba(230, 248, 195, 1), rgba(183, 216, 115, 0));
+  box-shadow: 0 0 12px rgba(183, 216, 115, 0.8);
+}
+
+.dg2-pause-hub {
+  position: absolute; left: 50%; top: 50%; width: 10px; height: 10px;
+  transform: translate(-50%, -50%); border-radius: 50%;
+  background: #c9e59a; box-shadow: 0 0 10px rgba(183, 216, 115, 0.9);
+}
+
+.dg2-pause-blip {
+  position: absolute; width: 6px; height: 6px; border-radius: 50%;
+  background: #c9e59a; box-shadow: 0 0 8px rgba(183, 216, 115, 0.9);
+  opacity: 0; animation: dg2-pause-blip 4s linear infinite;
+}
+.dg2-pause-blip.b1 { left: 64%; top: 36%; animation-delay: -0.6s; }
+.dg2-pause-blip.b2 { left: 40%; top: 62%; animation-delay: -2.4s; }
+
+@keyframes dg2-pause-spin { to { transform: rotate(360deg); } }
+@keyframes dg2-pause-blip { 0% { opacity: 0.95; } 14% { opacity: 0.45; } 32% { opacity: 0; } 100% { opacity: 0; } }
+
+.dg2-pause-caption {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  font-family: "PublicSans", sans-serif;
+}
+
+.dg2-pause-title {
+  font-size: 1.5rem; font-weight: 800; letter-spacing: 8px; text-transform: uppercase;
+  color: #e6ecef; text-shadow: 0 0 18px rgba(138, 163, 83, 0.55);
+  animation: dg2-pause-flicker 3.2s infinite;
+}
+
+.dg2-pause-sub {
+  font-size: 0.72rem; letter-spacing: 4px; color: #8aa353; text-transform: uppercase;
+}
+
+@keyframes dg2-pause-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.35; }
+  94% { opacity: 1; }
+  96% { opacity: 0.6; }
+  97% { opacity: 1; }
+}
+
+/* ------------------------------------------------------------------ */
+/* Delta Green 2 - critical event chat cards                           */
+/* ------------------------------------------------------------------ */
+
+.chat-message.dg2-msg-providence { border-left-color: #d6b45a; }
+.chat-message.dg2-msg-providence .dg2-card-strip .dg2-card-type { color: #e8cd7a; }
+.chat-message.dg2-msg-providence .dg2-chip {
+  color: #e8cd7a; background: rgba(214, 180, 90, 0.12); border-color: rgba(214, 180, 90, 0.5);
+}
+
+.chat-message.dg2-msg-calamity { border-left-color: #8b1a12; }
+.chat-message.dg2-msg-calamity { animation: dg2-calamity-in 0.6s ease-out; }
+.chat-message.dg2-msg-calamity .dg2-card-strip .dg2-card-type { color: #ff6a4d; }
+.chat-message.dg2-msg-calamity .dg2-chip {
+  color: #ff8d75; background: rgba(139, 26, 18, 0.2); border-color: rgba(184, 50, 38, 0.6);
+}
+
+@keyframes dg2-calamity-in {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+.dg2-crit-event .dg2-crit-lede {
+  font-size: 0.85rem; color: #aeb9c0; margin: 2px 0 6px;
+}
+
+.dg2-crit-event .dg2-crit-text {
+  font-size: 0.9rem; line-height: 1.45; color: #e6ecef;
+  border-top: 1px solid #272b32; padding-top: 6px;
+}

@@ -5,6 +5,7 @@ import {
   tagRollDice,
   colorsetForPercentileRoll,
 } from "../integrations/dice-so-nice.js";
+import { maybeTriggerCriticalEvent } from "../other/critical-events.js";
 
 const { renderTemplate } = foundry.applications.handlebars;
 const { DialogV2 } = foundry.applications.api;
@@ -410,10 +411,13 @@ export class DGPercentileRoll extends DGRoll {
         [keyForUpdate]: true,
       });
 
+      await maybeTriggerCriticalEvent(this);
       return message;
     }
 
-    return this.toMessage({ content: html });
+    const message = await this.toMessage({ content: html });
+    await maybeTriggerCriticalEvent(this);
+    return message;
   }
 
   /**

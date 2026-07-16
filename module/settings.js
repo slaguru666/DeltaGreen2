@@ -220,6 +220,10 @@ class AutomationSettings extends SettingForm {
         default: true,
         type: Boolean,
       },
+      criticalEvents: {
+        default: true,
+        type: Boolean,
+      },
     };
   }
 }

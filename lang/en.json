@@ -402,5 +402,8 @@
   "DG2.Chat.LethalForce": "Lethal Force",
   "DG2.Chat.TheUnnatural": "The Unnatural",
   "DG2.Chat.EyesOnly": "Delta Green // Eyes Only",
-  "DG2.Chat.Target": "Target"
+  "DG2.Chat.Target": "Target",
+  "DG2.PausedSub": "All stations hold // awaiting Handler",
+  "DG.Settings.criticalEvents.name": "Critical Events (Home Rule)",
+  "DG.Settings.criticalEvents.hint": "A natural 01 on a percentile test triggers a d6 Providence boon; a natural 00 triggers a d6 Calamity. Escalating tables, announced in chat; the Handler applies effects."
 }
