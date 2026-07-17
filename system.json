@@ -15,7 +15,7 @@
             "discord": "jalensailin"
         }
     ],
-    "version": "2.1.0",
+    "version": "2.1.1",
     "compatibility": {
         "minimum": "13",
         "verified": "14",

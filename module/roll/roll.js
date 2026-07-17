@@ -744,7 +744,10 @@ export class DGLethalityRoll extends DGPercentileRoll {
       },
     );
 
-    return this.toMessage({ content: html });
+    const message = await this.toMessage({ content: html });
+    // Lethality is a d100 test too - natural 01/00 triggers the home rule.
+    await maybeTriggerCriticalEvent(this);
+    return message;
   }
 
   /**
