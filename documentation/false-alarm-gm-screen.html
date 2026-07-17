@@ -16,45 +16,53 @@
   ::selection{background:rgba(138,163,83,.35)}
 
   /* ---------- sidebar ---------- */
-  nav{position:sticky;top:0;height:100vh;width:250px;flex:0 0 250px;background:var(--panel);
+  nav{position:sticky;top:0;height:100vh;width:252px;flex:0 0 252px;background:var(--panel);
     border-right:1px solid var(--edge);padding:14px 0;overflow-y:auto;scrollbar-width:thin}
   .brand{padding:0 16px 10px;border-bottom:1px solid var(--hair);margin-bottom:8px}
-  .brand h1{font-size:15px;letter-spacing:2px;color:var(--ink)}
+  .brand h1{font-size:15px;letter-spacing:2px}
   .brand small{color:var(--olive);letter-spacing:1.5px;font-size:10.5px;text-transform:uppercase}
   #search{margin:8px 12px;width:calc(100% - 24px);background:#0d1013;border:1px solid var(--edge);
     border-radius:5px;color:var(--ink);padding:7px 10px;font-size:13px}
   #search:focus{outline:none;border-color:var(--olive)}
-  nav a{display:block;padding:6px 16px;color:var(--mut);text-decoration:none;font-size:13px;border-left:3px solid transparent}
+  nav a{display:block;padding:6px 16px;color:var(--mut);text-decoration:none;font-size:13px;border-left:3px solid transparent;cursor:pointer}
   nav a:hover{color:var(--ink);background:var(--panel2)}
   nav a.on{color:var(--olive-b);border-left-color:var(--olive);background:var(--panel2)}
   nav .grp{padding:12px 16px 4px;font-size:10px;letter-spacing:2px;color:#5a646f;text-transform:uppercase}
   .navbtns{display:flex;gap:6px;margin:12px;flex-wrap:wrap}
-  .navbtns button{flex:1;min-width:60px;background:var(--panel2);border:1px solid var(--edge);color:var(--mut);
+  .navbtns button{flex:1;min-width:58px;background:var(--panel2);border:1px solid var(--edge);color:var(--mut);
     border-radius:5px;padding:6px 4px;font-size:11px;cursor:pointer}
   .navbtns button:hover{color:var(--ink);border-color:var(--olive)}
 
-  /* ---------- main ---------- */
-  main{flex:1;max-width:900px;padding:26px 40px 30vh}
-  section{margin-bottom:34px;scroll-margin-top:16px}
-  h2{font-size:19px;letter-spacing:1.5px;color:var(--ink);text-transform:uppercase;
-    border-left:4px solid var(--olive);padding-left:10px;margin-bottom:12px}
-  h2 .tag{font-size:10px;letter-spacing:2px;color:var(--mut);display:block;margin-top:1px}
-  h3{font-size:14px;color:var(--olive-b);letter-spacing:.8px;margin:16px 0 6px;text-transform:uppercase}
+  /* ---------- main / accordion ---------- */
+  main{flex:1;max-width:920px;padding:26px 40px 30vh}
+  section{margin-bottom:10px;scroll-margin-top:14px;border:1px solid var(--edge);border-radius:9px;
+    background:var(--panel);overflow:hidden}
+  .sec-head{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;user-select:none}
+  .sec-head:hover{background:var(--panel2)}
+  .sec-head .chev{flex:0 0 auto;width:22px;height:22px;border-radius:5px;border:1px solid var(--edge);
+    display:grid;place-items:center;color:var(--olive-b);font-size:12px;transition:transform .18s}
+  section.open .sec-head .chev{transform:rotate(90deg)}
+  .sec-head h2{font-size:16.5px;letter-spacing:1.4px;text-transform:uppercase;flex:1}
+  .sec-head .tag{font-size:11px;letter-spacing:1px;color:var(--mut);font-weight:400;text-transform:none;display:block}
+  .sec-head .accent{width:4px;align-self:stretch;border-radius:2px;background:var(--olive);flex:0 0 4px}
+  .sec-body{display:none;padding:4px 20px 20px;border-top:1px solid var(--hair)}
+  section.open .sec-body{display:block}
+
+  h3{font-size:13.5px;color:var(--olive-b);letter-spacing:1px;margin:18px 0 6px;text-transform:uppercase}
+  h4{font-size:13px;color:var(--gold);margin:12px 0 4px}
   p{margin:7px 0;color:#c8d0d6}
-  b,strong{color:var(--ink)}
-  em{color:#aeb9c0}
-  ul,ol{margin:6px 0 6px 22px;color:#c8d0d6}
-  li{margin:3px 0}
-  .card{background:var(--panel);border:1px solid var(--edge);border-radius:8px;padding:14px 16px;margin:10px 0}
-  .card.red{border-left:4px solid var(--red)}
-  .card.gold{border-left:4px solid var(--gold)}
-  .card.steel{border-left:4px solid var(--steel)}
-  .card.violet{border-left:4px solid var(--violet)}
+  b,strong{color:var(--ink)} em{color:#aeb9c0}
+  ul,ol{margin:6px 0 6px 22px;color:#c8d0d6} li{margin:3px 0}
+  .card{background:var(--panel2);border:1px solid var(--edge);border-radius:8px;padding:13px 15px;margin:10px 0}
+  .card.red{border-left:4px solid var(--red)} .card.gold{border-left:4px solid var(--gold)}
+  .card.steel{border-left:4px solid var(--steel)} .card.violet{border-left:4px solid var(--violet)}
   .card.olive{border-left:4px solid var(--olive)}
   .read{background:#14181d;border:1px dashed #39424d;border-radius:8px;padding:12px 15px;margin:10px 0;
     font-style:italic;color:#b8c2c9}
   .read::before{content:"READ ALOUD";display:block;font-style:normal;font-size:10px;letter-spacing:2px;color:var(--olive);margin-bottom:6px}
-  .kv{display:grid;grid-template-columns:150px 1fr;gap:3px 14px;font-size:14px;margin:8px 0}
+  .say{background:#181419;border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:8px 13px;margin:8px 0;color:#dcd3bd;font-style:italic}
+  .say b{font-style:normal;color:var(--gold);font-size:11px;letter-spacing:1.5px;display:block;margin-bottom:2px}
+  .kv{display:grid;grid-template-columns:160px 1fr;gap:3px 14px;font-size:14px;margin:8px 0}
   .kv dt{color:var(--mut)} .kv dd{color:var(--ink)}
   table{width:100%;border-collapse:collapse;margin:8px 0;font-size:13.5px}
   th{color:var(--mut);text-align:left;font-weight:600;letter-spacing:1px;font-size:11px;text-transform:uppercase;
@@ -66,13 +74,11 @@
   .pill.v{background:rgba(157,123,216,.12);border-color:rgba(157,123,216,.45);color:#c4aae8}
   .san{color:var(--violet);font-weight:600}
 
-  /* clue checkboxes */
   .clue{display:flex;gap:9px;align-items:flex-start;padding:5px 8px;border-radius:5px;cursor:pointer}
-  .clue:hover{background:var(--panel2)}
+  .clue:hover{background:#20262d}
   .clue input{margin-top:4px;accent-color:var(--olive);flex:0 0 auto}
   .clue.done span{color:#5f6a75;text-decoration:line-through}
 
-  /* trackers */
   .trk{display:flex;align-items:center;gap:8px;background:var(--panel2);border:1px solid var(--edge);
     border-radius:6px;padding:7px 10px;margin:6px 0;flex-wrap:wrap}
   .trk .nm{flex:1;min-width:150px;font-weight:600}
@@ -83,28 +89,24 @@
   .hpv{min-width:74px;text-align:center;font-weight:700;font-size:16px}
   .hpv small{color:var(--mut);font-weight:400}
   .bar{flex-basis:100%;height:5px;border-radius:3px;background:#0d1013;overflow:hidden}
-  .bar i{display:block;height:100%;background:var(--olive);transition:width .2s}
-  .low .bar i{background:var(--red)}
-  .low .hpv{color:var(--red-b)}
+  .bar i{display:block;height:100%;width:100%;background:var(--olive);transform-origin:left;transition:transform .2s}
+  .low .bar i{background:var(--red)} .low .hpv{color:var(--red-b)}
 
-  /* cell (agents) tracker */
   .cell input{background:#0d1013;border:1px solid var(--edge);border-radius:4px;color:var(--ink);
     padding:4px 7px;font-size:13px;width:100%}
   .cell td{padding:3px 5px}
 
-  /* notes */
-  .notes{margin-top:12px}
+  .notes{margin-top:14px}
   .notes>label{font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
   .note{min-height:38px;background:#14161a;border:1px dashed #3a4030;border-radius:6px;padding:9px 12px;
     margin-top:4px;color:#e0d9b8;font-size:14px;outline:none;white-space:pre-wrap}
   .note:empty::before{content:"Click to add your notes…";color:#5a6150}
   .note:focus{border-color:var(--gold)}
-
-  .hi{background:rgba(214,180,90,.25);border-radius:2px}
-  .footer{color:#525c66;font-size:12px;border-top:1px solid var(--hair);padding-top:14px}
+  .footer{color:#525c66;font-size:12px;padding:16px 4px}
   @media print{
-    nav,.navbtns,.trk button{display:none}
+    nav,.navbtns,.trk button,.sec-head .chev{display:none}
     body{background:#fff;color:#000} main{max-width:none}
+    .sec-body{display:block !important}
   }
 </style>
 </head>
@@ -117,96 +119,195 @@
   </div>
   <input id="search" type="search" placeholder="Search everything…  ( / )">
   <div class="navbtns">
-    <button onclick="expNotes()">Export notes</button>
+    <button onclick="openAll(true)">Open all</button>
+    <button onclick="openAll(false)">Close all</button>
+    <button onclick="expNotes()">Export</button>
     <button onclick="impNotes()">Import</button>
     <button onclick="resetAll()">Reset</button>
   </div>
   <div class="grp">Run the night</div>
-  <a href="#brief">0 · Briefing</a>
-  <a href="#s1">1 · The Arrival</a>
-  <a href="#s2">2 · The Server Room</a>
-  <a href="#s25">2.5 · The Congregation</a>
-  <a href="#s3">3 · The Radar Dome</a>
-  <a href="#climax">4 · The Broadcast</a>
-  <a href="#cover">5 · Cover-Up &amp; Aftermath</a>
+  <a data-go="brief">0 · Briefing</a>
+  <a data-go="s1">1 · The Arrival</a>
+  <a data-go="s2">2 · The Server Room</a>
+  <a data-go="s25">2.5 · The Congregation</a>
+  <a data-go="s3">3 · The Radar Dome</a>
+  <a data-go="climax">4 · The Broadcast</a>
+  <a data-go="cover">5 · Cover-Up &amp; Aftermath</a>
   <div class="grp">Reference</div>
-  <a href="#npcs">NPC Stat Blocks</a>
-  <a href="#truth">The Truth</a>
-  <a href="#world">Site · Town · Timeline</a>
-  <a href="#san">SAN &amp; Rules Quick-Ref</a>
+  <a data-go="npcs">NPC Stat Blocks</a>
+  <a data-go="truth">The Truth &amp; Player Questions</a>
+  <a data-go="world">Site · Town · Timeline</a>
+  <a data-go="improv">Improv Toolkit</a>
+  <a data-go="san">SAN &amp; Rules Quick-Ref</a>
   <div class="grp">Table tools</div>
-  <a href="#cell">The Cell (Agents)</a>
-  <a href="#session">Session Notes</a>
+  <a data-go="clock">The Dawn Clock</a>
+  <a data-go="cell">The Cell (Agents)</a>
+  <a data-go="session">Session Notes</a>
 </nav>
 
 <main id="main">
 
-<!-- ============ BRIEFING ============ -->
+<!-- ================= BRIEFING ================= -->
 <section id="brief">
-  <h2>0 · Briefing <span class="tag">handler "Provost" · cover: joint FAA/NWS field team</span></h2>
-  <div class="kv">
-    <dt>Situation</dt><dd>0312 local: FAA radar Site ME-07 "Sable Ridge" transmitted a corrupted data loop and went dark. No remote reboot. Deputy <b>Marcus Vance</b> drove up ~0500. No check-in since.</dd>
-    <dt>Why DG cares</dt><dd>Pre-crash frames logged a contact <b>not consistent with any aircraft</b>.</dd>
-    <dt>Window</dt><dd>Heavy snow tonight, −18°F on high ground, road impassable by dawn. <b>Done before first light.</b></dd>
-  </div>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>0 · Briefing <span class="tag">the phone call · cover · requisition · getting there</span></h2></div>
+  <div class="sec-body">
+
+  <h3>The phone call from "Provost"</h3>
+  <div class="read">The phone that rings is not the one you gave anybody. The voice is dry, unhurried, East-Coast old. "Good evening. You have thirty seconds to find a pen. There is a Federal Aviation Administration radar station in Aroostook County, Maine, designation ME-07, that stopped talking at twelve minutes past three this morning. Its last transmission was… wrong. A sheriff's deputy went to look and has also stopped talking. You and your friends are now a joint FAA and National Weather Service equipment-failure response team. You were never anything else. Go tonight; the weather window shuts at dawn. And — this is the part you write down — if your radios start answering you, <b>stop transmitting.</b>"</div>
+
+  <h4>What Provost will answer (if asked)</h4>
+  <ul>
+    <li><b>"What was wrong with the transmission?"</b> — "The radar reported a contact that our people say cannot be an aircraft. That is all the detail that exists."</li>
+    <li><b>"What about the deputy?"</b> — "Marcus Vance. Local, well-liked, Army signals before the county. Recover him if you can. He cannot simply disappear — the town would look for him. Neither can you."</li>
+    <li><b>"Support?"</b> — "There is a green box at the co-ordinates I'm about to give you." (Cold-weather kit, thermite charge, breaching tools, one encrypted VHF set per Agent — draw from the Field Equipment compendium as they wish, within reason.)</li>
+    <li><b>"What if it's… one of those?"</b> — a pause. "Then priority one is the data, and priority four covers the rest."</li>
+  </ul>
+  <h4>What Provost will NOT answer</h4>
+  <ul><li>Anything about prior events on Sable Ridge (he genuinely knows only the 1978 survey report — buried).</li>
+  <li>Anything about A-Cell, other cells, or what happens to Agnes-type witnesses afterward. "Ask me no questions tonight."</li></ul>
+
   <h3>Mission (priority order)</h3>
   <ol>
-    <li><b>Erase unnatural data</b> — on-site log drive AND the FAA remote cloud backups.</li>
+    <li><b>Erase unnatural data</b> — the on-site log drive AND the FAA remote cloud backups.</li>
     <li><b>Recover or terminate Deputy Vance.</b></li>
     <li><b>Secure the facility.</b></li>
     <li><b>Cover it up</b> as a catastrophic severe-weather generator failure.</li>
   </ol>
   <div class="card red">
-    <b>ROE:</b> weapons discreet; no local casualties that can't be blamed on weather or wildlife. If an Agent is compromised by what's on that ridge, <b>the mission comes before the Agent</b>.
+    <b>ROE:</b> weapons discreet; no local casualties that can't be blamed on weather or wildlife. An Agent compromised by what's on that ridge comes second to the mission.
     <br><b>Comms:</b> cellular dies at Ridge Road mile 3. Encrypted VHF, callsign OUTLAW-6. <b>If the radios begin to answer, stop transmitting.</b>
   </div>
-  <p><em>Player handouts (Foundry journals ①–⑤): A-Cell memo · site fact sheet · regional map · county newspaper · activity timeline · Vance/Rostova dossiers.</em></p>
+
+  <h3>Cover identities</h3>
+  <p>FAA/NWS credentials (real, issued tonight, will not survive a determined callback after 48 hrs). The county has been told a specialist team is inbound; <b>the substation will not interfere</b> — mostly because its one deputy is the missing man.</p>
+
+  <h3>Getting there — beats on the road</h3>
+  <ul>
+    <li><b>The drive:</b> 4+ hours into deepening snow. Radio stations thin out; the last one is a preacher, then static. Let a player fiddle with the dial. Let the static <em>almost</em> resolve into rhythm once.</li>
+    <li><b>Corliss Notch (optional stop, ~15 min):</b> the diner is open late, half the town awake — worried about Vance. Seeds if they stop: Ruth the cook says <em>"the Whistle's been singing all week"</em>; a trapper (Whit) mutters that the Petrie boys' truck is <em>still up there running</em>; teenager Cody Aldous stares at the Agents and says nothing (he deleted his livestream). <span class="pill">HUMINT</span> everyone here is frightened in a way they can't name. <b>These are the faces they'll meet again at the Crossing.</b></li>
+    <li><b>The winter gate</b> at Ridge Road: chained — and the chain is already cut. (Vance had a key. Someone else didn't.)</li>
+  </ul>
+
+  <h3>Player handouts</h3>
+  <p>Foundry journals ①–⑤: A-Cell memo · ME-07 fact sheet · regional map · county newspaper · escalation timeline · Vance/Rostova dossiers. Give ①–④ before the drive; ⑤ works well AT the diner.</p>
   <div class="notes"><label>My notes</label><div class="note" data-note="brief" contenteditable="true"></div></div>
-</section>
-
-<!-- ============ SCENE 1 ============ -->
-<section id="s1">
-  <h2>1 · The Arrival <span class="tag">the compound · heavy snow</span></h2>
-  <p>Fenced compound: one concrete equipment building, one massive geodesic radar dome above the pines. Gate stands open. Wind, snow, and a hum you feel in your teeth more than hear.</p>
-  <h3>Clues</h3>
-  <div class="clue"><input type="checkbox" data-clue="s1-fence"><span>The chain-link fence is <b>cut from the inside out</b> (anyone examining: no tool marks — the wire is <em>pushed</em>, splayed like a flower).</span></div>
-  <div class="clue"><input type="checkbox" data-clue="s1-cruiser"><span><b>Deputy's cruiser</b> at the gate: door open, engine dead, interior thick with frost. <span class="pill">Forensics/Search</span> service pistol in the footwell, <b>3 rounds missing, no bullet holes anywhere</b>.</span></div>
-  <div class="clue"><input type="checkbox" data-clue="s1-tracks"><span><span class="pill">Survival/Track</span> footprints from the driver's seat toward the woods — strides <b>~8 feet apart</b>. Running, or dragged in great strides. They stop mid-field. Nothing after.</span></div>
-  <p><em>Pacing: let them sweep the compound; the building hum (failing generator) draws them inside. Nothing attacks here. The dread does the work.</em></p>
-  <div class="notes"><label>My notes</label><div class="note" data-note="s1" contenteditable="true"></div></div>
-</section>
-
-<!-- ============ SCENE 2 ============ -->
-<section id="s2">
-  <h2>2 · The Server Room <span class="tag">equipment building · ~40°F · backup power</span></h2>
-  <p>Emergency lighting; the backup generator hums <em>unsteadily</em>, like something breathing wrong. Racks, a main console — and <b>Dr. Elena Rostova</b> slumped over it.</p>
-  <div class="card steel">
-    <b>Rostova is frozen solid</b> in a 40°F room. Eyes wide. Lips torn back from her teeth. No wound a coroner could accept. <span class="san">SAN 0/1</span> to examine closely.
   </div>
-  <h3>Clues</h3>
-  <div class="clue"><input type="checkbox" data-clue="s2-log"><span><span class="pill">Computer Science</span> the data log: the radar tracked no aircraft — it tracked a <b>"geometric shadow"</b> hovering directly over the dish before the crash. <em>Show Handout ⑥.</em></span></div>
-  <div class="clue"><input type="checkbox" data-clue="s2-audio"><span><span class="pill">SIGINT/Science</span> the final transmission: rhythmic oscillating static, a 6-second loop. <b>Listening closely = <span class="san">SAN 0/1D4</span></b>. Success: a low human voice under the static, <b>whispering the Agents' own names</b> (use their real character names — whisper them). <em>Show Handout ⑦.</em></span></div>
-  <div class="clue"><input type="checkbox" data-clue="s2-notes"><span>Rostova's work notes (priority recovery): the array is <b>"receiving more than it transmits"</b>; readings that "don't make sense in three dimensions."</span></div>
-  <div class="clue"><input type="checkbox" data-clue="s2-drive"><span>The <b>corrupted data drive</b> — must be wiped or destroyed. The <b>FAA cloud backup</b> still exists (Computer Science, from here or later).</span></div>
-  <p><em>The ladder in the corner leads up into the dome (Scene 3). When they head for it — or step back outside — run <a href="#s25" style="color:var(--olive-b)">Scene 2.5</a>.</em></p>
-  <div class="notes"><label>My notes</label><div class="note" data-note="s2" contenteditable="true"></div></div>
 </section>
 
-<!-- ============ SCENE 2.5 ============ -->
+<!-- ================= SCENE 1 ================= -->
+<section id="s1">
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>1 · The Arrival <span class="tag">the compound · heavy snow · dread, not danger</span></h2></div>
+  <div class="sec-body">
+
+  <div class="read">The trees fall away and the headlights find chain-link. Beyond it, a concrete blockhouse with one caged bulb burning over the door — and above everything, pale against the storm, the dome: a geodesic golf ball ten storeys tall, humming somewhere below hearing. The gate stands open. Snow is filling a police cruiser's open driver's door like an hourglass.</div>
+
+  <h3>Environment — the cold clock</h3>
+  <div class="card steel">
+    <b>Exposure (house rule for tonight):</b> without proper cold-weather gear, each 30 minutes outside = <span class="pill">CON×5</span> or 1 HP and −10% (cumulative) to fine-motor tests until warmed. With the green-box kit: test each 2 hours instead. <b>Inside the fence it is colder than the forecast says it should be.</b> Anyone who says so aloud is right.
+  </div>
+
+  <h3>The compound, piece by piece</h3>
+  <ul>
+    <li><b>Gate &amp; fence line:</b> gate open, no forcing. Forty metres north, the chain-link is burst <b>outward</b> — wire splayed like a flower. <span class="pill">Search</span> no tool marks; the wire was <em>pushed</em>.</li>
+    <li><b>The yard:</b> one set of vehicle tracks in (the cruiser), softening under new snow. A second, older set (Rostova's contractor truck, parked behind the building, cold and buried).</li>
+    <li><b>Equipment building:</b> concrete, one steel door (unlocked — Rostova's keycard is still in the reader), the caged bulb, the <em>unsteady</em> generator hum through the wall. Like breathing with a catch in it.</li>
+    <li><b>The dome:</b> no ground-level entrance — access is the ladder inside the equipment building. Standing at its foot, <span class="pill">Alertness</span>: the hum isn't coming from the dome. It's coming from <em>everywhere</em>, faintly, like the air itself is carrying it.</li>
+  </ul>
+
+  <h3>The cruiser</h3>
+  <div class="clue"><input type="checkbox" data-clue="s1-cruiser"><span>Door open, engine dead (ran until the tank emptied), interior <b>furred with frost</b> — inside the car, not outside. <span class="pill">Forensics/Search</span> service pistol in the footwell, <b>3 rounds fired, no casings anywhere, no bullet holes in the car</b>.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="s1-radio"><span>The dash radio is on, volume high, tuned between stations — <b>soft rhythmic static</b>. Anyone who listens for more than a few seconds hears the 6-second loop for the first time. No SAN yet — just recognition later.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="s1-glovebox"><span>Glovebox: a photo of two kids at a lake; a county map with the Ridge Road marked in four places — Vance's welfare checks, dated. The last is <b>Cold Cauldron Pond</b>.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="s1-tracks"><span><span class="pill">Survival/Track</span> footprints from the driver's seat toward the treeline — strides <b>~8 feet apart</b>, weight wrong (too even, like something carrying itself perfectly). They <b>stop mid-field</b>. Nothing after. Snowfall can't explain it.</span></div>
+
+  <h3>Optional dread beats (d6, sprinkle 1–2)</h3>
+  <table>
+    <tr><td>1</td><td>An Agent's earpiece clicks twice. Politely. Like a courtesy.</td></tr>
+    <tr><td>2</td><td>The caged bulb dims in rhythm — six seconds on the nose. Then stops when noticed.</td></tr>
+    <tr><td>3</td><td>Snow in the yard has settled in faint concentric rings around the dome.</td></tr>
+    <tr><td>4</td><td>A hare sits inside the fence line, dead, upright, facing the dish. Frozen solid.</td></tr>
+    <tr><td>5</td><td>One Agent (lowest POW) briefly hears their own name — in their own voice — from the treeline.</td></tr>
+    <tr><td>6</td><td>The wind stops. All at once. For exactly six seconds.</td></tr>
+  </table>
+
+  <p><em>Pacing: nothing attacks here. Let them clear the compound tactically, feel clever, get cold. The building's hum draws them inside → Scene 2.</em></p>
+  <div class="notes"><label>My notes</label><div class="note" data-note="s1" contenteditable="true"></div></div>
+  </div>
+</section>
+
+<!-- ================= SCENE 2 ================= -->
+<section id="s2">
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>2 · The Server Room <span class="tag">equipment building · ~40°F · the investigation core</span></h2></div>
+  <div class="sec-body">
+
+  <div class="read">Emergency lights the colour of old teeth. Racks of humming equipment, breath misting indoors, and a main console whose screens are all showing the same frozen frame of static. A woman in a contractor's fleece is slumped over the console, one hand still on the keyboard, as if she'd just put her head down for a moment. Frost has grown across her like ivy.</div>
+
+  <h3>Layout</h3>
+  <ul>
+    <li><b>Server racks</b> (north wall) — four bays, all alive, all hot; the room should be warm. It isn't.</li>
+    <li><b>Main console</b> (centre) — Rostova at it. Login is open under her keycard; no hacking needed to begin.</li>
+    <li><b>Backup generator</b> (east corner) — diesel, running rough. <span class="pill">Heavy Machinery</span>: it's been running for days on bad fuel mix; it could be killed from here in seconds. <em>(Remember for the climax.)</em></li>
+    <li><b>Ladder</b> (west corner) — up into the dome. Cold air breathes DOWN it. Ozone and scorched copper.</li>
+  </ul>
+
+  <h3>Dr. Rostova — the body</h3>
+  <div class="card steel">
+    <b>Frozen solid</b> in a 40°F room. Eyes wide; lips torn back from her teeth. <span class="san">SAN 0/1</span> to examine closely.<br>
+    <span class="pill">Medicine/Forensics</span> she froze <b>from the inside out</b> — core first. There is no medical mechanism for this. Dead ~18 hours (matches the corrupted loop at 0312). No wounds, no struggle: her last act was pressing a headphone to one ear.
+  </div>
+  <div class="clue"><input type="checkbox" data-clue="s2-notes"><span><b>Rostova's work notes</b> (priority recovery) — margin scrawl gets worse over two weeks: <em>"array is receiving more than it transmits"</em> · <em>"return signal exceeds transmit power. Where is the gain coming from?"</em> · <em>"these readings do not make sense in three dimensions"</em> · final page, one line, steady hand: <b>"it is learning the shape of the carrier."</b></span></div>
+
+  <h3>The console — tiered digging</h3>
+  <div class="clue"><input type="checkbox" data-clue="s2-log"><span><span class="pill">Computer Science 40%</span> the radar log: last contact was no aircraft — a <b>"geometric shadow"</b>, no transponder, no vector, hovering <em>directly over the dish</em> before the crash. <em>Show Handout ⑥.</em></span></div>
+  <div class="clue"><input type="checkbox" data-clue="s2-audio"><span><span class="pill">SIGINT/Science</span> the final transmission: rhythmic oscillating static, a 6-second loop. <b>Listening closely = <span class="san">SAN 0/1D4</span></b>. Success: a low human voice under the static, <b>whispering the Agents' own names</b> — use their real character names; whisper them at the table. <em>Show Handout ⑦.</em></span></div>
+  <div class="clue"><input type="checkbox" data-clue="s2-drive"><span>The <b>on-site log drive</b>: wipe (trivial) or pull it (evidence — but then it exists).</span></div>
+  <div class="clue"><input type="checkbox" data-clue="s2-cloud"><span><b>The cloud backups — a real decision:</b> the satellite uplink is DOWN (it died with the crash). Wiping FAA cloud requires <b>re-raising the uplink for ~10 minutes</b> (<span class="pill">Computer Science</span> + <span class="pill">SIGINT</span>). While it's up, the channel is OPEN — the hum deepens, lights gutter, and the dome upstairs gets <em>louder</em>. Handler's dial: nothing has to happen… but they should sweat. (Alternative: wipe it later from any county library — and hope no one reads it first.)</span></div>
+
+  <h3>Optional beat</h3>
+  <p>While they work: every radio they carry clicks, together, twice. If anyone answers — <em>"say again, over"</em> — the static answers back in rhythm. That Agent has been <b>noticed</b>: they're the first name Agnes speaks at the Crossing.</p>
+
+  <p><em>When they head up the ladder or back outside → run <b>Scene 2.5</b>.</em></p>
+  <div class="notes"><label>My notes</label><div class="note" data-note="s2" contenteditable="true"></div></div>
+  </div>
+</section>
+
+<!-- ================= SCENE 2.5 ================= -->
 <section id="s25">
-  <h2>2.5 · The Congregation <span class="tag">midpoint · Cold Cauldron Crossing, Ridge Road mile 9</span></h2>
-  <p><b>Trigger:</b> the Agents leave the equipment building for the dome, or try to drive back down. Headlights crest the road; under the wind, a dozen human voices <b>humming the six-second loop in unison</b>. A jackknifed log truck blocks the road; vehicles cluster, doors open, engines running.</p>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>2.5 · The Congregation <span class="tag">midpoint · Cold Cauldron Crossing · the moral fight</span></h2></div>
+  <div class="sec-body">
+
+  <p><b>Trigger:</b> the Agents leave the equipment building for the dome, or try to drive back down. Headlights crest the road at mile 9; under the wind, a dozen human voices <b>humming the six-second loop in unison</b>. A jackknifed log truck blocks the road; vehicles cluster, doors open, engines running.</p>
   <div class="read">The snow parts around them like they've been standing there an hour. Old Agnes Corliss stands at the centre in her nightcoat, one hand pressing a dead man's radio handset to her ear. Without turning, she says your point-man's name — first, middle, last — in a voice that is not hers. From the pond shore, two big men in soaked hunting jackets begin to walk up the bank. They have been dead for ten weeks, and they are smiling like they're late for supper.</div>
 
-  <h3>Balance note (4 agents)</h3>
-  <p>Deliberately unwinnable as a straight shootout: ~34 effective HP of armored Returned, five civilians they must not shoot, and Agnes stripping actions and SAN. <b>The door out is the handset.</b></p>
+  <h3>Agnes speaks (use these)</h3>
+  <div class="say"><b>OPENING — to the noticed Agent</b>"He says he knows you. He says he's been saying your name for <em>days</em> and you kept pretending it was the wind."</div>
+  <div class="say"><b>WHEN THREATENED</b>"You can't shoot a broadcast, dear. Elias tried to tell me that for thirty-five years and I never listened either."</div>
+  <div class="say"><b>THE PITCH</b>"It only wants to finish the song. One more verse. Then everyone comes inside where it's warm."</div>
+  <div class="say"><b>IF THE HANDSET IS THREATENED — the only time she's afraid</b>"NO — that's HIM, that's all of him that's LEFT—"</div>
+
+  <h3>Default round-by-round (adjust freely)</h3>
+  <table>
+    <tr><th>Rd</th><th>The Congregation does</th></tr>
+    <tr><td>1</td><td>The Called advance, arms out, to restrain. Agnes: <b>Chorus</b> begins (<span class="san">SAN 0/1D4</span> first exposure). The Returned close from the pond, unhurried.</td></tr>
+    <tr><td>2</td><td>Agnes: <b>STAND STILL</b> on the biggest gun. Called pair-grapple whoever advanced. Roy heads for the loudest Agent.</td></tr>
+    <tr><td>3</td><td>The Returned engage. Anyone grappled by BOTH brothers starts the <b>Baptism drag</b> (2 rounds to the shore, then under).</td></tr>
+    <tr><td>4+</td><td>Agnes: <b>SPEAK THE NAMES</b> on the most effective Agent (<span class="san">SAN 0/1D4</span>). Chorus each round (<span class="san">0/1</span>). She retreats behind the Called if pressed.</td></tr>
+  </table>
+
+  <h3>The pond (if the Baptism lands)</h3>
+  <div class="card steel">Under the ice: <span class="pill">CON×5</span> each round; fail = 1D6 (cold + water). Allies can smash through (STR×5) and pull (opposed STR vs one brother, 17). An Agent who goes under and comes back up has heard the song from the OTHER side: <span class="san">SAN 1/1D6</span>, and they know exactly what the Tear is, no translation needed.</div>
 
   <h3>Ways to win that aren't massacre</h3>
   <ul>
     <li><b>Cut the feed:</b> destroy/snatch Elias's handset (called shot −20%, 6 HP, or grapple Agnes). Chorus dies → the Called wake; the Returned stop mid-stride, turn, and walk back into the pond.</li>
     <li><b>Deafen her:</b> a flash-bang within 10 m ends the Chorus for good.</li>
-    <li><b>Names:</b> <span class="pill">HUMINT</span> + shouting a Petrie's name = that brother hesitates one full round (once each).</li>
-    <li><b>Run the gauntlet:</b> ram past the log truck (<span class="pill">Drive −20%</span> in snow). The Congregation follows on foot, slowly, humming — they arrive at the compound during the climax if unresolved.</li>
+    <li><b>Names:</b> <span class="pill">HUMINT</span> + shouting a Petrie's name = that brother hesitates one full round (once each). <em>"DALE! Your mother's porch light is still on!"</em></li>
+    <li><b>Stealth:</b> the Called barely see; Agnes hears RADIOS, not feet. A blacked-out, radio-silent cell can skirt the treeline entirely (<span class="pill">Stealth</span>, group). The Congregation walks on toward the compound behind them — a ticking clock for the climax.</li>
+    <li><b>Run the gauntlet:</b> ram past the log truck (<span class="pill">Drive −20%</span> in snow; fail = ditched, 1D4 to all aboard).</li>
   </ul>
 
   <h3>Combat trackers</h3>
@@ -214,109 +315,172 @@
 
   <h3>Aftermath</h3>
   <ul>
-    <li>Freed Called remember it as a dream of "the most beautiful voice." All five alive: <b>+1 SAN each Agent</b>.</li>
-    <li>Agnes, freed, keeps asking where Elias went — and once, flat, in the wrong voice: <b>"IT IS ALMOST DONE LEARNING OUR SHAPE."</b></li>
-    <li>Every civilian death becomes a named problem in the Cover-Up.</li>
+    <li>Freed Called remember a dream of "the most beautiful voice." All five alive: <b>+1 SAN each Agent</b>. They are hypothermic civilians, miles from town, mid-operation — <em>what do the Agents do with them?</em> (Truck keys are in the vehicles. Cody can drive. It costs 20 minutes of the dawn clock to organize.)</li>
+    <li>Agnes, freed, keeps asking where Elias went — and once, flat, in the wrong voice: <b>"IT IS ALMOST DONE LEARNING OUR SHAPE."</b> That's the players' warning for Scene 3.</li>
+    <li>Every civilian death becomes a named problem in the Cover-Up. Say so out loud at the table when the first gun rises.</li>
   </ul>
   <div class="notes"><label>My notes</label><div class="note" data-note="s25" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ SCENE 3 ============ -->
+<!-- ================= SCENE 3 ================= -->
 <section id="s3">
-  <h2>3 · The Radar Dome <span class="tag">upper catwalk · pitch black · ozone and scorched copper</span></h2>
-  <p>Total darkness; their lights are the only light. The smell of ozone and burned wiring. And at the central transmitter — <b>Deputy Vance</b>.</p>
-  <div class="card red">
-    <b>Vance is no longer entirely human.</b> Blind — he gouged out his own eyes — yet he rewires the transmitter by feel, fast. His jaw unhinges when he screams: the radar's technical manual, <b>backward</b>. Witnessing him: <span class="san">SAN 1/1D6</span>.
-  </div>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>3 · The Radar Dome <span class="tag">the catwalk · pitch black · Vance and the countdown</span></h2></div>
+  <div class="sec-body">
+
+  <div class="read">The ladder climbs through a concrete throat and lets out onto a steel catwalk in absolute darkness. Your lights find the inside of the dome arching away like the vault of a cathedral built by something that had heard about cathedrals. The air burns with ozone and scorched copper. And at the centre, at the base of the great dish, somebody is working — fast, in the dark, with a sound of stripped wire and a voice reciting words in an order no throat should manage.</div>
+
+  <h3>Environment</h3>
   <ul>
-    <li>He is not trying to kill the Agents — he is trying to <b>finish the broadcast</b>. He attacks only those who interpose.</li>
-    <li>Blindness costs him nothing in the dark; the Agents' lights don't help him or hinder him.</li>
-    <li>Dropping him does <b>not</b> stop the transmitter he has already wired — the countdown to the Broadcast continues (2–3 rounds, Handler's clock).</li>
+    <li><b>Total darkness.</b> Their lights are the only light — and each light says exactly where its Agent stands.</li>
+    <li><b>Catwalk:</b> a ring around the dome with two radial spurs to the transmitter mast. Moving faster than careful in the dark: <span class="pill">Athletics/DEX×5</span> or fall — 4 m to the deck, 1D6.</li>
+    <li><b>Frozen metal:</b> bare-hand fine work (wiring, lockpicking, reloading fiddly weapons) −20% without gloves.</li>
+    <li><b>The dish</b> looms overhead, wrong even before the climax — anyone who studies it: it seems very slightly <em>closer</em> each time you look.</li>
+  </ul>
+
+  <h3>Vance at the transmitter — the countdown</h3>
+  <div class="card red">
+    <b>Witnessing him: <span class="san">SAN 1/1D6</span>.</b> Blind — sockets self-emptied, trails frozen black — but working the transmitter by feel at horrible speed, jaw unhinged, screaming the radar's technical manual <b>backward</b>.
+  </div>
+  <div class="card gold">
+    <b>THE WIRING CLOCK — 5 segments.</b> Each round Vance works unmolested, fill one. At <b>5/5</b> the Broadcast begins (Scene 4). Interposing (blocking, grappling, dragging him off) stops the clock that round; damage doesn't stop it unless he's down. <b>Killing him does not un-wire what's wired</b> — at 3+ segments the system finishes arming itself 2 rounds later regardless. There is a way to say this to players: <em>"He's not the bomb. He's just the fuse."</em>
+  </div>
+  <h4>Vance's lines (the manual, backward — read them slow)</h4>
+  <div class="say"><b>WORKING</b>"…tuptuo rewop mumixam ot yarra eht tes… niag eht kcolnU…"</div>
+  <div class="say"><b>IF AN AGENT SPEAKS TO HIM</b>— he stops for one heartbeat. In his own voice, small: "Tell my kids the lake in summer." Then the other voice takes the throat back.</div>
+  <h4>Fighting him</h4>
+  <ul>
+    <li>Wrench 65%, 1D10+2; <b>two actions per round</b>; your lights don't help or hinder him.</li>
+    <li><b>Restraint</b> (non-lethal): opposed STR (his 17); two Agents together shift the odds. He does not tire. Cuffs hold for 1D4 rounds, then the joints… reconfigure. <span class="san">SAN 0/1D3</span> for whoever's holding him when they do.</li>
+    <li>He attacks only those who interpose. He is trying to finish, not to kill.</li>
   </ul>
   <h3>Combat tracker</h3>
   <div id="trk-s3"></div>
   <div class="notes"><label>My notes</label><div class="note" data-note="s3" contenteditable="true"></div></div>
-</section>
-
-<!-- ============ CLIMAX ============ -->
-<section id="climax">
-  <h2>4 · The Broadcast <span class="tag">climax · the Tear manifests</span></h2>
-  <p>Whether Vance succeeds or the fight trips it, the dish activates and spins wildly, projecting invisible localized EM. Hair stands on end. The air goes static-charged. <b>The Tear bleeds through the centre of the dish.</b> <em>Show Handout ⑧ now — not before.</em></p>
-  <div class="card violet">
-    <b>The Tear</b> — presence: <span class="san">SAN 1D6/1D20</span>. <b>Bullets pass through and warp uselessly — do not roll damage.</b> It cannot be fought. It can only be <b>starved of signal</b>.
   </div>
+</section>
+
+<!-- ================= CLIMAX ================= -->
+<section id="climax">
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>4 · The Broadcast <span class="tag">the Tear manifests · the choice · the implosion</span></h2></div>
+  <div class="sec-body">
+
+  <div class="read">The dish wakes with a shriek of servos and begins to spin — too fast, faster, until it is a blur that pulls the air around after it. Every hair on your body stands up. Your fillings taste like batteries. And in the space above the dish, where the signal is thickest, the dark <b>opens</b>. It is not a shape. It is where shapes end. And it is coming through.</div>
+  <p><em>Show Handout ⑧ NOW — not before.</em></p>
+
+  <div class="card violet">
+    <b>The Tear</b> — presence: <span class="san">SAN 1D6/1D20</span>. <b>Bullets pass through and warp uselessly — do not roll damage, describe the round coming apart in the air.</b> It cannot be fought. It can only be <b>starved of signal</b>. Each round it is fed, the cold deepens (all exposure tests worsen one step) and it <em>reaches</em> — one Agent per round, lowest POW first, must <span class="pill">POW×5</span> or take a step toward the dish.
+  </div>
+
   <h3>The choice — cut the primary power</h3>
+  <h4>Option A — blow the backup generator (outside, below)</h4>
   <ul>
-    <li><b>Blow the backup generator</b> (outside, in the dark, through whatever remains of the night) — <span class="pill">Demolitions</span> or improvised; a hazardous run.</li>
-    <li><b>Manually overload the main transformer</b> inside the dome — lethal electrical shock to whoever does it (Lethality; survivors are badly hurt) + the full <span class="san">1D6/1D20</span> exposure at arm's length.</li>
+    <li>Get there: down the ladder and out — 2 rounds moving fast (catwalk test in the dark), while the Congregation's survivors, if unresolved, are arriving at the fence.</li>
+    <li>Do it: <span class="pill">Demolitions 40%</span> with the thermite (instant, clean), or improvise — <span class="pill">INT×5</span> + fuel + 2 rounds rigging. The blast: anyone within 5 m, 2D6.</li>
+    <li>The generator dies → the transmitter browns out → <b>the Tear snaps back</b>.</li>
   </ul>
-  <p>Power dies → the Tear <b>snaps back</b>; the vacuum <b>implodes the dome</b>. Ringing silence. Snow falling through the new hole in the world.</p>
+  <h4>Option B — overload the main transformer (inside the dome, beside the Tear)</h4>
+  <ul>
+    <li>One Agent at the transformer cabinet, one full round, no roll to attempt — the roll is surviving it.</li>
+    <li><b>Cost:</b> Lethality 15% electrical discharge (fail the Lethality = 2D10 damage instead), AND the full <span class="san">1D6/1D20</span> exposure at arm's length as the Tear turns its whole attention on the hand on the switch.</li>
+    <li>Insulated gloves from the cold-weather kit: the 2D10 becomes 1D10. Small mercies are Delta Green's whole budget.</li>
+  </ul>
+
+  <h3>Power dies</h3>
+  <div class="read">The Tear does not scream. It simply stops being there — and the air rushes in to fill the place where it wasn't, and the dome comes down like God clapping his hands.</div>
+  <ul>
+    <li><b>Implosion escape:</b> everyone inside — <span class="pill">DEX×5 or Athletics</span>; fail = 1D6 from debris. The catwalk survives; the panels don't.</li>
+    <li>Then: ringing silence. Snow falling through the new hole in the world. The hum is gone — <em>and one Agent (highest SAN loss tonight) notices they miss it.</em></li>
+  </ul>
+
+  <h3>If they fail / flee</h3>
+  <p>The Broadcast completes. The doorway holds open. Sable Ridge becomes a permanent cold spot that swallows Corliss Notch over the winter — 300 people, one radio sermon at a time. A-Cell's after-action call is very quiet. No SAN reward; the next operation is worse, and it is theirs.</p>
   <div class="notes"><label>My notes</label><div class="note" data-note="climax" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ COVER-UP ============ -->
+<!-- ================= COVER-UP ================= -->
 <section id="cover">
-  <h2>5 · Cover-Up &amp; Aftermath <span class="tag">loose ends · sanity rewards</span></h2>
-  <h3>Loose ends</h3>
-  <div class="clue"><input type="checkbox" data-clue="c-rostova"><span><b>Burn Rostova's remains</b> (thermite) and manage her FAA record and next of kin (sister in Vermont).</span></div>
-  <div class="clue"><input type="checkbox" data-clue="c-vance"><span><b>Stage the cruiser</b> — wildlife attack or vehicular accident. Recover Vance's body if at all possible; the Notch will search for its deputy.</span></div>
-  <div class="clue"><input type="checkbox" data-clue="c-cloud"><span><b>Wipe the FAA cloud backups</b> (<span class="pill">Computer Science</span>) as well as the on-site drive.</span></div>
-  <div class="clue"><input type="checkbox" data-clue="c-dome"><span>The imploded dome sells "catastrophic weather-generator failure" on its own — <b>if nothing contradicts it</b>. Loose talk in Corliss Notch is the real threat.</span></div>
-  <div class="clue"><input type="checkbox" data-clue="c-locals"><span>Any dead civilians from the Crossing = named bodies that cannot be blamed on weather.</span></div>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>5 · Cover-Up &amp; Aftermath <span class="tag">the story that holds · complications · rewards</span></h2></div>
+  <div class="sec-body">
+
+  <h3>The task list (each costs dawn-clock time)</h3>
+  <div class="clue"><input type="checkbox" data-clue="c-rostova"><span><b>Burn Rostova's remains</b> — thermite, 20 min. <span class="pill">Forensics</span> to leave the right kind of nothing. Her sister in Vermont gets a "generator explosion" letter and a sealed casket. (An Agent who reads the sister's later letters to the FAA: <span class="san">0/1</span>, the slow kind.)</span></div>
+  <div class="clue"><input type="checkbox" data-clue="c-vance"><span><b>Vance</b> — recover the body if it exists. Stage: vehicular accident on the ridge road (roll his cruiser, 30 min work) or wildlife (messier, less questioned in Aroostook). The town buries a hero; the county buys a plaque. His kids get the lake in summer, if anyone passes it on.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="c-cloud"><span><b>FAA cloud backups</b> — if not wiped on-site, hit within 48 hrs (<span class="pill">Computer Science</span>, any decent connection) before a duty analyst gets curious.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="c-dome"><span><b>The dome</b> — the implosion IS the cover story: catastrophic weather-generator failure. FAA inspectors will fly up in spring, find honest wreckage, write honest paperwork.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="c-locals"><span><b>The locals</b> — freed Called remember a beautiful dream; a debrief over cocoa at the substation ("gas leak from the generator, you all wandered up in your sleep, lucky we found you") holds <em>if they're alive</em>. Agnes needs a longer conversation and a quiet care placement A-Cell will arrange without being asked twice. Dead civilians = named bodies = the story does not hold.</span></div>
+  <div class="clue"><input type="checkbox" data-clue="c-handset"><span><b>Elias's handset</b> — inert now. Mostly. Green box it. Do not keep it. <em>(If an Agent keeps it: it is very slightly cold at 3 a.m. That's a hook, not a rule.)</em></span></div>
+
+  <h3>Complications (d6 — roll once if the night went loud)</h3>
+  <table>
+    <tr><td>1</td><td>A snowplow driver saw headlights at the Crossing and "figures somebody ought to write it down."</td></tr>
+    <tr><td>2</td><td>Cody Aldous re-uploads a fragment of his deleted livestream. 214 views and climbing.</td></tr>
+    <tr><td>3</td><td>The sister in Vermont hires a very cheap, very stubborn private investigator.</td></tr>
+    <tr><td>4</td><td>An FAA duty tech noticed the uplink flap at 03:40 and opened a ticket. It has a number now. Numbers live forever.</td></tr>
+    <tr><td>5</td><td>One of the Called starts a prayer group. They meet on Thursdays. They hum.</td></tr>
+    <tr><td>6</td><td>County wants to REBUILD the radar. A-Cell would like the Agents' written opinion. All of them feel the draft of the door that didn't quite shut.</td></tr>
+  </table>
+
   <h3>Sanity rewards</h3>
-  <p>Threat eliminated: <b>+1D4 SAN</b>, minus losses from collateral damage or a failed cover-up. All five Called freed alive: <b>+1 SAN each</b>. Transformer martyr: carries the worst of it — if they lived. Broadcast completed &amp; agents fled: no reward; A-Cell will be back.</p>
+  <p>Threat eliminated: <b>+1D4 SAN</b> · all five Called saved alive: <b>+1 each</b> · minus losses from collateral damage or a failed cover-up. The transformer martyr carries the worst of it — if they lived. Broadcast completed: no reward; A-Cell will be back.</p>
   <div class="notes"><label>My notes</label><div class="note" data-note="cover" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ NPC STATS ============ -->
+<!-- ================= NPC STATS ================= -->
 <section id="npcs">
-  <h2>NPC Stat Blocks <span class="tag">everything rollable in one place</span></h2>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>NPC Stat Blocks <span class="tag">everything rollable · with voices</span></h2></div>
+  <div class="sec-body">
 
   <div class="card steel">
     <h3 style="margin-top:0">Dr. Elena Rostova <span class="pill">deceased — clue, not combatant</span></h3>
-    <p>Found frozen at the console. Her notes are a priority recovery. Burn the remains.</p>
+    <p>Frozen at the console, inside-out. Notes are priority recovery. Burn the remains. Her last steady line: <em>"it is learning the shape of the carrier."</em></p>
   </div>
 
   <div class="card red">
     <h3 style="margin-top:0">Deputy Marcus Vance (Changed) <span class="pill r">HP 16</span> <span class="pill r">SAN 1/1D6</span></h3>
-    <p>STR 17 CON 16 DEX 16 INT 6 POW 15 · <b>acts twice per round</b> · blind, unimpaired in dark</p>
+    <p>STR 17 CON 16 DEX 16 INT 6 POW 15 · <b>2 actions/round</b> · blind, unimpaired in dark · attacks only those who interpose</p>
     <ul>
-      <li><b>Pipe wrench</b> 65%, 1D10+2. Attacks only those who block the transmitter.</li>
-      <li>Flesh — gunfire drops him. Dropping him ≠ stopping the broadcast.</li>
+      <li><b>Pipe wrench</b> 65%, 1D10+2 · restraint: opposed STR 17; cuffs hold 1D4 rounds (<span class="san">0/1D3</span> when the joints reconfigure).</li>
+      <li>Runs the <b>wiring clock</b> (Scene 3): 1 segment/unmolested round; at 3+ it self-completes 2 rounds after he stops.</li>
+      <li><b>Voice:</b> the manual, backward — except once, his own, small: <em>"Tell my kids the lake in summer."</em></li>
     </ul>
   </div>
 
   <div class="card gold">
     <h3 style="margin-top:0">Agnes Corliss, the Switchboard Widow <span class="pill r">HP 10 · WP 18</span> <span class="pill r">SAN 0/1D4 · Chorus-voice 1/1D6</span></h3>
-    <p>STR 8 CON 12 DEX 9 INT 14 <b>POW 18</b> CHA 16 · doesn't fight — <b>rules</b> the fight</p>
+    <p>STR 8 CON 12 DEX 9 INT 14 <b>POW 18</b> CHA 16 · doesn't fight — <b>rules</b> the fight · shielded −20% while any ally conscious in 10 m</p>
     <ul>
-      <li><b>Chorus protects:</b> attacks vs Agnes −20% while any ally conscious within 10 m.</li>
-      <li><b>THE CHORUS</b> (free, every round): static from her mouth and <em>from the Agents' own radios</em>. <span class="san">SAN 0/1D4 first exposure, 0/1 per further round</span>; −20% concentration tasks. Ditch comms + plug ears = first exposure only.</li>
-      <li><b>STAND STILL</b> (action): a name spoken backward. Her POW×5 (90%) vs target POW×5 opposed. Fail = lose next action; crit fail = also drop held item.</li>
-      <li><b>SPEAK THE NAMES</b> (1/Agent/night): recites a private guilt or Bond. <span class="san">SAN 0/1D4</span>.</li>
-      <li><b>WEAKNESS — CUT THE FEED:</b> Elias's handset (belt; called shot −20%, 6 HP, or grapple to snatch) OR deafen her → Chorus ends, Stand Still drops to 45%, the Called wake. She collapses — a victim. A-Cell's problem now.</li>
+      <li><b>THE CHORUS</b> (free, every round): static from her mouth AND the Agents' own radios. <span class="san">0/1D4 first, 0/1 per round after</span>; −20% concentration. Ditch comms + plug ears = first exposure only.</li>
+      <li><b>STAND STILL</b> (action): a name backward. POW×5 (90%) vs target POW×5. Fail = lose next action; crit fail = drop held item.</li>
+      <li><b>SPEAK THE NAMES</b> (1/Agent/night): a Bond or a private guilt. <span class="san">0/1D4</span>.</li>
+      <li><b>CUT THE FEED:</b> Elias's handset (belt · called shot −20% · 6 HP · or grapple-snatch) OR deafen → Chorus ends, Stand Still 45%, the Called wake, Agnes collapses. A victim. A-Cell's problem now.</li>
     </ul>
   </div>
 
   <div class="card olive">
     <h3 style="margin-top:0">Dale &amp; Roy Petrie, Returned <span class="pill r">HP 17 each · Armor 3</span> <span class="pill r">SAN 1/1D6</span></h3>
-    <p>STR 17/18 CON 16 DEX 12/11 INT 7/6 POW 12 · ignore stun, pain, fear · <b>fire = double damage</b> (and they flinch from open flame)</p>
+    <p>STR 17/18 CON 16 DEX 12/11 INT 7/6 POW 12 · no stun, pain, fear · <b>fire ×2 damage</b> + they flinch from open flame</p>
     <ul>
-      <li><b>Dale — boat hook</b> 60%, 1D8+2 · <b>Roy — splitting maul</b> 60%, 1D10+2 (Roy always moves toward whoever is LOUDEST).</li>
-      <li><b>Grasp of the Drowned</b> 55%, 1D6+1 — struck limb numbs: −20% to target's DEX-based tests next round.</li>
-      <li><b>Cold radius:</b> within 3 m for 3+ rounds → CON×5 or 1 HP.</li>
-      <li><b>COLD CAULDRON BAPTISM:</b> both grapple one Agent → dragged to the pond, 2 rounds to the shore, then under the thin ice. Drowning + freezing. <em>The pond is how the Tear tastes people.</em></li>
-      <li><span class="pill">HUMINT</span> + shouting his name: that brother hesitates one round (once each).</li>
+      <li><b>Dale — boat hook</b> 60%, 1D8+2 · patient, flanks · <b>Roy — splitting maul</b> 60%, 1D10+2 · goes for the LOUDEST.</li>
+      <li><b>Grasp of the Drowned</b> 55%, 1D6+1 — struck limb numbs: −20% DEX-based next round.</li>
+      <li><b>Cold radius</b> 3 m, 3+ rounds → CON×5 or 1 HP.</li>
+      <li><b>BAPTISM:</b> both grapple one Agent → 2 rounds to the shore → under the ice (CON×5/round, fail 1D6). <em>The pond is how the Tear tastes people.</em></li>
+      <li><span class="pill">HUMINT</span> + his name shouted = one round's hesitation (once each). Something in there remembers supper.</li>
     </ul>
   </div>
 
   <div class="card">
     <h3 style="margin-top:0">The Called ×5 <span class="pill r">HP 11 each</span> <span class="pill r">killing one: SAN 1/1D8</span></h3>
-    <p>Cody Aldous (17), Ruth the cook, Whit the trapper, the Pelletiers. Nightclothes, upturned faces, humming. <span class="pill">HUMINT 40%</span>: they are weeping while they do it.</p>
+    <p>Cody Aldous (17) · Ruth the cook · Whit the trapper · the Pelletiers. Nightclothes, upturned faces, humming. <span class="pill">HUMINT 40%</span>: weeping while they do it.</p>
     <ul>
-      <li><b>They restrain, never kill:</b> grapple 40%, pairs work together (+20% for the second). Held Agents get carried — to Agnes, or the pond.</li>
-      <li>Immune to Persuade and fear while the Chorus sustains.</li>
-      <li>Any damage dealt to one → POW×5 each round to shake the trance.</li>
+      <li><b>Restrain, never kill:</b> grapple 40%, pairs +20% for the second. Held Agents get carried — to Agnes, or the pond.</li>
+      <li>Immune to Persuade/fear while the Chorus holds · any damage → POW×5 each round to wake.</li>
       <li>Chorus dies → all five wake at once: terrified, hypothermic civilians in a firefight.</li>
     </ul>
   </div>
@@ -324,57 +488,99 @@
   <div class="card violet">
     <h3 style="margin-top:0">The Tear (the Static Between Stations) <span class="pill v">presence SAN 1D6/1D20</span></h3>
     <ul>
-      <li><b>Bullets pass through and warp — no damage roll exists.</b></li>
-      <li>Closable only by cutting primary power (generator outside / transformer inside at lethal cost).</li>
-      <li>It mimics frequencies; it has spent months <em>learning our shape</em>.</li>
+      <li><b>Bullets warp through it — no damage roll exists.</b> Describe the round coming apart.</li>
+      <li>Each fed round: cold worsens one step; one Agent (lowest POW) POW×5 or steps toward the dish.</li>
+      <li>Closable ONLY by cutting primary power. It has spent months <em>learning our shape</em>.</li>
     </ul>
   </div>
   <div class="notes"><label>My notes</label><div class="note" data-note="npcs" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ TRUTH ============ -->
+<!-- ================= TRUTH ================= -->
 <section id="truth">
-  <h2>The Truth <span class="tag">what's really happening — GM only</span></h2>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>The Truth &amp; Player Questions <span class="tag">GM only</span></h2></div>
+  <div class="sec-body">
   <p>The entity is a <b>place adjacent to ours</b> that perceives through <b>resonance</b> — a signal answered by a signal. It has brushed Sable Ridge forever: the spinning compasses, the ridge that "answers," the 1888 hunting party. For most of history it could only whisper to those who whistled back.</p>
-  <p>In <b>2016</b> the FAA parked a high-power transmitter on the one ridge that half-listened, and left it running unattended. Years of steady carrier gave it a <b>stable channel</b> — a door propped wider every night. The phantom returns were it <b>looking back down the beam</b>. The frozen animals and the Petrie brothers were it <b>learning to reach through and feed</b>.</p>
+  <p>In <b>2016</b> the FAA parked a high-power transmitter on the one ridge that half-listened and left it running unattended. Years of steady carrier gave it a <b>stable channel</b> — a door propped wider every night. The phantom returns were it <b>looking back down the beam</b>. The frozen animals and the Petrie brothers were it <b>learning to reach through and feed</b>.</p>
   <p>Rostova's servicing tuned the door. The corrupted loop was it learning to <b>speak in our signal</b> — it took her first, then reached down <b>Vance's radio</b> (the one man for miles fluent in signal) and remade him into an instrument: blinded so nothing distracts, wiring the lure to full power.</p>
-  <p><b>If the Agents fail:</b> the broadcast completes, the doorway holds, and Sable Ridge becomes a permanent cold spot that swallows the Notch over the winter — a much larger Delta Green problem, later.</p>
+  <h3>When players ask…</h3>
+  <ul>
+    <li><b>"Why doesn't it just come through?"</b> — It can't hold our shape yet. It needs the broadcast at full power to finish the fitting. Tonight is the last fitting.</li>
+    <li><b>"Why the cold?"</b> — Reaching through costs energy; it pulls heat the way we'd pull breath. Where it touches, things freeze from the inside.</li>
+    <li><b>"Can we talk to it?"</b> — It can only say what it has heard. It is a mirror that wants to be a mouth. Anything it "says" is your own words, rearranged, coming back wrong.</li>
+    <li><b>"Why Vance? Why Agnes?"</b> — Fluency. He spoke signal professionally; she has listened longer than anyone alive. It reached for the two best antennas in the county.</li>
+    <li><b>"Is it dead now?"</b> — No. The door is shut. The ridge is still the ridge. Don't rebuild the radar.</li>
+  </ul>
   <div class="notes"><label>My notes</label><div class="note" data-note="truth" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ WORLD ============ -->
+<!-- ================= WORLD ================= -->
 <section id="world">
-  <h2>Site · Town · Timeline <span class="tag">background reference</span></h2>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>Site · Town · Timeline <span class="tag">background reference</span></h2></div>
+  <div class="sec-body">
   <h3>Site ME-07 "Sable Ridge"</h3>
   <div class="kv">
     <dt>What</dt><dd>ARSR-4 long-range radar, joint FAA/USAF/NWS, border-approach coverage gap</dd>
     <dt>Where</dt><dd>2,140 ft ridge ("the Whistle"), 14 gravel miles up Ridge Road from Corliss Notch; winter gate; no cell past mile 3</dd>
-    <dt>Staffing</dt><dd>Unmanned; Sygnal Dynamics contractor visits quarterly; nobody lives within 9 miles</dd>
+    <dt>Staffing</dt><dd>Unmanned; Sygnal Dynamics contractor quarterly; nobody lives within 9 miles</dd>
     <dt>Power</dt><dd>Grid + diesel backup generator (equipment building); main transformer in the dome</dd>
   </div>
   <h3>Corliss Notch (pop. ~310)</h3>
-  <p>General store (only gas for 40 mi), the Notch Diner, Grange hall, white Congregational church, volunteer FD, and a two-deputy substation Vance runs alone. Logging town losing its young. Strangers are noticed. Locals call the ridge <b>"the Whistle"</b> — it answers, and if you answer back, it draws you into the cold. They don't discuss it with outsiders; they just don't go up after dark.</p>
+  <p>General store (only gas for 40 mi) · the Notch Diner · Grange hall · white Congregational church · volunteer FD · two-deputy substation Vance runs alone. Logging town losing its young. Strangers are noticed. The ridge is <b>"the Whistle"</b> — it answers, and if you answer back it draws you into the cold. Locals won't discuss it with outsiders; they just don't go up after dark.</p>
   <h3>Escalation timeline</h3>
   <table>
     <tr><th>When</th><th>Event</th></tr>
-    <tr><td>pre-1900</td><td>Compasses spin; the ridge "answers whistles"; 1888 diary — party followed a voice, lost two</td></tr>
+    <tr><td>pre-1900</td><td>Compasses spin; the ridge "answers whistles"; 1888 diary — a party followed a voice, lost two</td></tr>
     <tr><td>1978</td><td>USGS survey team flees a ridge cabin; "equipment fouling," one breakdown; report buried</td></tr>
     <tr><td>2016</td><td>Site automated; ham operators log the nightly "Sable hum"</td></tr>
     <tr><td>−14 mo</td><td>First phantom returns: contacts with no transponder or vector, gone between sweeps</td></tr>
     <tr><td>−3 mo</td><td>Livestock/pets die "frozen through"; the static answers operators, twice repeats a name</td></tr>
     <tr><td>−10 wk</td><td><b>Petrie brothers vanish</b> at Cold Cauldron Pond; truck running, radio on static</td></tr>
-    <tr><td>−6 wk</td><td>FAA schedules service; teen livestreams "breathing static," deletes it</td></tr>
+    <tr><td>−6 wk</td><td>FAA schedules service; Cody livestreams "breathing static," deletes it</td></tr>
     <tr><td>−2 wk</td><td>Rostova arrives; "receiving more than it transmits"; deep cold sets in around the dome</td></tr>
     <tr><td>−4 days</td><td>A trucker's CB says Vance's kids' names; Vance rattled, calls the site repeatedly</td></tr>
     <tr><td>−18 hr</td><td>Corrupted loop; site dark</td></tr>
     <tr><td>−6 hr</td><td>Vance drives up alone. Silence. The Agents are activated</td></tr>
   </table>
   <div class="notes"><label>My notes</label><div class="note" data-note="world" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ SAN QUICK REF ============ -->
+<!-- ================= IMPROV ================= -->
+<section id="improv">
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>Improv Toolkit <span class="tag">names · senses · static</span></h2></div>
+  <div class="sec-body">
+  <h3>Name bank — Corliss Notch</h3>
+  <p><b>The Called (statted):</b> Cody Aldous (17, gas-station kid) · Ruth Demers (diner cook) · Whit Emmons (trapper) · Gil &amp; Marge Pelletier (feed store).<br>
+  <b>Everyone else:</b> Pastor Vern Ouellette · Doreen at the store · plow driver Big Mike Thibodeau · warden Sgt. Kathy Cyr (county seat, 90 min away) · schoolteacher Miss Lavoie · Vance's kids: Sam (9) &amp; Ellie (7), with their mother in Bangor.</p>
+  <h3>Sensory bank (steal freely)</h3>
+  <ul>
+    <li>Snow squeaking like styrofoam · breath freezing in eyelashes · the particular silence after an engine dies.</li>
+    <li>The hum: felt in molars, in fillings, in an old collarbone break.</li>
+    <li>Frost growing in FERNS across glass — always toward the dome.</li>
+    <li>The static loop: shh-shh-SHH-shh-shh-shh. Six seconds. Once you've counted it, you can't stop.</li>
+  </ul>
+  <h3>Things the static says (sparingly — it can only repeat)</h3>
+  <ul>
+    <li>An Agent's own "say again, over," returned an hour later, flat.</li>
+    <li>Rostova: "…where is the gain coming from…"</li>
+    <li>Vance, clear as day: "Dispatch, show me 10-23 at the radar site." (He said it at 0455. It kept it.)</li>
+    <li>A child's voice from a 1994 broadcast, asking for a song on the county request show.</li>
+  </ul>
+  <div class="notes"><label>My notes</label><div class="note" data-note="improv" contenteditable="true"></div></div>
+  </div>
+</section>
+
+<!-- ================= SAN ================= -->
 <section id="san">
-  <h2>SAN &amp; Rules Quick-Ref <span class="tag">every check in the scenario</span></h2>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>SAN &amp; Rules Quick-Ref <span class="tag">every check in the scenario</span></h2></div>
+  <div class="sec-body">
   <table>
     <tr><th>Source</th><th>SAN</th><th>Where</th></tr>
     <tr><td>Examining Rostova closely</td><td class="san">0/1</td><td>Scene 2</td></tr>
@@ -383,34 +589,70 @@
     <tr><td>Chorus speaks in a dead loved one's voice</td><td class="san">1/1D6</td><td>Scene 2.5</td></tr>
     <tr><td>Agnes: Speak the Names</td><td class="san">0/1D4</td><td>Scene 2.5</td></tr>
     <tr><td>Seeing a Returned clearly</td><td class="san">1/1D6</td><td>Scene 2.5</td></tr>
+    <tr><td>Dragged under the pond ice (and surviving)</td><td class="san">1/1D6</td><td>Scene 2.5</td></tr>
     <tr><td>Killing one of the Called</td><td class="san">1/1D8</td><td>Scene 2.5</td></tr>
     <tr><td>Witnessing the changed Vance</td><td class="san">1/1D6</td><td>Scene 3</td></tr>
-    <tr><td>The Tear — presence / arm's length</td><td class="san">1D6/1D20</td><td>Climax</td></tr>
+    <tr><td>Vance's joints reconfiguring while held</td><td class="san">0/1D3</td><td>Scene 3</td></tr>
+    <tr><td>The Tear — presence / at the transformer</td><td class="san">1D6/1D20</td><td>Climax</td></tr>
     <tr><td><b>Rewards:</b> threat ended +1D4 · all Called saved +1 each</td><td>—</td><td>Aftermath</td></tr>
   </table>
+  <h3>Tonight's environmental rules</h3>
+  <ul>
+    <li><b>Cold:</b> no gear — CON×5 per 30 min outside or 1 HP + cumulative −10% fine-motor. With kit: per 2 hrs. Worsens one step per fed round of the Tear.</li>
+    <li><b>Under the ice:</b> CON×5/round, fail 1D6. Rescue: STR×5 to smash through, opposed STR vs 17 to pull free.</li>
+    <li><b>Catwalk in the dark, moving fast:</b> Athletics/DEX×5 or 4 m fall, 1D6.</li>
+    <li><b>Bare hands on frozen metal:</b> −20% fine manipulation.</li>
+  </ul>
   <h3>House rules in play (Delta Green 2)</h3>
   <ul>
-    <li><b>Nat 01 → PROVIDENCE</b>, <b>nat 00 → CALAMITY</b> — d6 escalating tables, auto-posted in chat.</li>
+    <li><b>Nat 01 → PROVIDENCE · nat 00 → CALAMITY</b> — escalating d6 tables auto-post in chat.</li>
     <li>Ammo auto-decrements; reload from the Equipment tab.</li>
-    <li>Apply Damage / Apply SAN buttons live on the chat cards (armor − AP handled).</li>
+    <li>Apply Damage / Apply SAN buttons on chat cards (armor − AP handled).</li>
   </ul>
   <div class="notes"><label>My notes</label><div class="note" data-note="san" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ CELL TRACKER ============ -->
+<!-- ================= DAWN CLOCK ================= -->
+<section id="clock">
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>The Dawn Clock <span class="tag">time pressure tracker</span></h2></div>
+  <div class="sec-body">
+  <p>The cell is activated ~21:00. First light ~06:40. Tick a box when the table burns real time; the road closes behind snow at dawn — everything unfinished becomes a complication.</p>
+  <div id="clockgrid"></div>
+  <table>
+    <tr><th>Typical costs</th><th></th></tr>
+    <tr><td>Drive from briefing to the winter gate</td><td>4 hrs (4 boxes)</td></tr>
+    <tr><td>Diner stop · compound sweep · server room work</td><td>30 min each</td></tr>
+    <tr><td>Uplink raise for cloud wipe</td><td>30 min (and the channel opens)</td></tr>
+    <tr><td>The Crossing (however it goes)</td><td>30–60 min</td></tr>
+    <tr><td>Organizing freed Called back to town</td><td>30 min</td></tr>
+    <tr><td>Each cover-up task</td><td>20–30 min</td></tr>
+  </table>
+  <div class="notes"><label>My notes</label><div class="note" data-note="clock" contenteditable="true"></div></div>
+  </div>
+</section>
+
+<!-- ================= CELL ================= -->
 <section id="cell">
-  <h2>The Cell <span class="tag">agents at the table — edits save automatically</span></h2>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>The Cell <span class="tag">agents at the table — edits save automatically</span></h2></div>
+  <div class="sec-body">
   <table class="cell" id="celltab">
     <tr><th style="width:32%">Agent / Player</th><th>HP</th><th>WP</th><th>SAN</th><th>Breaking Pt</th><th style="width:28%">Condition</th></tr>
   </table>
   <div class="notes"><label>My notes</label><div class="note" data-note="cell" contenteditable="true"></div></div>
+  </div>
 </section>
 
-<!-- ============ SESSION NOTES ============ -->
+<!-- ================= SESSION ================= -->
 <section id="session">
-  <h2>Session Notes <span class="tag">free space — saves on this computer</span></h2>
+  <div class="sec-head"><span class="accent"></span><span class="chev">▶</span>
+    <h2>Session Notes <span class="tag">free space — saves on this computer</span></h2></div>
+  <div class="sec-body">
   <div class="note" data-note="session" contenteditable="true" style="min-height:220px"></div>
-  <p class="footer" style="margin-top:26px">FALSE ALARM Handler's Screen · Delta Green 2 · notes &amp; trackers persist in this browser (localStorage). Use <b>Export notes</b> to move them to another machine. Delta Green is a trademark of the Delta Green Partnership; fan material.</p>
+  <p class="footer">FALSE ALARM Handler's Screen · Delta Green 2 · notes &amp; trackers persist in this browser (localStorage). <b>Export</b> moves them to another machine. Delta Green is a trademark of the Delta Green Partnership; fan material.</p>
+  </div>
 </section>
 
 </main>
@@ -418,6 +660,27 @@
 <script>
 (function(){
   const LS = k => "fa-gm-" + k;
+
+  /* ---------- accordion ---------- */
+  const secs = [...document.querySelectorAll("main section")];
+  function setOpen(sec, open, save = true) {
+    sec.classList.toggle("open", open);
+    if (save) localStorage.setItem(LS("open-" + sec.id), open ? "1" : "0");
+  }
+  secs.forEach(sec => {
+    sec.querySelector(".sec-head").addEventListener("click", () => setOpen(sec, !sec.classList.contains("open")));
+    if (localStorage.getItem(LS("open-" + sec.id)) === "1") setOpen(sec, true, false);
+  });
+  window.openAll = (v) => secs.forEach(s => setOpen(s, v));
+
+  /* nav: open + scroll */
+  document.querySelectorAll("nav a[data-go]").forEach(a => {
+    a.addEventListener("click", () => {
+      const sec = document.getElementById(a.dataset.go);
+      setOpen(sec, true);
+      sec.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 
   /* ---------- notes ---------- */
   document.querySelectorAll(".note").forEach(n => {
@@ -447,18 +710,19 @@
       ["c1","Called — Cody (17)","grapples only · POW×5 to wake if hurt",11],
       ["c2","Called — Ruth","grapples only",11],
       ["c3","Called — Whit","grapples only",11],
-      ["c4","Called — Pelletier (A)","grapples only",11],
-      ["c5","Called — Pelletier (B)","grapples only",11],
+      ["c4","Called — Gil Pelletier","grapples only",11],
+      ["c5","Called — Marge Pelletier","grapples only",11],
     ],
     "trk-s3": [
       ["vance","Deputy Vance (Changed)","2 actions/round · wrench 65% 1D10+2",16],
+      ["wclock","Wiring Clock","fills 1/round unmolested · 5 = Broadcast",5],
     ],
   };
   for (const [mount, list] of Object.entries(NPCS)) {
     const host = document.getElementById(mount);
     list.forEach(([id, name, sub, max]) => {
       const key = LS("hp-" + id);
-      let hp = parseInt(localStorage.getItem(key)); if (isNaN(hp)) hp = max;
+      let hp = parseInt(localStorage.getItem(key)); if (isNaN(hp)) hp = id === "wclock" ? 0 : max;
       const row = document.createElement("div");
       row.className = "trk";
       row.innerHTML = `<div class="nm">${name}<small>${sub}</small></div>
@@ -467,18 +731,37 @@
         <button data-d="1">+1</button><button data-d="99">⟳</button>
         <div class="bar"><i></i></div>`;
       const val = row.querySelector(".hpv span"), bar = row.querySelector(".bar i");
-      const paint = () => { val.textContent = hp; bar.style.width = Math.max(0, hp / max * 100) + "%";
-        row.classList.toggle("low", hp <= Math.ceil(max / 3)); };
+      const paint = () => { val.textContent = hp; bar.style.transform = "scaleX(" + Math.max(0, hp / max) + ")";
+        row.classList.toggle("low", id === "wclock" ? hp >= 4 : hp <= Math.ceil(max / 3)); };
       row.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
         const d = parseInt(b.dataset.d);
-        hp = d === 99 ? max : Math.max(0, Math.min(max, hp + d));
+        hp = d === 99 ? (id === "wclock" ? 0 : max) : Math.max(0, Math.min(max, hp + d));
         localStorage.setItem(key, hp); paint();
       }));
       paint(); host.appendChild(row);
     });
   }
 
-  /* ---------- cell (agents) table ---------- */
+  /* ---------- dawn clock ---------- */
+  const cg = document.getElementById("clockgrid");
+  const times = []; for (let h = 21 * 2; h <= 30.5 * 2; h++) times.push(h / 2); // 21:00 → 06:30 in half-hours (mod 24)
+  cg.style.cssText = "display:flex;flex-wrap:wrap;gap:5px;margin:10px 0";
+  times.forEach(t => {
+    const hh = Math.floor(t) % 24, mm = t % 1 ? "30" : "00";
+    const lab = String(hh).padStart(2, "0") + ":" + mm;
+    const key = LS("clk-" + lab);
+    const b = document.createElement("button");
+    b.textContent = lab;
+    b.style.cssText = "padding:6px 8px;border-radius:5px;border:1px solid var(--edge);background:#0d1013;color:var(--mut);font-size:12px;cursor:pointer";
+    const paint = () => { const on = localStorage.getItem(key) === "1";
+      b.style.background = on ? "rgba(138,163,83,.25)" : "#0d1013";
+      b.style.color = on ? "var(--olive-b)" : "var(--mut)";
+      b.style.borderColor = on ? "var(--olive)" : "var(--edge)"; };
+    b.addEventListener("click", () => { localStorage.setItem(key, localStorage.getItem(key) === "1" ? "0" : "1"); paint(); });
+    paint(); cg.appendChild(b);
+  });
+
+  /* ---------- cell table ---------- */
   const tab = document.getElementById("celltab");
   for (let r = 0; r < 6; r++) {
     const tr = document.createElement("tr");
@@ -493,15 +776,14 @@
   }
 
   /* ---------- nav highlight ---------- */
-  const links = [...document.querySelectorAll("nav a")];
-  const secs = links.map(a => document.querySelector(a.getAttribute("href")));
+  const links = [...document.querySelectorAll("nav a[data-go]")];
   const onScroll = () => {
-    let i = secs.findLastIndex(s => s && s.getBoundingClientRect().top < 120);
-    links.forEach((a, j) => a.classList.toggle("on", j === Math.max(0, i)));
+    let i = secs.findLastIndex(s => s.getBoundingClientRect().top < 120);
+    links.forEach(a => a.classList.toggle("on", a.dataset.go === (secs[Math.max(0, i)] || {}).id));
   };
   document.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
-  /* ---------- search ---------- */
+  /* ---------- search (opens matches) ---------- */
   const box = document.getElementById("search");
   document.addEventListener("keydown", e => {
     if (e.key === "/" && document.activeElement !== box && !e.target.isContentEditable && e.target.tagName !== "INPUT") {
@@ -510,12 +792,13 @@
   });
   box.addEventListener("input", () => {
     const q = box.value.trim().toLowerCase();
-    document.querySelectorAll(".hi").forEach(el => { el.replaceWith(...el.childNodes); });
-    document.querySelectorAll("main section").forEach(s => {
+    secs.forEach(s => {
       const hit = !q || s.textContent.toLowerCase().includes(q);
       s.style.display = hit ? "" : "none";
-      links.find(a => a.getAttribute("href") === "#" + s.id)?.style.setProperty("opacity", hit ? "1" : ".3");
+      if (q && hit) setOpen(s, true, false);
+      links.find(a => a.dataset.go === s.id)?.style.setProperty("opacity", hit ? "1" : ".3");
     });
+    if (!q) secs.forEach(s => setOpen(s, localStorage.getItem(LS("open-" + s.id)) === "1", false));
   });
 
   /* ---------- export / import / reset ---------- */
